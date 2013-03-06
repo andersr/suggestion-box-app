@@ -1,4 +1,15 @@
 SuggestionBoxApp::Application.routes.draw do
+
+  root to: 'suggestion_boxes#index'
+
+  resources :suggestion_boxes, :suggestions
+
+
+#resources 
+
+
+  
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

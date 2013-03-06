@@ -1,0 +1,23 @@
+<h1>Suggestion Boxes</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @suggestion_boxes.each do |suggestion_box| %>
+  <tr>
+    <td><%= suggestion_box.name %></td>
+    <td><%= link_to 'Show', suggestion_box %></td>
+    <td><%= link_to 'Edit', edit_suggestion_box_path(suggestion_box) %></td>
+    <td><%= link_to 'Destroy', suggestion_box, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Suggestion box', new_suggestion_box_path %>
