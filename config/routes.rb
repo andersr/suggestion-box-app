@@ -4,7 +4,6 @@ SuggestionBoxApp::Application.routes.draw do
 
   resources :suggestion_boxes, :suggestions
 
-
 #resources 
 
 
