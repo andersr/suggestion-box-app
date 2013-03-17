@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130316205842) do
+ActiveRecord::Schema.define(:version => 20130317210006) do
+
+  create_table "members", :force => true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "organizations", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "sessions", :force => true do |t|
     t.string   "passcode"
@@ -28,8 +41,11 @@ ActiveRecord::Schema.define(:version => 20130316205842) do
 
   create_table "suggestions", :force => true do |t|
     t.text     "message"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "member_name"
+    t.string   "member_email"
+    t.boolean  "anonymous_suggestion"
   end
 
 end
