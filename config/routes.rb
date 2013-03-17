@@ -1,5 +1,7 @@
 SuggestionBoxApp::Application.routes.draw do
 
+  resources :sessions
+
   root to: 'suggestion_boxes#index'
 
   resources :suggestion_boxes, :suggestions

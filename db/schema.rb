@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130313182300) do
+ActiveRecord::Schema.define(:version => 20130316205842) do
+
+  create_table "sessions", :force => true do |t|
+    t.string   "passcode"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "suggestion_boxes", :force => true do |t|
     t.string   "name"

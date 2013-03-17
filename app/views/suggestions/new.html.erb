@@ -1,10 +1,10 @@
 <h1>Post a suggestion</h1>
-<p id="passcode">
+<!-- <p id="passcode">
   <label for="suggestion-box-passcode">Please enter BCL Suggestion Box passcode: 
   <input type="password" name="suggestion-box-passcode" id="suggestion-box-passcode"></label> <em><a href="#">What passcode?</a></em><br />
   <label for="remember-passcode"><input type="checkbox" id="remember-passcode" value="Remember for next time.">Remember for next time.</label><br />
   <input type="submit" value="Continue">
-</p>
+</p> -->
 
 <%= form_for(@suggestion) do |f| %>
   <% if @suggestion.errors.any? %>
@@ -28,4 +28,4 @@
   </div>
 <% end %>
 
-<%= link_to 'Back', suggestions_path %>
+<%#= link_to 'Back', suggestions_path %>
