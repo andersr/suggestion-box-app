@@ -4,6 +4,18 @@
   <b>Message:</b>
   <%= @suggestion.message %>
 </p>
+<p>
+  <b>Name:</b>
+  <%= @suggestion.member_name %>
+</p>
+<p>
+  <b>Email:</b>
+  <%= @suggestion.member_email %>
+</p>
+<p>
+  <b>Anonymous?</b>
+  <%= @suggestion.anonymous_suggestion %>
+</p>
 
 
 <%= link_to 'Edit', edit_suggestion_path(@suggestion) %> |

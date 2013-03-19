@@ -10,6 +10,6 @@
 
 class Session < ActiveRecord::Base
   attr_accessible :passcode
-  belongs_to :organization
+  # belongs_to :organization
 
 end

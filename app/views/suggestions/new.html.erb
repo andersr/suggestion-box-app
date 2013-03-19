@@ -23,14 +23,18 @@
     <%= f.label :message %><br />
     <%= f.text_area :message %>
   </div>
+
     <div class="field">
-    <label>Name:</label><input type="text"><br />
+    <%= f.label :member_name,'Name' %><br />
+    <%= f.text_field :member_name %>
   </div>
-    <div class="field">
-    <label>Email:</label><input type="text"><br />
+
+  <div class="field">
+    <%= f.label :member_email,'Email' %><br />
+    <%= f.text_field :member_email %>
   </div>
-    <div class="field">
-    <label><input type="checkbox" name="anonymous" value="anonymous"> I'd like to make this suggestion anonymously</label><br />
+  <div class="field">
+    <%= f.check_box :anonymous_suggestion %><%= f.label :anonymous_suggestion,"I'd like to make this suggestion anonymously" %><br />
   </div>
   <div class="actions">
     <%= f.submit %>
