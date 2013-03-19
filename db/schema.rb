@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130319170205) do
+ActiveRecord::Schema.define(:version => 20130319185801) do
 
   create_table "landing_pages", :force => true do |t|
     t.string   "invite_email"
@@ -52,6 +52,12 @@ ActiveRecord::Schema.define(:version => 20130319170205) do
     t.string   "member_name"
     t.string   "member_email"
     t.boolean  "anonymous_suggestion"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "email"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
 end
