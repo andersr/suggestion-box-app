@@ -1,16 +1,16 @@
 SuggestionBoxApp::Application.routes.draw do
 
-  resources :members
+  get "landing_page/new"
 
-  resources :organizations
+  get "landing_page/create"
 
-  resources :sessions
+  root to: 'landing_pages#index'
 
-  root to: 'suggestion_boxes#index'
+  resources :suggestion_boxes, :suggestions, :landing_pages, :organizations, :sessions, :members
 
-  resources :suggestion_boxes, :suggestions
+  match '/bcl/new' => 'suggestions#new'
 
-#resources 
+#route /bcl/new to suggestion/new 
 
 
   
