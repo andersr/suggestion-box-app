@@ -4,3 +4,200 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "compass/reset";
+@import "compass/css3";
+@import "colors";
+@import "clouds";
+
+
+body {
+	font-family:'Josefin Sans', Helvetica, Arial, sans-serif;
+	font-size: 1.4em;
+	line-height: 1.45em; 
+	//line-height: 25px;
+	//margin-top: 15px;
+}
+
+.container {
+	// position: absolute;
+	// top: 25%;
+	// left: 25%;
+	// margin-left: auto;
+	// margin-right: auto;
+
+	// width: 100%;
+	// height: 1px;
+	// background-color: transparent;
+	//text-align: center;
+	// 
+	// width: 100%;
+	// height: 1px;
+	// overflow: visible;
+	// visibility: visible;
+	// display: block;
+}
+.centered-box {
+	//position:relative;
+	// margin-left: auto;
+	// margin-right: auto;
+
+	//@include border-radius(15px);
+	//padding:10px;
+	//border:2px solid #98A89E;
+	//background-color:#FFF;
+	// 	margin-left: -125px;
+	// position: absolute;
+	// top: -35px;
+	// left: 40%;
+	background-color: transparent;
+	max-width: 400px;
+	min-width:250px;
+	z-index: 5;
+}
+
+
+// .callout-box {
+// 	background-color:$light-gray;
+// 	@include border-radius(15px);
+// 	padding:20px;
+// 	margin:5px;
+// 	height:95px;
+// }
+
+
+
+h1 {
+	font:bold 3.5em/1.4em 'Dancing Script', Georgia, Times, serif;
+	//letter-spacing: 0.1em;
+	color:$ml-orange;
+	@include opaque;
+}
+h2{
+	//font-family: 'Josefin Sans', sans-serif;
+	font-weight:700;
+	font-size: 1.2em;
+	font-style: italic;
+	margin-bottom:.25em;
+}
+// .margin-bottom {
+// 	margin-bottom:.75em;
+// 	}
+.signup-text-field {
+	font-size:1.1em;
+	border:2px solid #98A89E;
+	padding:10px;
+	@include border-radius(5px);
+	float:left;
+	width: 230px;
+}
+
+.submit-button {
+float:left;
+margin-left: 5px;
+border:1px solid #d82e00;
+@include border-radius(5px);
+
+font:16px bold arial, helvetica, sans-serif;
+text-align: center;
+
+padding: 15px;
+text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+
+color: #FFFFFF;
+background-color: #FF4411;
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FF4411), color-stop(100%, #D40015));
+background-image: -webkit-linear-gradient(top, #FF4411, #D40015);
+background-image: -moz-linear-gradient(top, #FF4411, #D40015);
+background-image: -ms-linear-gradient(top, #FF4411, #D40015);
+background-image: -o-linear-gradient(top, #FF4411, #D40015);
+background-image: linear-gradient(top, #FF4411, #D40015);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FF4411, endColorstr=#D40015);
+}
+
+.submit-button:hover{
+	cursor: pointer;
+ border:1px solid #aa2400; background-color: #FFDA24;
+ background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFDA24), color-stop(100%, #D40015));
+ background-image: -webkit-linear-gradient(top, #FFDA24, #D40015);
+ background-image: -moz-linear-gradient(top, #FFDA24, #D40015);
+ background-image: -ms-linear-gradient(top, #FFDA24, #D40015);
+ background-image: -o-linear-gradient(top, #FFDA24, #D40015);
+ background-image: linear-gradient(top, #FFDA24, #D40015);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFDA24, endColorstr=#D40015);
+}
+
+// // .no-spam {
+// // 	padding-left:5px;
+// // 	padding-top:5px;
+// // }
+
+
+// //FOOTER
+// //------------------------------
+footer {
+	font-size:.8em;
+	color:#666666;
+		
+	a, a:visited {
+		color:#666666;
+		//color:$ml-grayblue;
+		text-decoration:none;
+	
+		&:hover {
+			color:black;
+			//font-weight: bold;
+			//text-decoration:underline;
+			background-color: transparent;
+		}
+	}
+}
+.fixed-bottom {
+	text-align: center;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 30px;
+	visibility: visible;
+	overflow: hidden;
+	display: block;
+	z-index: 4;
+}
+
+// //FORMS
+// //------------------------------
+// .help-text {
+// 	font-size:.8em;
+// 	font-style:italic;
+// }
+
+
+// //GENERIC
+// //------------------------------
+// .inline {
+// 	display:inline;
+// }
+// .align-left {
+// 	text-align:left;
+// }
+
+
+// // APP HEADER
+// // header {
+// // 	background-color: #eee;
+
+// // 	#title {
+// // 		width: 600px;
+
+// // 		h1 {
+// // 			display: inline-block;
+// // 		}
+// // 	}
+
+// // 	#user {
+// // 		float: right;
+// // 		width: 150px;
+// // 		font-size: smaller;
+
+// // 	}
+// // }
+
+
+

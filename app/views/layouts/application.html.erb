@@ -3,13 +3,40 @@
 <head>
 	<meta charset="utf-8">
   <title>ChirpyBox - A Social Suggestion Box</title>
+  <link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
+  <script>
+$(document).ready(function(){
+				   
+ $(window).resize(function(){
+
+  $('.centered-box').css({
+   position:'absolute',
+   left: ($(window).width() 
+     - $('.centered-box').outerWidth())/2,
+   top: ($(window).height() 
+     - $('.centered-box').outerHeight())/2
+  });
+		
+ });
+ 
+ // To initially run the function:
+ $(window).resize();
+
+});
+  </script>
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render 'layouts/header' if !root_url %>
-<div id="content"><%= yield %></div>
-<%= render 'layouts/footer' %>	
+	<!-- <div id="landing-page"> -->
+	<%= render 'landing_page/clouds' %>
+	<%= yield %>
+	<footer class="fixed-bottom">
+<nav>
+  <%= mail_to "hello@chirpybox.com", "Contact", :encode => "hex" %> | <%= link_to "Twitter", "#" %> | <%= link_to "Take Our Survey", "#" %> 
+</nav>
+</footer>
 </body>
 </html>

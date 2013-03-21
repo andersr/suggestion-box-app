@@ -15,13 +15,22 @@ class UsersController < ApplicationController
 				format.html { redirect_to @user, notice: 'user was successfully created.' }
 				format.json { render json: @user, status: :created, location: @user }
 			else
-				format.html { render action: "new" }
-				format.json { render json: @user.errors, status: :unprocessable_entity }
+				    flash[:error] = "There were errors..."
+				    render :action => :welcome
 			end
 		end
 	end
 
 	def show
+		@user = User.find(params[:id])
+
+		respond_to do |format|
+		format.html # show.html.erb
+		format.json { render json: @user }
+		end
+	end
+
+	def thanks
 		@user = User.find(params[:id])
 
 		respond_to do |format|

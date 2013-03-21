@@ -1,22 +1,28 @@
-<h1>ChirpyBox</h1>
-<em>A Social Suggestion Box</em>
-<p><img src="http://placehold.it/300x300" alt="photo of a ChirpyBox"></p>
-<p>We're still hammering together our first few Chirpyboxes.</p>
-<p>Want us to let you know when we're ready to make one for you?</p>
-<%= form_for(@user) do |f| %>
-  <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-      <ul>
-      <% @user.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+ 
+<div class="container">
+    <div class="centered-box">
+      <h1>ChirpyBox</h1>
+      <h2>A Social Suggestion Box</h2>
+      <!-- <div class="callout-box"> -->
+        <p class="margin-bottom">We're still hammering together our first few Chirpyboxes. Want us to let you know when we're ready to make one for you?</p>
+        <%= form_for(@user) do |f| %>
+        <div class="field">
+            <%= f.text_field :email, placeholder:"your@email.com", class:"signup-text-field" %> <%= f.submit 'Let me know!', class:"submit-button" %>
+             <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+        <% end %>
+
+          </div><!-- .field -->
       <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.text_field :email, placeholder:"your@email.com" %> <%= f.submit 'Let me know!' %>
-  </div>
-<% end %>
+       <!-- </div> --><!-- .callout-box -->
+    </div><!-- #landing-notice centered-box -->
+  </div><!-- .centered-box-container -->
+<!-- </div>  --><!-- .landing-page -->
