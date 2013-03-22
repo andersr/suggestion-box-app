@@ -254,14 +254,14 @@ body {
   }
 }
 
-/* line 12, ../../../sass/screen.scss */
+/* line 13, ../../../sass/screen.scss */
 body {
   font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
-  font-size: 1.4em;
-  line-height: 1.45em;
+  font-size: 1.2em;
+  line-height: 1.3em;
 }
 
-/* line 38, ../../../sass/screen.scss */
+/* line 39, ../../../sass/screen.scss */
 .centered-box {
   background-color: transparent;
   max-width: 400px;
@@ -269,7 +269,7 @@ body {
   z-index: 5;
 }
 
-/* line 68, ../../../sass/screen.scss */
+/* line 67, ../../../sass/screen.scss */
 h1 {
   font: bold 3.5em/1.4em 'Dancing Script', Georgia, Times, serif;
   color: #ff4411;
@@ -277,7 +277,7 @@ h1 {
   opacity: 1;
 }
 
-/* line 74, ../../../sass/screen.scss */
+/* line 73, ../../../sass/screen.scss */
 h2 {
   font-weight: 700;
   font-size: 1.2em;
@@ -285,7 +285,7 @@ h2 {
   margin-bottom: .25em;
 }
 
-/* line 84, ../../../sass/screen.scss */
+/* line 81, ../../../sass/screen.scss */
 .signup-text-field {
   font-size: 1.1em;
   border: 2px solid #98A89E;
@@ -296,12 +296,13 @@ h2 {
   -o-border-radius: 5px;
   border-radius: 5px;
   float: left;
-  width: 230px;
+  width: 62%;
 }
 
-/* line 93, ../../../sass/screen.scss */
+/* line 90, ../../../sass/screen.scss */
 .submit-button {
-  float: left;
+  float: right;
+  width: 29%;
   margin-left: 5px;
   border: 1px solid #d82e00;
   -webkit-border-radius: 5px;
@@ -311,7 +312,7 @@ h2 {
   border-radius: 5px;
   font: 16px bold arial, helvetica, sans-serif;
   text-align: center;
-  padding: 15px;
+  padding: 14px 10px;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
   color: #FFFFFF;
   background-color: #FF4411;
@@ -324,7 +325,7 @@ h2 {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FF4411, endColorstr=#D40015);
 }
 
-/* line 115, ../../../sass/screen.scss */
+/* line 113, ../../../sass/screen.scss */
 .submit-button:hover {
   cursor: pointer;
   border: 1px solid #aa2400;
@@ -338,32 +339,66 @@ h2 {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFDA24, endColorstr=#D40015);
 }
 
-/* line 134, ../../../sass/screen.scss */
-footer {
-  font-size: .8em;
-  color: #666666;
-}
-/* line 138, ../../../sass/screen.scss */
-footer a, footer a:visited {
-  color: #666666;
-  text-decoration: none;
-}
-/* line 143, ../../../sass/screen.scss */
-footer a:hover, footer a:visited:hover {
-  color: black;
-  background-color: transparent;
+/* line 131, ../../../sass/screen.scss */
+.error-messages {
+  clear: both;
+  font-size: smaller;
+  font-weight: bold;
+  color: #cc0000;
 }
 
-/* line 151, ../../../sass/screen.scss */
+/* line 138, ../../../sass/screen.scss */
+.field_with_errors {
+  display: inline;
+}
+/* line 141, ../../../sass/screen.scss */
+.field_with_errors input {
+  border: 2px solid #cc0000;
+}
+
+/* line 149, ../../../sass/screen.scss */
 .fixed-bottom {
   text-align: center;
   position: absolute;
   bottom: 0px;
   left: 0px;
   width: 100%;
-  height: 30px;
-  visibility: visible;
-  overflow: hidden;
-  display: block;
+  height: 100px;
   z-index: 4;
+  display: block;
+  overflow: visible;
+}
+
+/* line 161, ../../../sass/screen.scss */
+footer {
+  font-size: .8em;
+  color: #666666;
+}
+/* line 170, ../../../sass/screen.scss */
+footer a, footer a:visited {
+  color: #666666;
+  text-decoration: none;
+}
+/* line 174, ../../../sass/screen.scss */
+footer a:hover, footer a:visited:hover {
+  color: black;
+  background-color: transparent;
+}
+
+/* line 181, ../../../sass/screen.scss */
+#debug {
+  font: 12px monospace;
+  background-color: white !important;
+  color: black;
+  border-top: 1px solid #eee;
+  text-align: left;
+  margin-top: 10px;
+  clear: both;
+  float: left;
+  width: 100%;
+  padding-top: 10px;
+  margin-left: 5px;
+  -webkit-box-sizing: border_box;
+  -moz-box-sizing: border_box;
+  box-sizing: border_box;
 }
