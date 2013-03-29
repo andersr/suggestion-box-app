@@ -9,4 +9,4 @@ class EmailValidator < ActiveModel::Validator
 #         else #email is not unique
 #         end #if else
 #     end # def
-# end # class
+end # class
