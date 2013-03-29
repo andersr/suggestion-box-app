@@ -1,0 +1,14 @@
+#debug {
+	font:12px monospace;
+	background-color: white !important;
+	color:black;
+	border-top: 1px solid #eee;
+	text-align: left;
+	margin-top:10px;
+  clear: both;
+  float: left;
+  width: 100%;
+  padding-top: 10px;
+  margin-left: 5px;
+  @include box_sizing(border_box);
+}

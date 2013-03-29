@@ -15,7 +15,7 @@ class UsersController < ApplicationController
 		if @user.save
 			redirect_to @user.thanks
 		else
-			render "welcome"
+			redirect_to root_path
 		end
 
 		#if @user.errors.any? - if there were any errors
