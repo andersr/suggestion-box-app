@@ -8,15 +8,39 @@ class UsersController < ApplicationController
 	end
 
 
-# when user clicks submit, this method gets called
 	def create
 		@user = User.new(params[:user])
 
-		if @user.save
-			redirect_to @user.thanks
-		else
-			redirect_to root_path
+		respond_to do |format|
+			if @user.save
+				format.html { redirect_to @user, notice: 'User was successfully registered.' }
+				format.json { render json: @user, status: :created, location: @user }
+			else
+				format.html { redirect_to root_path, notice: "Sorry, there was a problem with your email address.  Please try again." }
+				format.json { render json: @user.errors, status: :unprocessable_entity }
+			end
 		end
+	end
+
+# when user clicks submit, this method gets called
+	# def create
+	# 	@user = User.new(params[:user])
+
+	# 	respond_to do |format|
+	# 		if @user.save
+	# 			format.html { redirect_to root_path, notice: "Thanks, we'll be in touch!" }
+	# 			format.json { render json: @user, status: :created, location: @user }
+	# 		else
+	# 			format.html { render action: "new" }
+	# 			format.json { render json: @user.errors, status: :unprocessable_entity }
+	# 		end
+	# 	end
+
+		# if @user.save
+		# 	redirect_to @user.thanks
+		# else
+		# 	redirect_to root_path
+		# end
 
 		#if @user.errors.any? - if there were any errors
 
@@ -29,7 +53,7 @@ class UsersController < ApplicationController
 		# 		    #render :action => :welcome
 		# 	end
 		# end
-	end
+	#end
 
 	def show
 		@user = User.find(params[:id])
@@ -45,7 +69,7 @@ class UsersController < ApplicationController
 
 		respond_to do |format|
 		format.html # show.html.erb
-		format.json { render json: @user }
+		format.json { render json: @thanks }
 		end
 	end
 end

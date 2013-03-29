@@ -15,6 +15,14 @@
 </head>
 <body>
 	<%= render 'landing_page/clouds' %>
+  <div class="container">
+  <div class="centered-box">
 	<%= yield %>
+   </div><!-- #landing-notice centered-box -->
+  </div><!-- .container -->
+   <footer class="fixed-bottom">
+<nav>
+  <%= mail_to "hello@chirpybox.com", "Contact", :encode => "hex" %> | <%= link_to "Twitter", "#" %> | <%= link_to "Take Our Survey", "#" %> 
+</nav>
 </body>
 </html>

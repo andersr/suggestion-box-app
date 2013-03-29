@@ -6,9 +6,9 @@ SuggestionBoxApp::Application.routes.draw do
 
   root to: 'users#welcome'
 
-  #match '/users' => 'users#thanks', :as => '/thanks'
+  #match 'users/:id' => 'thanks', :as => "/thanks"
 
-  resources :users, :suggestion_boxes, :suggestions
+  resources :users  #, :suggestion_boxes, :suggestions
   #resources :landing_pages, :organizations, :sessions, :members
 
   #get '/bcl/new' => 'suggestions#new'

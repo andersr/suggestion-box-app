@@ -151,6 +151,12 @@ $submit-button-width:7.5em;
 	background-image: linear-gradient(top, #FFDA24, #D40015);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFDA24, endColorstr=#D40015);
 }
 
+.error { color:$ml-orange;
+	padding-top: 10px;
+	font-size: 1.2em;
+
+}
+
 
 // FORMS
 // ------------------------------

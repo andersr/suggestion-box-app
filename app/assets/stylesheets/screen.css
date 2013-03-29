@@ -411,7 +411,14 @@ p {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFDA24, endColorstr=#D40015);
 }
 
-/* line 157, ../../../sass/screen.scss */
+/* line 154, ../../../sass/screen.scss */
+.error {
+  color: #ff4411;
+  padding-top: 10px;
+  font-size: 1.2em;
+}
+
+/* line 163, ../../../sass/screen.scss */
 .error-messages {
   margin-top: .5em;
   clear: both;
@@ -420,21 +427,21 @@ p {
   color: #cc0000;
 }
 
-/* line 165, ../../../sass/screen.scss */
+/* line 171, ../../../sass/screen.scss */
 .field_with_errors {
   display: inline;
 }
-/* line 168, ../../../sass/screen.scss */
+/* line 174, ../../../sass/screen.scss */
 .field_with_errors input {
   border: 2px solid #cc0000;
 }
 
-/* line 174, ../../../sass/screen.scss */
+/* line 180, ../../../sass/screen.scss */
 a, a:visited {
   color: #666666;
   text-decoration: none;
 }
-/* line 178, ../../../sass/screen.scss */
+/* line 184, ../../../sass/screen.scss */
 a:hover, a:visited:hover {
   color: black;
   background-color: transparent;
