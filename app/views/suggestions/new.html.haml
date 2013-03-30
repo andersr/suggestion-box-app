@@ -1,6 +1,7 @@
 %h1 Brooklyn Creative League Suggestion Box
 
 = form_for(@suggestion) do |f|
+  # if valid box code, display this, else display box_code form
   - if @suggestion.errors.any?
     #error_explanation
       %h2

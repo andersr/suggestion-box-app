@@ -10,7 +10,9 @@
 #
 
 class SuggestionBox < ActiveRecord::Base
-  attr_accessible :name #, :passcode
+  attr_accessible :name , :passcode
+
+  validates :passcode, :presence => {:message => "Sorry, this doesn't look like the right code :-/"}
   # belongs_to :organization
-  # has_many :suggestions, :as => :suggestable, :dependent => :destroy 
+  has_many :suggestions, :dependent => :destroy 
 end

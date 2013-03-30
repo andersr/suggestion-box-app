@@ -21,20 +21,6 @@ if( window.addEventListener ){
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<%= render 'landing_page/clouds' %>
-  <div class="container">
-    <div class="centered-box">
 	   <%= yield %>
-      <div class="table-row">
-        <div class="table-cell footer-cell">
-          <footer>
-            <nav>
-              <%= mail_to "hello@chirpybox.com", "Contact", :encode => "hex" %> | <%= link_to "Twitter", "https://twitter.com/chirpybox" %> | <%= link_to "Take Our Survey", "#" %> 
-            </nav>
-          </footer>
-        </div> 
-      </div> 
-    </div><!-- #landing-notice centered-box -->
-  </div><!-- .container -->
 </body>
 </html>

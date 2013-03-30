@@ -1,4 +1,7 @@
-<h1>ChirpyBox</h1>
+<%= render 'landing_page/clouds' %>
+  <div class="container">
+    <div class="centered-box">
+      <h1>ChirpyBox</h1>
 <h2>A Social Suggestion Box</h2>
 <p class="margin-bottom">We're still hammering together our first few ChirpyBoxes. Want us to let you know when we're ready to make one for you?</p>
 <div class="display-table">
@@ -21,4 +24,14 @@
 </div><%# .display-table %>
     <% end %>   
   <%# debug(params) if Rails.env.development? %><!-- </div> -->
-</footer>
+      <div class="table-row">
+        <div class="table-cell footer-cell">
+          <footer>
+            <nav>
+              <%= mail_to "hello@chirpybox.com", "Contact", :encode => "hex" %> | <%= link_to "Twitter", "https://twitter.com/chirpybox" %> | <%= link_to "Take Our Survey", "#" %> 
+            </nav>
+          </footer>
+        </div> 
+      </div> 
+    </div><!-- #landing-notice centered-box -->
+  </div><!-- .container -->

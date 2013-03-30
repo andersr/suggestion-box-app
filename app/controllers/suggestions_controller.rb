@@ -24,6 +24,8 @@ class SuggestionsController < ApplicationController
   # GET /suggestions/new
   # GET /suggestions/new.json
   def new
+
+    # if valid box code, render suggestion for, else render box code form
     @suggestion = Suggestion.new
 
     respond_to do |format|
