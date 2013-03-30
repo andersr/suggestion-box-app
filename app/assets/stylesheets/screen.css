@@ -329,34 +329,31 @@ footer {
   color: #666666;
 }
 
-/* line 89, ../../../sass/screen.scss */
-body {
+/* line 93, ../../../sass/screen.scss */
+.landing-page {
   font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
 }
-
-/* line 93, ../../../sass/screen.scss */
-h1 {
+/* line 96, ../../../sass/screen.scss */
+.landing-page h1 {
   font: 4.5em 'Dancing Script', Georgia, Times, serif;
   color: #ff4411;
   margin-bottom: .15em;
 }
-
-/* line 99, ../../../sass/screen.scss */
-h2 {
+/* line 102, ../../../sass/screen.scss */
+.landing-page h2 {
   font-weight: bold;
   color: #666;
   font-size: 1.6em;
   margin-bottom: .25em;
 }
-
-/* line 106, ../../../sass/screen.scss */
-p {
+/* line 109, ../../../sass/screen.scss */
+.landing-page p {
   font-size: 1.35em;
   line-height: 1.3em;
   margin-bottom: .5em;
 }
 
-/* line 120, ../../../sass/screen.scss */
+/* line 123, ../../../sass/screen.scss */
 .signup-text-field {
   font-size: 1em;
   border: 2px solid #98A89E;
@@ -369,7 +366,7 @@ p {
   width: 80%;
 }
 
-/* line 131, ../../../sass/screen.scss */
+/* line 134, ../../../sass/screen.scss */
 .submit-button {
   width: 100%;
   margin-left: 5px;
@@ -394,7 +391,7 @@ p {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FF4411, endColorstr=#D40015);
 }
 
-/* line 154, ../../../sass/screen.scss */
+/* line 157, ../../../sass/screen.scss */
 .submit-button:hover {
   cursor: pointer;
   border: 1px solid #aa2400;
@@ -408,14 +405,14 @@ p {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFDA24, endColorstr=#D40015);
 }
 
-/* line 165, ../../../sass/screen.scss */
+/* line 168, ../../../sass/screen.scss */
 .error {
   color: #ff4411;
   padding-top: 10px;
   font-size: 1.2em;
 }
 
-/* line 174, ../../../sass/screen.scss */
+/* line 177, ../../../sass/screen.scss */
 .error-messages {
   margin-top: .5em;
   clear: both;
@@ -424,21 +421,21 @@ p {
   color: #cc0000;
 }
 
-/* line 182, ../../../sass/screen.scss */
+/* line 185, ../../../sass/screen.scss */
 .field_with_errors {
   display: inline;
 }
-/* line 185, ../../../sass/screen.scss */
+/* line 188, ../../../sass/screen.scss */
 .field_with_errors input {
   border: 2px solid #cc0000;
 }
 
-/* line 191, ../../../sass/screen.scss */
+/* line 194, ../../../sass/screen.scss */
 a, a:visited {
   color: #666666;
   text-decoration: none;
 }
-/* line 195, ../../../sass/screen.scss */
+/* line 198, ../../../sass/screen.scss */
 a:hover, a:visited:hover {
   color: black;
   background-color: transparent;

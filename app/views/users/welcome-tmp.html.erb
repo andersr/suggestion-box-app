@@ -1,0 +1,37 @@
+<%= render 'landing_page/clouds' %>
+  <div class="container">
+    <div class="centered-box">
+      <h1>ChirpyBox</h1>
+<h2>A Social Suggestion Box</h2>
+<p class="margin-bottom">We're still hammering together our first few ChirpyBoxes. Want us to let you know when we're ready to make one for you?</p>
+<div class="display-table">
+  <%= form_for(@user) do |f| %>
+  <div class="table-row">
+    <div class="table-cell table-cell-field">
+      <%= f.text_field :email, placeholder:"your@email.com", type:"email", class:"signup-text-field" %>
+    </div>
+    <div class="table-cell table-cell-submit">
+      <%= f.submit 'Let me know!', class:"submit-button" %>
+    </div>
+  </div><%# .table-row %>
+  <% if notice %>
+  <div class="table-row">
+    <div class="table-cell">
+ <p class="error"><%= notice %></p>
+    </div>
+  </div><%# .table-row %>
+  <% end %><%# form_for %>
+</div><%# .display-table %>
+    <% end %>   
+  <%# debug(params) if Rails.env.development? %><!-- </div> -->
+      <div class="table-row">
+        <div class="table-cell footer-cell">
+          <footer>
+            <nav>
+              <%= mail_to "hello@chirpybox.com", "Contact", :encode => "hex" %> | <%= link_to "Twitter", "https://twitter.com/chirpybox" %> | <%= link_to "Take Our Survey", "#" %> 
+            </nav>
+          </footer>
+        </div> 
+      </div> 
+    </div><!-- #landing-notice centered-box -->
+  </div><!-- .container -->

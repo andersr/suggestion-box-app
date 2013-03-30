@@ -1,0 +1,28 @@
+.landing-page
+  = render 'landing_page/clouds'
+  .container
+    .centered-box
+      %h1
+        ChirpyBox
+      %h2
+        A Social Suggestion Box
+      %p.margin-bottom
+        We're still hammering together our first few ChirpyBoxes. Want us to let you know when we're ready to make one for you?
+      .display-table
+        = form_for(@user) do |f|
+          .table-row
+            .table-cell.table-cell-field
+              = f.text_field :email, placeholder:"your@email.com", type:"email", class:"signup-text-field"
+            .table-cell.table-cell-submit
+              = f.submit 'Let me know!', class:"submit-button"
+          - if notice
+            .table-row
+              .table-cell
+                %p.error = notice
+          .table-row
+            .table-cell.footer-cell
+              %footer
+                %nav
+                  = mail_to "hello@chirpybox.com", "Contact", :encode => "hex"
+                  | #{link_to "Twitter", "https://twitter.com/chirpybox"}
+                  | #{link_to "Take Our Survey", "#"}

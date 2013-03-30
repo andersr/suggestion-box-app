@@ -1,37 +1,28 @@
 %h1 Brooklyn Creative League Suggestion Box
-
 = form_for(@suggestion) do |f|
-  # if valid box code, display this, else display box_code form
   - if @suggestion.errors.any?
     #error_explanation
       %h2
         = pluralize(@suggestion.errors.count, "error")
         prohibited this suggestion from being saved:
-
-  %ul
-    - @suggestion.errors.full_messages.each do |msg|
-      %li= msg
-
+      %ul
+        - @suggestion.errors.full_messages.each do |msg|
+          %li= msg
   .field
     = f.label :message
     %br/
     = f.text_area :message
-
   .field
-    = f.label :member_name, 'Name'
+    = f.label :member_name,'Name'
     %br/
     = f.text_field :member_name
-
   .field
-    = f.label :member_email, 'Email'
+    = f.label :member_email,'Email'
     %br/
-    = f.email_field :member_email
-
+    = f.text_field :member_email
   .field
     = f.check_box :anonymous_suggestion
-    = f.label :anomymous_suggestion, "I'd like to remain anonymous."
+    = f.label :anonymous_suggestion,"I'd like to make this suggestion anonymously"
     %br/
-
   .actions
     = f.submit
-

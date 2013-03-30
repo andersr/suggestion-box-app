@@ -87,29 +87,32 @@ footer {
 // TYPOGRAPHY + COLOR
 // ---------
 body {
+	
+}
+
+.landing-page {
 	font-family:'Josefin Sans', Helvetica, Arial, sans-serif;
+	
+	h1 {
+		font: 4.5em 'Dancing Script', Georgia, Times, serif;
+		color:$ml-orange;
+		margin-bottom:.15em;
+	}
+
+	h2{
+		font-weight:bold;
+		color: #666;
+		font-size:1.6em;
+		margin-bottom:.25em;
+	}
+
+	p {
+	    font-size: 1.35em;
+	    line-height: 1.3em;
+	    margin-bottom: .5em;
+	}
+
 }
-
-h1 {
-	font: 4.5em 'Dancing Script', Georgia, Times, serif;
-	color:$ml-orange;
-	margin-bottom:.15em;
-}
-
-h2{
-	font-weight:bold;
-	color: #666;
-	font-size:1.6em;
-	margin-bottom:.25em;
-}
-
-p {
-    font-size: 1.35em;
-    line-height: 1.3em;
-    margin-bottom: .5em;
-}
-
-
 // FORMS
 
 // change this to display table with each field 100% width within their cell
