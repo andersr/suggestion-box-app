@@ -8,7 +8,7 @@ SuggestionBoxApp::Application.routes.draw do
 
   #match 'users/:id' => 'thanks', :as => "/thanks"
 
-  resources :users  #, :suggestion_boxes, :suggestions
+  resources :users, :suggestions  #, :suggestion_boxes, :suggestions
   #resources :landing_pages, :organizations, :sessions, :members
 
   #get '/bcl/new' => 'suggestions#new'
