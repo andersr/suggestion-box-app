@@ -9,15 +9,6 @@
 <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag "screen", :media => "all" %>
   <%= javascript_include_tag "application" %>
-  <script>
-if( window.addEventListener ){
-    window.addEventListener("load",function() {
-        setTimeout(function(){
-            window.scrollTo(0, 0);
-        }, 0);
-    });
-}
-  </script>
   <%= csrf_meta_tags %>
 </head>
 <body>
