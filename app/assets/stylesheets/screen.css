@@ -310,8 +310,8 @@ body {
 
 /* line 54, ../../../sass/screen.scss */
 .table-cell-field {
-  min-width: 50%;
-  max-width: 80%;
+  min-width: 7.5em;
+  max-width: 100%;
 }
 
 /* line 59, ../../../sass/screen.scss */
@@ -366,12 +366,12 @@ p {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  width: 85%;
+  width: 80%;
 }
 
-/* line 130, ../../../sass/screen.scss */
+/* line 131, ../../../sass/screen.scss */
 .submit-button {
-  width: 7.5em;
+  width: 100%;
   margin-left: 5px;
   border: 1px solid #d82e00;
   -webkit-border-radius: 5px;
@@ -394,7 +394,7 @@ p {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FF4411, endColorstr=#D40015);
 }
 
-/* line 153, ../../../sass/screen.scss */
+/* line 154, ../../../sass/screen.scss */
 .submit-button:hover {
   cursor: pointer;
   border: 1px solid #aa2400;
@@ -408,14 +408,14 @@ p {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFDA24, endColorstr=#D40015);
 }
 
-/* line 164, ../../../sass/screen.scss */
+/* line 165, ../../../sass/screen.scss */
 .error {
   color: #ff4411;
   padding-top: 10px;
   font-size: 1.2em;
 }
 
-/* line 173, ../../../sass/screen.scss */
+/* line 174, ../../../sass/screen.scss */
 .error-messages {
   margin-top: .5em;
   clear: both;
@@ -424,21 +424,21 @@ p {
   color: #cc0000;
 }
 
-/* line 181, ../../../sass/screen.scss */
+/* line 182, ../../../sass/screen.scss */
 .field_with_errors {
   display: inline;
 }
-/* line 184, ../../../sass/screen.scss */
+/* line 185, ../../../sass/screen.scss */
 .field_with_errors input {
   border: 2px solid #cc0000;
 }
 
-/* line 190, ../../../sass/screen.scss */
+/* line 191, ../../../sass/screen.scss */
 a, a:visited {
   color: #666666;
   text-decoration: none;
 }
-/* line 194, ../../../sass/screen.scss */
+/* line 195, ../../../sass/screen.scss */
 a:hover, a:visited:hover {
   color: black;
   background-color: transparent;

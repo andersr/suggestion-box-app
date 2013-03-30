@@ -52,8 +52,8 @@
 }
 
 .table-cell-field {
-	min-width: 50%;
-max-width: 80%;
+	min-width: 7.5em;
+max-width: 100%;
 }
 
 .footer-cell {
@@ -123,13 +123,14 @@ $submit-button-width:7.5em;
 	padding:10px;
 	@include border-radius(5px);
 	//float:left;
-	width:85%;
+	width:80%;
+	//margin-right: 100px;
 	//width:7.5em;
 //	max-width:60em;
 }
 .submit-button {
 	//float:right;
-	width: $submit-button-width;
+	width: 100%;
 	margin-left: 5px;
 	border:1px solid #d82e00;
 	@include border-radius(5px);

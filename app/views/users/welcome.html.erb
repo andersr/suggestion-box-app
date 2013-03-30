@@ -5,7 +5,7 @@
   <%= form_for(@user) do |f| %>
   <div class="table-row">
     <div class="table-cell table-cell-field">
-      <%= f.text_field :email, placeholder:"your@email.com", class:"signup-text-field" %>
+      <%= f.text_field :email, placeholder:"your@email.com", type:"email", class:"signup-text-field" %>
     </div>
     <div class="table-cell table-cell-submit">
       <%= f.submit 'Let me know!', class:"submit-button" %>
