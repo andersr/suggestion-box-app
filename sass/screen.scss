@@ -87,8 +87,10 @@ footer {
 // TYPOGRAPHY + COLOR
 // ---------
 body {
-	font-family:'Josefin Sans', Helvetica, Arial, sans-serif;
+	//font-family:'Josefin Sans', Helvetica, Arial, sans-serif;
 }
+.landing-page {
+	font-family:'Josefin Sans', Helvetica, Arial, sans-serif;
 
 h1 {
 		font: 4.5em 'Dancing Script', Georgia, Times, serif;
@@ -108,6 +110,10 @@ h1 {
 	    line-height: 1.3em;
 	    margin-bottom: .5em;
 	}
+
+}
+
+
 // FORMS
 
 // change this to display table with each field 100% width within their cell
