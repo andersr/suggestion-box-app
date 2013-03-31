@@ -1,4 +1,6 @@
-%h1 Brooklyn Creative League Suggestion Box
+%h1 Brooklyn Creative League
+%h2 Suggestion Box
+%p We'd love to hear any comments, complaints, or ideas you'd like to share with us.
 = form_for(@suggestion) do |f|
   - if @suggestion.errors.any?
     #error_explanation
@@ -9,20 +11,20 @@
         - @suggestion.errors.full_messages.each do |msg|
           %li= msg
   .field
-    = f.label :message
+    -# = f.label :message, "Please post a suggestion"
     %br/
-    = f.text_area :message
+    = f.text_area :message, placeholder:"Please enter your suggestion here."
   .field
-    = f.label :member_name,'Name'
+    -# = f.label :member_name,'Your Name'
     %br/
-    = f.text_field :member_name
+    = f.text_field :member_name, placeholder:"Your Name"
   .field
-    = f.label :member_email,'Email'
+    -# = f.label :member_email,'Your Email'
     %br/
-    = f.text_field :member_email
+    = f.text_field :member_email, placeholder:"Your Email"
   .field
     = f.check_box :anonymous_suggestion
     = f.label :anonymous_suggestion,"I'd like to make this suggestion anonymously"
     %br/
   .actions
-    = f.submit
+    = f.submit "Post Suggestion"

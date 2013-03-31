@@ -273,88 +273,105 @@ body {
 }
 
 /* line 21, ../../../sass/screen.scss */
-.container {
-  width: 100%;
+.inline {
+  margin-top: 15px;
 }
-/* line 25, ../../../sass/screen.scss */
-.container .centered-box {
-  position: absolute;
-  top: 1em;
-  left: 1.5em;
-  right: 1.5em;
-  bottom: 1.5em;
+/* line 24, ../../../sass/screen.scss */
+.inline li {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: smaller;
+  padding-right: 10px;
+  border-right: 1px solid #999999;
+}
+/* line 31, ../../../sass/screen.scss */
+.inline li:first-child {
+  margin-left: 0;
+}
+/* line 34, ../../../sass/screen.scss */
+.inline li:last-child {
+  border-right: none;
 }
 
-/* line 37, ../../../sass/screen.scss */
+/* line 43, ../../../sass/screen.scss */
 .display-table {
   display: table;
   border-collapse: collapse;
   width: 100%;
 }
 
-/* line 42, ../../../sass/screen.scss */
+/* line 48, ../../../sass/screen.scss */
 .table-row {
   display: table-row;
 }
 
-/* line 46, ../../../sass/screen.scss */
+/* line 52, ../../../sass/screen.scss */
 .table-cell {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 50, ../../../sass/screen.scss */
+/* line 56, ../../../sass/screen.scss */
 .table-cell-submit {
   width: 7.5em;
 }
 
-/* line 54, ../../../sass/screen.scss */
+/* line 60, ../../../sass/screen.scss */
 .table-cell-field {
   min-width: 7.5em;
   max-width: 100%;
 }
 
-/* line 59, ../../../sass/screen.scss */
-.footer-cell {
+/* line 70, ../../../sass/screen.scss */
+.landing-page {
+  font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+}
+/* line 73, ../../../sass/screen.scss */
+.landing-page .container {
+  width: 100%;
+}
+/* line 76, ../../../sass/screen.scss */
+.landing-page .container .centered-box {
+  position: absolute;
+  top: 1em;
+  left: 1.5em;
+  right: 1.5em;
+  bottom: 1.5em;
+}
+/* line 85, ../../../sass/screen.scss */
+.landing-page .footer-cell {
   border-spacing: 10px;
   font-size: .9em;
   vertical-align: middle;
   height: 50px;
 }
-
-/* line 66, ../../../sass/screen.scss */
-footer {
+/* line 92, ../../../sass/screen.scss */
+.landing-page footer {
   margin-top: 0px;
   font-size: 1.2em;
   color: #666666;
 }
-
-/* line 92, ../../../sass/screen.scss */
-.landing-page {
-  font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
-}
-/* line 95, ../../../sass/screen.scss */
+/* line 99, ../../../sass/screen.scss */
 .landing-page h1 {
   font: 4.5em 'Dancing Script', Georgia, Times, serif;
   color: #ff4411;
   margin-bottom: .15em;
 }
-/* line 101, ../../../sass/screen.scss */
+/* line 105, ../../../sass/screen.scss */
 .landing-page h2 {
   font-weight: bold;
   color: #666;
   font-size: 1.6em;
   margin-bottom: .25em;
 }
-/* line 108, ../../../sass/screen.scss */
+/* line 112, ../../../sass/screen.scss */
 .landing-page p {
   font-size: 1.35em;
   line-height: 1.3em;
   margin-bottom: .5em;
 }
-
-/* line 124, ../../../sass/screen.scss */
-.signup-text-field {
+/* line 120, ../../../sass/screen.scss */
+.landing-page .signup-text-field {
   font-size: 1em;
   border: 2px solid #98A89E;
   padding: 10px;
@@ -365,9 +382,8 @@ footer {
   border-radius: 5px;
   width: 80%;
 }
-
-/* line 135, ../../../sass/screen.scss */
-.submit-button {
+/* line 127, ../../../sass/screen.scss */
+.landing-page .submit-button {
   width: 100%;
   margin-left: 5px;
   border: 1px solid #d82e00;
@@ -390,9 +406,8 @@ footer {
   background-image: linear-gradient(top, #ff4411, #d40015);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FF4411, endColorstr=#D40015);
 }
-
-/* line 158, ../../../sass/screen.scss */
-.submit-button:hover {
+/* line 149, ../../../sass/screen.scss */
+.landing-page .submit-button:hover {
   cursor: pointer;
   border: 1px solid #aa2400;
   background-color: #FFDA24;
@@ -404,60 +419,35 @@ footer {
   background-image: linear-gradient(top, #ffda24, #d40015);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFDA24, endColorstr=#D40015);
 }
-
-/* line 169, ../../../sass/screen.scss */
-.error {
+/* line 160, ../../../sass/screen.scss */
+.landing-page .error {
   color: #ff4411;
   padding-top: 10px;
   font-size: 1.2em;
 }
-
-/* line 178, ../../../sass/screen.scss */
-.error-messages {
+/* line 166, ../../../sass/screen.scss */
+.landing-page .error-messages {
   margin-top: .5em;
   clear: both;
   font-size: 1em;
   font-weight: bold;
   color: #cc0000;
 }
-
-/* line 186, ../../../sass/screen.scss */
-.field_with_errors {
+/* line 174, ../../../sass/screen.scss */
+.landing-page .field_with_errors {
   display: inline;
 }
-/* line 189, ../../../sass/screen.scss */
-.field_with_errors input {
+/* line 177, ../../../sass/screen.scss */
+.landing-page .field_with_errors input {
   border: 2px solid #cc0000;
 }
-
-/* line 195, ../../../sass/screen.scss */
-a, a:visited {
+/* line 182, ../../../sass/screen.scss */
+.landing-page a, .landing-page a:visited {
   color: #666666;
   text-decoration: none;
 }
-/* line 199, ../../../sass/screen.scss */
-a:hover, a:visited:hover {
+/* line 186, ../../../sass/screen.scss */
+.landing-page a:hover, .landing-page a:visited:hover {
   color: black;
   background-color: transparent;
-}
-
-/* line 209, ../../../sass/screen.scss */
-.inline {
-  margin-top: 15px;
-}
-/* line 212, ../../../sass/screen.scss */
-.inline li {
-  display: inline-block;
-  margin-left: 4px;
-  font-size: smaller;
-  padding-right: 10px;
-  border-right: 1px solid #999999;
-}
-/* line 219, ../../../sass/screen.scss */
-.inline li:first-child {
-  margin-left: 0;
-}
-/* line 222, ../../../sass/screen.scss */
-.inline li:last-child {
-  border-right: none;
 }
