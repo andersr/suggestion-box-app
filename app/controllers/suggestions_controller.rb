@@ -1,4 +1,6 @@
 class SuggestionsController < ApplicationController
+
+  before_filter :authenticate
   # GET /suggestions
   # GET /suggestions.json
   def index
