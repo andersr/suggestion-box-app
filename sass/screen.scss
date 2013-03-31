@@ -13,6 +13,76 @@
 @import "colors";
 @import "clouds";
 @import "dev";
+@import "compass/utilities/text/replacement";
+
+header {
+	padding:.5em;
+	background-color: #eee;
+	position: relative;
+	height: 65px;
+
+	img.logo {
+		position: absolute;
+		left:10px;
+		top:15px;
+		float: left;
+		width: 60px;
+	}
+	h1.title {
+		float: left;
+		clear: right;
+		margin-left: 76px;
+		padding-top: 20px;
+		//position: absolute;
+		//top:25px;
+		//left: 20px;
+	}
+}
+
+.main {
+	padding:.5em;
+}
+
+
+body {
+	  font-family: 'Crimson Text', Georgia, Times, serif;
+    font-size:100%;
+    //line-height:1.125em;
+}
+
+h1 {
+    font-family: 'Allerta', Helvetica, Arial, sans-serif;
+    font-size: 1.4em;
+    //float: left;
+    //margin-left: 80px;
+//    display: inline;
+    //line-height: 55px;
+}
+
+h2 {
+    font-family: 'Crimson Text', Georgia, Times, serif;
+    font-size: 1.2em;
+    //float: left;
+    //margin-left: 80px;
+//    display: inline;
+    //line-height: 55px;
+}
+ 
+p {
+  
+    font-size: 1.3em;
+    //line-height: 25px;
+}
+
+textarea {
+	font-size: 16px;
+}
+.help-text {
+	margin-top: 5px;
+	font-size: smaller;
+	font-style: italic;
+}
+
 
 
 // LISTS
@@ -178,7 +248,7 @@ max-width: 100%;
 			border: 2px solid #cc0000;
 		}
 	}
-	
+
 	a, a:visited {
 		color:#666666;
 		text-decoration:none;
