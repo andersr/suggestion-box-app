@@ -98,7 +98,7 @@ h1 {
 		margin-bottom:.15em;
 	}
 
-	h2{
+	h2 {
 		font-weight:bold;
 		color: #666;
 		font-size:1.6em;
@@ -203,6 +203,27 @@ a, a:visited {
 }
 
 
+// LISTS
+// ------------------------------
+
+.inline {
+	margin-top: 15px;
+
+	li {
+		display: inline-block;
+		margin-left: 4px;
+		font-size: smaller;
+		padding-right: 10px;
+		border-right: 1px solid #999999;
+		
+		&:first-child{
+			margin-left:0;
+		}
+		&:last-child{
+			border-right:none;
+		}
+	}
+}
 
 
 

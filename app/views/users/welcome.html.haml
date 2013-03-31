@@ -19,10 +19,12 @@
             .table-row
               .table-cell
                 %p.error = notice
-          .table-row
-            .table-cell.footer-cell
-              %footer
-                %nav
-                  = mail_to "hello@chirpybox.com", "Contact", :encode => "hex"
-                  | #{link_to "Twitter", "https://twitter.com/chirpybox"}
-                  | #{link_to "Take Our Survey", "#"}
+          -#.table-row
+            -#.table-cell.footer-cell
+      %footer
+        %nav
+          %ul.inline
+            %li
+              = mail_to "hello@chirpybox.com", "Contact", :encode => "hex"
+            %li #{link_to "Twitter", "https://twitter.com/chirpybox"}
+            %li #{link_to "Take Our Survey", "#"}

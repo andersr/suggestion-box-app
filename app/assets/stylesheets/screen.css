@@ -440,3 +440,24 @@ a:hover, a:visited:hover {
   color: black;
   background-color: transparent;
 }
+
+/* line 209, ../../../sass/screen.scss */
+.inline {
+  margin-top: 15px;
+}
+/* line 212, ../../../sass/screen.scss */
+.inline li {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: smaller;
+  padding-right: 10px;
+  border-right: 1px solid #999999;
+}
+/* line 219, ../../../sass/screen.scss */
+.inline li:first-child {
+  margin-left: 0;
+}
+/* line 222, ../../../sass/screen.scss */
+.inline li:last-child {
+  border-right: none;
+}
