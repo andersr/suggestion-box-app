@@ -13,7 +13,7 @@
 @import "colors";
 @import "clouds";
 @import "dev";
-@import "compass/utilities/text/replacement";
+@import "compass/typography/text/replacement";
 
 header {
 	padding:.5em;
@@ -36,6 +36,13 @@ header {
 		//position: absolute;
 		//top:25px;
 		//left: 20px;
+	}
+
+	.notice {
+		display: block;
+		height: 50px;
+		background-color:#ffff99;
+		color: #000;
 	}
 }
 
@@ -74,8 +81,8 @@ p {
     //line-height: 25px;
 }
 
-textarea {
-	font-size: 16px;
+textarea, input {
+	font-size: 16px; 
 }
 .help-text {
 	margin-top: 5px;

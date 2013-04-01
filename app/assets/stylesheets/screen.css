@@ -294,52 +294,59 @@ header h1.title {
   margin-left: 76px;
   padding-top: 20px;
 }
+/* line 41, ../../../sass/screen.scss */
+header .notice {
+  display: block;
+  height: 50px;
+  background-color: #ffff99;
+  color: #000;
+}
 
-/* line 42, ../../../sass/screen.scss */
+/* line 49, ../../../sass/screen.scss */
 .main {
   padding: .5em;
 }
 
-/* line 47, ../../../sass/screen.scss */
+/* line 54, ../../../sass/screen.scss */
 body {
   font-family: 'Crimson Text', Georgia, Times, serif;
   font-size: 100%;
 }
 
-/* line 53, ../../../sass/screen.scss */
+/* line 60, ../../../sass/screen.scss */
 h1 {
   font-family: 'Allerta', Helvetica, Arial, sans-serif;
   font-size: 1.4em;
 }
 
-/* line 62, ../../../sass/screen.scss */
+/* line 69, ../../../sass/screen.scss */
 h2 {
   font-family: 'Crimson Text', Georgia, Times, serif;
   font-size: 1.2em;
 }
 
-/* line 71, ../../../sass/screen.scss */
+/* line 78, ../../../sass/screen.scss */
 p {
   font-size: 1.3em;
 }
 
-/* line 77, ../../../sass/screen.scss */
-textarea {
+/* line 84, ../../../sass/screen.scss */
+textarea, input {
   font-size: 16px;
 }
 
-/* line 80, ../../../sass/screen.scss */
+/* line 87, ../../../sass/screen.scss */
 .help-text {
   margin-top: 5px;
   font-size: smaller;
   font-style: italic;
 }
 
-/* line 91, ../../../sass/screen.scss */
+/* line 98, ../../../sass/screen.scss */
 .inline {
   margin-top: 15px;
 }
-/* line 94, ../../../sass/screen.scss */
+/* line 101, ../../../sass/screen.scss */
 .inline li {
   display: inline-block;
   margin-left: 4px;
@@ -347,53 +354,53 @@ textarea {
   padding-right: 10px;
   border-right: 1px solid #999999;
 }
-/* line 101, ../../../sass/screen.scss */
+/* line 108, ../../../sass/screen.scss */
 .inline li:first-child {
   margin-left: 0;
 }
-/* line 104, ../../../sass/screen.scss */
+/* line 111, ../../../sass/screen.scss */
 .inline li:last-child {
   border-right: none;
 }
 
-/* line 113, ../../../sass/screen.scss */
+/* line 120, ../../../sass/screen.scss */
 .display-table {
   display: table;
   border-collapse: collapse;
   width: 100%;
 }
 
-/* line 118, ../../../sass/screen.scss */
+/* line 125, ../../../sass/screen.scss */
 .table-row {
   display: table-row;
 }
 
-/* line 122, ../../../sass/screen.scss */
+/* line 129, ../../../sass/screen.scss */
 .table-cell {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 126, ../../../sass/screen.scss */
+/* line 133, ../../../sass/screen.scss */
 .table-cell-submit {
   width: 7.5em;
 }
 
-/* line 130, ../../../sass/screen.scss */
+/* line 137, ../../../sass/screen.scss */
 .table-cell-field {
   min-width: 7.5em;
   max-width: 100%;
 }
 
-/* line 140, ../../../sass/screen.scss */
+/* line 147, ../../../sass/screen.scss */
 .landing-page {
   font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
 }
-/* line 143, ../../../sass/screen.scss */
+/* line 150, ../../../sass/screen.scss */
 .landing-page .container {
   width: 100%;
 }
-/* line 146, ../../../sass/screen.scss */
+/* line 153, ../../../sass/screen.scss */
 .landing-page .container .centered-box {
   position: absolute;
   top: 1em;
@@ -401,39 +408,39 @@ textarea {
   right: 1.5em;
   bottom: 1.5em;
 }
-/* line 155, ../../../sass/screen.scss */
+/* line 162, ../../../sass/screen.scss */
 .landing-page .footer-cell {
   border-spacing: 10px;
   font-size: .9em;
   vertical-align: middle;
   height: 50px;
 }
-/* line 162, ../../../sass/screen.scss */
+/* line 169, ../../../sass/screen.scss */
 .landing-page footer {
   margin-top: 0px;
   font-size: 1.2em;
   color: #666666;
 }
-/* line 169, ../../../sass/screen.scss */
+/* line 176, ../../../sass/screen.scss */
 .landing-page h1 {
   font: 4.5em 'Dancing Script', Georgia, Times, serif;
   color: #ff4411;
   margin-bottom: .15em;
 }
-/* line 175, ../../../sass/screen.scss */
+/* line 182, ../../../sass/screen.scss */
 .landing-page h2 {
   font-weight: bold;
   color: #666;
   font-size: 1.6em;
   margin-bottom: .25em;
 }
-/* line 182, ../../../sass/screen.scss */
+/* line 189, ../../../sass/screen.scss */
 .landing-page p {
   font-size: 1.35em;
   line-height: 1.3em;
   margin-bottom: .5em;
 }
-/* line 190, ../../../sass/screen.scss */
+/* line 197, ../../../sass/screen.scss */
 .landing-page .signup-text-field {
   font-size: 1em;
   border: 2px solid #98A89E;
@@ -445,7 +452,7 @@ textarea {
   border-radius: 5px;
   width: 80%;
 }
-/* line 197, ../../../sass/screen.scss */
+/* line 204, ../../../sass/screen.scss */
 .landing-page .submit-button {
   width: 100%;
   margin-left: 5px;
@@ -469,7 +476,7 @@ textarea {
   background-image: linear-gradient(top, #ff4411, #d40015);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FF4411, endColorstr=#D40015);
 }
-/* line 219, ../../../sass/screen.scss */
+/* line 226, ../../../sass/screen.scss */
 .landing-page .submit-button:hover {
   cursor: pointer;
   border: 1px solid #aa2400;
@@ -482,13 +489,13 @@ textarea {
   background-image: linear-gradient(top, #ffda24, #d40015);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFDA24, endColorstr=#D40015);
 }
-/* line 230, ../../../sass/screen.scss */
+/* line 237, ../../../sass/screen.scss */
 .landing-page .error {
   color: #ff4411;
   padding-top: 10px;
   font-size: 1.2em;
 }
-/* line 236, ../../../sass/screen.scss */
+/* line 243, ../../../sass/screen.scss */
 .landing-page .error-messages {
   margin-top: .5em;
   clear: both;
@@ -496,20 +503,20 @@ textarea {
   font-weight: bold;
   color: #cc0000;
 }
-/* line 244, ../../../sass/screen.scss */
+/* line 251, ../../../sass/screen.scss */
 .landing-page .field_with_errors {
   display: inline;
 }
-/* line 247, ../../../sass/screen.scss */
+/* line 254, ../../../sass/screen.scss */
 .landing-page .field_with_errors input {
   border: 2px solid #cc0000;
 }
-/* line 252, ../../../sass/screen.scss */
+/* line 259, ../../../sass/screen.scss */
 .landing-page a, .landing-page a:visited {
   color: #666666;
   text-decoration: none;
 }
-/* line 256, ../../../sass/screen.scss */
+/* line 263, ../../../sass/screen.scss */
 .landing-page a:hover, .landing-page a:visited:hover {
   color: black;
   background-color: transparent;

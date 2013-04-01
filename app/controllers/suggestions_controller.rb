@@ -1,19 +1,15 @@
 class SuggestionsController < ApplicationController
-
   before_filter :authenticate
-  # GET /suggestions
-  # GET /suggestions.json
+
   def index
     @suggestions = Suggestion.all
-
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @suggestions }
     end
   end
 
-  # GET /suggestions/1
-  # GET /suggestions/1.json
   def show
     @suggestion = Suggestion.find(params[:id])
 
@@ -23,11 +19,8 @@ class SuggestionsController < ApplicationController
     end
   end
 
-  # GET /suggestions/new
-  # GET /suggestions/new.json
   def new
 
-    # if valid box code, render suggestion for, else render box code form
     @suggestion = Suggestion.new
 
     respond_to do |format|
@@ -36,20 +29,17 @@ class SuggestionsController < ApplicationController
     end
   end
 
-  # GET /suggestions/1/edit
   def edit
     @suggestion = Suggestion.find(params[:id])
   end
 
-  # POST /suggestions
-  # POST /suggestions.json
   def create
     @suggestion = Suggestion.new(params[:suggestion])
 
     respond_to do |format|
       if @suggestion.save
-        format.html { redirect_to @suggestion, notice: 'Suggestion was successfully created.' }
-        format.json { render json: @suggestion, status: :created, location: @suggestion }
+        format.html { render action: "new", notice: 'Thanks for your feedback!' }
+        format.json { render json: @suggestion, status: :created }
       else
         format.html { render action: "new" }
         format.json { render json: @suggestion.errors, status: :unprocessable_entity }
@@ -57,8 +47,7 @@ class SuggestionsController < ApplicationController
     end
   end
 
-  # PUT /suggestions/1
-  # PUT /suggestions/1.json
+
   def update
     @suggestion = Suggestion.find(params[:id])
 
@@ -73,8 +62,6 @@ class SuggestionsController < ApplicationController
     end
   end
 
-  # DELETE /suggestions/1
-  # DELETE /suggestions/1.json
   def destroy
     @suggestion = Suggestion.find(params[:id])
     @suggestion.destroy
@@ -84,4 +71,5 @@ class SuggestionsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 end
