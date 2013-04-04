@@ -13,13 +13,23 @@ class UsersController < ApplicationController
 
 		respond_to do |format|
 			if @user.save
+				flash[:notice] = "we just created something"
 				format.html { redirect_to @user, notice: 'User was successfully registered.' }
-				format.json { render json: @user, status: :created, location: @user }
+				format.json { render json: @user, status: :created, location: @user.new }
 			else
-				format.html { redirect_to root_path, notice: "Sorry, there was a problem with your email address.  Please try again." }
-				format.json { render json: @user.errors, status: :unprocessable_entity }
+				flash[:notice] = "something went wrong"
 			end
 		end
+
+		# respond_to do |format|
+		# 	if @user.save
+		# 		format.html { redirect_to @user, notice: 'User was successfully registered.' }
+		# 		format.json { render json: @user, status: :created, location: @user }
+		# 	else
+		# 		format.html { redirect_to root_path, notice: "Sorry, there was a problem with your email address.  Please try again." }
+		# 		format.json { render json: @user.errors, status: :unprocessable_entity }
+		# 	end
+		# end
 	end
 
 # when user clicks submit, this method gets called

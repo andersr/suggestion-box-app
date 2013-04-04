@@ -20,6 +20,7 @@ class SuggestionsController < ApplicationController
   end
 
   def new
+    @time = Time.now
 
     @suggestion = Suggestion.new
 
