@@ -35,12 +35,12 @@ class SuggestionsController < ApplicationController
   end
 
   def create
-    @suggestion = Suggestion.new(params[:suggestion])
+    @suggestion = Suggestion.new(params[:organization])
 
     respond_to do |format|
       if @suggestion.save
-        format.html { render action: "new", notice: 'Thanks for your feedback!' }
-        format.json { render json: @suggestion, status: :created }
+        format.html { redirect_to @suggestion, notice: 'Suggestion was successfully submitted.' }
+        format.json { render json: @suggestion, status: :created, location: @suggestion }
       else
         format.html { render action: "new" }
         format.json { render json: @suggestion.errors, status: :unprocessable_entity }

@@ -12,7 +12,10 @@
 #
 
 class Suggestion < ActiveRecord::Base
-  attr_accessible :message, :member_name, :member_email, :anonymous_suggestion
+  attr_accessible :suggestion_message, :member_name, :member_email, :anonymous_suggestion
+
+  validates :suggestion_message, :presence => {:message => "Please enter a suggestion."}
+
   # belongs_to :suggestable, :polymorphic => true
   # accepts_nested_attributes_for :members
 end

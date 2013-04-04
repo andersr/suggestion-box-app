@@ -2,28 +2,25 @@
   = image_tag("/assets/bcl/bcl-logo.png", :size => "50x50", :alt => "Brooklyn Creative League", class:"logo")
   %h1.title BCL Suggestion Box
 .main
-  %p.help-text We'd love to hear your comments, complaints, or ideas!
-  %p
-    = @time
+  -# %p.help-text We'd love to hear your comments, complaints, or ideas!
   = form_for(@suggestion) do |f|
     - if @suggestion.errors.any?
       #error_explanation
-        %h2
-          = pluralize(@suggestion.errors.count, "error")
-          prohibited this suggestion from being saved:
         %ul
-          - @suggestion.errors.full_messages.each do |msg|
-            %li= msg
+          - @suggestion.errors.messages.values.each do |msg|
+            = msg.to_sentence
+    - if @suggestion.errors.any?
+      .field.error
+        %br/
+        = f.text_area :suggestion_message, type:"text", placeholder:"Drop a note in our suggestion box...", :rows => 6, :cols => 30
+    - else
+      .field
+        %br/
+        = f.text_area :suggestion_message, type:"text", placeholder:"Drop a note in our suggestion box...", :rows => 6, :cols => 30
     .field
-      -# = f.label :message, "Please post a suggestion"
-      %br/
-      = f.text_area :message, type:"text", placeholder:"Drop a note in our suggestion box...", :rows => 6, :cols => 30
-    .field
-      -# = f.label :member_name,'Your Name'
       %br/
       = f.text_field :member_name, placeholder:"Your Name"
     .field
-      -# = f.label :member_email,'Your Email'
       %br/
       = f.text_field :member_email, placeholder:"Your Email"
     .field

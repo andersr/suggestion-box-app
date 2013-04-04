@@ -81,6 +81,10 @@ p {
     //line-height: 25px;
 }
 
+
+// FORMS
+// ------------------------------
+
 textarea, input {
 	font-size: 16px; 
 }
@@ -88,6 +92,12 @@ textarea, input {
 	margin-top: 5px;
 	font-size: smaller;
 	font-style: italic;
+}
+.error {
+	textarea {
+		border: 2px solid red;
+	}
+
 }
 
 
