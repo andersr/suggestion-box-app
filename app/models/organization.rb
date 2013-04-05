@@ -9,9 +9,8 @@
 #
 
 class Organization < ActiveRecord::Base
- attr_accessible :name
- # has_many :suggestion_boxes, :dependent => :destroy
- # has_many :members
- # has_one :session #org passcodes
+ attr_accessible :name, :short_name
+
+ has_many :suggestions, :dependent => :destroy
 
 end

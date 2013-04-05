@@ -9,14 +9,9 @@
         %ul
           - @suggestion.errors.messages.values.each do |msg|
             = msg.to_sentence
-    - if @suggestion.errors.any?
-      .field.error
-        %br/
-        = f.text_area :suggestion_message, type:"text", placeholder:"Drop a note in our suggestion box...", :rows => 6, :cols => 30
-    - else
-      .field
-        %br/
-        = f.text_area :suggestion_message, type:"text", placeholder:"Drop a note in our suggestion box...", :rows => 6, :cols => 30
+    .field
+      %br/
+      = f.text_area :suggestion_message, type:"text", placeholder:"Drop a note in our suggestion box...", :rows => 6, :cols => 30
     .field
       %br/
       = f.text_field :member_name, placeholder:"Your Name"

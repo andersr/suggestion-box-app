@@ -16,6 +16,7 @@ class Suggestion < ActiveRecord::Base
 
   validates :suggestion_message, :presence => {:message => "Please enter a suggestion."}
 
-  # belongs_to :suggestable, :polymorphic => true
+  belongs_to :organization
+
   # accepts_nested_attributes_for :members
 end

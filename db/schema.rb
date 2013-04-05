@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130404152202) do
+ActiveRecord::Schema.define(:version => 20130404184128) do
 
   create_table "landing_pages", :force => true do |t|
     t.string   "invite_email"
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20130404152202) do
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "short_name"
   end
 
   create_table "sessions", :force => true do |t|
