@@ -21,6 +21,8 @@ class SuggestionsController < ApplicationController
 
 
   def new
+
+    # @org_shortname
     @suggestion = Suggestion.new
 
     respond_to do |format|

@@ -13,10 +13,10 @@ Scenario: Enter suggestion box passcode
 	Given I am viewing the suggestion box passcode form 
 	When I enter a valid passcode
 	Then The corresponding suggestion box form should be displayed
-	
-Scenario: Enter suggestion box passcode
-	Given I am viewing the suggestion box passcode form 
-	When I enter a valid passcode
+
+Scenario: Fill out suggestion box form
+	Given I am viewing the suggestion form 
+	When When I enter suggestion information abnd
 	Then The corresponding suggestion box form should be displayed
 
 Scenario: post suggestion with no message

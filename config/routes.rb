@@ -1,19 +1,22 @@
 SuggestionBoxApp::Application.routes.draw do
 
+  resources :invites
+
   #get "landing_page/new"
 
   # get "landing_page/create"
 
-  root to: 'users#welcome'
+  root to: 'invites#new'
 
   #match '/bcl' => 'suggestions#new', :as => "/bcl"
-
 
   #match '/users/:id' => 'users#thanks', :as => '/thanks'
 
   #match 'users/:id' => 'thanks', :as => "/thanks"
 
-  resources :users, :suggestions, :suggestion_boxes
+  resources :suggestions 
+  #:users,:organizations, :suggestion_boxes
+
   #resources :landing_pages, :organizations, :sessions, :members
 
   #get '/bcl/new' => 'suggestions#new'

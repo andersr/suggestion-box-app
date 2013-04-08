@@ -1,0 +1,15 @@
+= render 'landing_page/clouds'
+.landing-page
+	.container
+		.centered-box
+			%h1
+				ChirpyBox
+			%h2
+				A Social Suggestion Box
+			%p.margin-bottom
+				We're still hammering together our first few ChirpyBoxes. Want us to let you know when we're ready to make one for you?
+			.display-table
+			= form_for(@landing_page) do |f|
+				= fields_for :users do |u|
+					= u.text_field :email, placeholder:"your@email.com", type:"email"
+      

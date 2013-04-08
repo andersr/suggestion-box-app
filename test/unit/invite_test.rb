@@ -1,16 +1,16 @@
 # == Schema Information
 #
-# Table name: landing_pages
+# Table name: invites
 #
 #  id         :integer          not null, primary key
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  user_id    :integer
+#  email      :string(255)
 #
 
 require 'test_helper'
 
-class LandingPageTest < ActiveSupport::TestCase
+class InviteTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

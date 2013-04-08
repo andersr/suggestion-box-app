@@ -2,7 +2,6 @@
   = image_tag("/assets/bcl/bcl-logo.png", :size => "50x50", :alt => "Brooklyn Creative League", class:"logo")
   %h1.title BCL Suggestion Box
 .main
-  -# %p.help-text We'd love to hear your comments, complaints, or ideas!
   = form_for(@suggestion) do |f|
     - if @suggestion.errors.any?
       #error_explanation

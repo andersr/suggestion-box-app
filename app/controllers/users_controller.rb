@@ -3,9 +3,9 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 
-	def welcome
-		@user = User.new
-	end
+	# def welcome
+	# 	@user = User.new
+	# end
 
 
 	def create
