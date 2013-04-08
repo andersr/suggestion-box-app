@@ -1,12 +1,24 @@
 SuggestionBoxApp::Application.routes.draw do
-
+  root to: 'invites#new'
   resources :invites
+  
+  #landing page
+
+
+  #landing page confirmation
+  #get '/thanks', :to => 'invites#show', :as => :invite_thanks
+
+  #post 'invites#show', :as => '/thanks'
+
+ 
+
+  #resources :suggestions
 
   #get "landing_page/new"
 
   # get "landing_page/create"
 
-  root to: 'invites#new'
+
 
   #match '/bcl' => 'suggestions#new', :as => "/bcl"
 
@@ -14,7 +26,7 @@ SuggestionBoxApp::Application.routes.draw do
 
   #match 'users/:id' => 'thanks', :as => "/thanks"
 
-  resources :suggestions 
+ 
   #:users,:organizations, :suggestion_boxes
 
   #resources :landing_pages, :organizations, :sessions, :members

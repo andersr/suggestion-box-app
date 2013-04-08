@@ -44,7 +44,7 @@ class InvitesController < ApplicationController
 
     respond_to do |format|
       if @invite.save
-        format.html { redirect_to @invite, notice: 'Invite was successfully created.' }
+        format.html { redirect_to @invite }
         format.json { render json: @invite, status: :created, location: @invite }
       else
         format.html { render action: "new" }
