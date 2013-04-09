@@ -2,7 +2,7 @@ class SuggestionsController < ApplicationController
   before_filter :authenticate
 
   def index
-    @suggstions = Suggestion.all
+    @suggestions = Suggestion.all
 
     respond_to do |format|
       format.html

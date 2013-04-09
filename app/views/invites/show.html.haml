@@ -5,3 +5,10 @@
 			%h1 Thanks!
 			%p.margin-bottom
 				We've added "#{@invite.email}" to the ChirpyBox mailing list. We'll be in touch!
+			%footer
+				%nav
+					%ul.inline
+						%li
+							= mail_to "hello@chirpybox.com", "Contact", :encode => "hex"
+						%li #{link_to "Twitter", "https://twitter.com/chirpybox"}
+						%li #{link_to "Take Our Survey", "#"}
