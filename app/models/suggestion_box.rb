@@ -14,5 +14,5 @@ class SuggestionBox < ActiveRecord::Base
 
   validates :passcode, :presence => {:message => "Sorry, this doesn't look like the right code :-/"}
   # belongs_to :organization
-  has_many :suggestions, :dependent => :destroy 
+  #has_many :suggestions, :dependent => :destroy 
 end
