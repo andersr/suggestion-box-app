@@ -319,39 +319,39 @@ h1 {
   font-size: 1.4em;
 }
 
-/* line 69, ../../../sass/screen.scss */
+/* line 65, ../../../sass/screen.scss */
 h2 {
   font-family: 'Crimson Text', Georgia, Times, serif;
   font-size: 1.2em;
 }
 
-/* line 78, ../../../sass/screen.scss */
+/* line 70, ../../../sass/screen.scss */
 p {
   font-size: 1.3em;
 }
 
-/* line 88, ../../../sass/screen.scss */
+/* line 78, ../../../sass/screen.scss */
 textarea, input {
   font-size: 16px;
 }
 
-/* line 91, ../../../sass/screen.scss */
+/* line 81, ../../../sass/screen.scss */
 .help-text {
   margin-top: 5px;
   font-size: smaller;
   font-style: italic;
 }
 
-/* line 97, ../../../sass/screen.scss */
+/* line 87, ../../../sass/screen.scss */
 .error textarea {
   border: 2px solid red;
 }
 
-/* line 108, ../../../sass/screen.scss */
+/* line 95, ../../../sass/screen.scss */
 .inline {
   margin-top: 15px;
 }
-/* line 111, ../../../sass/screen.scss */
+/* line 98, ../../../sass/screen.scss */
 .inline li {
   display: inline-block;
   margin-left: 4px;
@@ -359,80 +359,77 @@ textarea, input {
   padding-right: 10px;
   border-right: 1px solid #999999;
 }
-/* line 118, ../../../sass/screen.scss */
+/* line 105, ../../../sass/screen.scss */
 .inline li:first-child {
   margin-left: 0;
 }
-/* line 121, ../../../sass/screen.scss */
+/* line 108, ../../../sass/screen.scss */
 .inline li:last-child {
   border-right: none;
 }
 
-/* line 130, ../../../sass/screen.scss */
+/* line 117, ../../../sass/screen.scss */
 .display-table {
   display: table;
   border-collapse: collapse;
   width: 100%;
 }
 
-/* line 135, ../../../sass/screen.scss */
+/* line 122, ../../../sass/screen.scss */
 .table-row {
   display: table-row;
 }
 
-/* line 139, ../../../sass/screen.scss */
+/* line 125, ../../../sass/screen.scss */
 .table-cell {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 143, ../../../sass/screen.scss */
+/* line 129, ../../../sass/screen.scss */
 .table-cell-submit {
   width: 7.5em;
 }
 
-/* line 147, ../../../sass/screen.scss */
+/* line 133, ../../../sass/screen.scss */
 .table-cell-field {
   min-width: 7.5em;
   max-width: 100%;
 }
 
-/* line 157, ../../../sass/screen.scss */
+/* line 143, ../../../sass/screen.scss */
 .landing-page {
   font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
-}
-/* line 160, ../../../sass/screen.scss */
-.landing-page .container {
-  width: 100%;
-}
-/* line 163, ../../../sass/screen.scss */
-.landing-page .container .centered-box {
   position: absolute;
   top: 1em;
   left: 1.5em;
   right: 1.5em;
   bottom: 1.5em;
 }
-/* line 172, ../../../sass/screen.scss */
-.landing-page .footer-cell {
+/* line 151, ../../../sass/screen.scss */
+.landing-page .container {
+  width: 100%;
+}
+/* line 154, ../../../sass/screen.scss */
+.landing-page .container .footer-cell {
   border-spacing: 10px;
   font-size: .9em;
   vertical-align: middle;
   height: 50px;
 }
-/* line 179, ../../../sass/screen.scss */
-.landing-page footer {
+/* line 161, ../../../sass/screen.scss */
+.landing-page .container footer {
   margin-top: 0px;
   font-size: 1.2em;
   color: #666666;
 }
-/* line 186, ../../../sass/screen.scss */
+/* line 168, ../../../sass/screen.scss */
 .landing-page h1 {
   font: 4.5em 'Dancing Script', Georgia, Times, serif;
   color: #ff4411;
   margin-bottom: .15em;
 }
-/* line 192, ../../../sass/screen.scss */
+/* line 174, ../../../sass/screen.scss */
 .landing-page h2 {
   font-family: 'Josefin Sans', Georgia, Times, serif;
   font-weight: bold;
@@ -440,13 +437,13 @@ textarea, input {
   font-size: 1.6em;
   margin-bottom: .25em;
 }
-/* line 200, ../../../sass/screen.scss */
+/* line 182, ../../../sass/screen.scss */
 .landing-page p {
   font-size: 1.35em;
   line-height: 1.3em;
   margin-bottom: .5em;
 }
-/* line 208, ../../../sass/screen.scss */
+/* line 188, ../../../sass/screen.scss */
 .landing-page .signup-text-field {
   font-size: 1em;
   border: 2px solid #98A89E;
@@ -456,9 +453,9 @@ textarea, input {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  width: 80%;
+  width: 7.5em;
 }
-/* line 215, ../../../sass/screen.scss */
+/* line 197, ../../../sass/screen.scss */
 .landing-page .submit-button {
   width: 100%;
   margin-left: 5px;
@@ -482,7 +479,7 @@ textarea, input {
   background-image: linear-gradient(top, #ff4411, #d40015);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FF4411, endColorstr=#D40015);
 }
-/* line 237, ../../../sass/screen.scss */
+/* line 219, ../../../sass/screen.scss */
 .landing-page .submit-button:hover {
   cursor: pointer;
   border: 1px solid #aa2400;
@@ -495,13 +492,13 @@ textarea, input {
   background-image: linear-gradient(top, #ffda24, #d40015);
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFDA24, endColorstr=#D40015);
 }
-/* line 248, ../../../sass/screen.scss */
+/* line 230, ../../../sass/screen.scss */
 .landing-page .error {
   color: #ff4411;
   padding-top: 10px;
   font-size: 1.2em;
 }
-/* line 254, ../../../sass/screen.scss */
+/* line 236, ../../../sass/screen.scss */
 .landing-page .error-messages {
   margin-top: .5em;
   clear: both;
@@ -509,20 +506,20 @@ textarea, input {
   font-weight: bold;
   color: #cc0000;
 }
-/* line 262, ../../../sass/screen.scss */
+/* line 244, ../../../sass/screen.scss */
 .landing-page .field_with_errors {
   display: inline;
 }
-/* line 265, ../../../sass/screen.scss */
+/* line 247, ../../../sass/screen.scss */
 .landing-page .field_with_errors input {
   border: 2px solid #cc0000;
 }
-/* line 270, ../../../sass/screen.scss */
+/* line 252, ../../../sass/screen.scss */
 .landing-page a, .landing-page a:visited {
   color: #666666;
   text-decoration: none;
 }
-/* line 274, ../../../sass/screen.scss */
+/* line 256, ../../../sass/screen.scss */
 .landing-page a:hover, .landing-page a:visited:hover {
   color: black;
   background-color: transparent;
