@@ -44,16 +44,20 @@ class InvitesController < ApplicationController
 
     respond_to do |format|
       if @invite.save
-        format.html { redirect_to @invite }
+        format.html { redirect_to '/thanks' }
         #format.js { render :action => 'create_success' }
         format.json { render json: @invite, status: :created, location: @invite }
       else
-        format.html { render action: "new" }
+        format.html { render action: "new" } #redirect_to new_invite_path if you want to return to the form submission page on error
         #format.js { render :action => 'create_fail' }
         format.json { render json: @invite.errors, status: :unprocessable_entity }
       end
     end
   end
+
+def thanks
+  #@invite = Invite.find(params[:id])
+end
 
   # PUT /invites/1
   # PUT /invites/1.json
