@@ -1,4 +1,4 @@
-= render 'landing_page/clouds'
+= render 'layouts/clouds'
 .landing-page
 	.container
 		.centered-box
@@ -9,7 +9,7 @@
 			%p.margin-bottom
 				We're still hammering together our first few ChirpyBoxes. Want us to let you know when we're ready to make one for you?
 			.display-table
-			= form_for(@invite) do |f| -# , :remote => true
+			= form_for(@invite) do |f|
 				.table-row
 					.table-cell.table-cell-field
 						= f.text_field :email, placeholder:"your@email.com", type:"email", class:"signup-text-field"
