@@ -1,10 +1,9 @@
 SuggestionBoxApp::Application.routes.draw do
-  root to: 'invites#new'
-  resources :invites
-  resources :suggestions
-  resources :organizations
-  get "/users" => 'users#index'
-#  get "/members" => 'members#index'
+  resources :invites, :users
+  root :to => 'invites#new'
+
+  #get "/users" => 'users#index'
+  #get "/members" => 'members#index'
   #landing page
 
 

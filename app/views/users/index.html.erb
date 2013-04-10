@@ -2,23 +2,23 @@
 
 <table>
   <tr>
-    <th>Message</th>
+    <th>Name</th>
     <th></th>
     <th></th>
     <th></th>
   </tr>
 
-<% @users.each do |user| %>
+<%# @users.each do |user| %>
   <tr>
-    <td><%= user.suggestion_message %></td>
-    <td><%= link_to 'Show', suggestion_message %></td>
-    <td><%= link_to 'Edit', edit_suggestion_message(suggestion) %></td>
-    <td><%= link_to 'Destroy', suggestion_message, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%# user.email %></td>
+    <td><%# link_to 'Show', user %></td>
+    <td><%# link_to 'Edit', edit_user_path(user) %></td>
+    <td><%# link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 
-<% end %>
+<%# end %>
 </table>
 
 <br />
 
-<%= link_to 'New Suggestion', new_suggestion %>
+<%= link_to 'New User', new_user_path %>
