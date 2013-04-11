@@ -44,7 +44,7 @@ class InvitesController < ApplicationController
 
     respond_to do |format|
       if @invite.save
-        format.html { redirect_to '/thanks' }
+        format.html { redirect_to :thanks }
         #format.js { render :action => 'create_success' }
         format.json { render json: @invite, status: :created, location: @invite }
       else
@@ -57,6 +57,12 @@ class InvitesController < ApplicationController
 
 def thanks
   #@invite = Invite.find(params[:id])
+      @invite = Invite.find_by_email(params[:email])
+
+    # respond_to do |format|
+    #   format.html # show.html.erb
+    #   format.json { render json: @invite }
+    # end
 end
 
   # PUT /invites/1

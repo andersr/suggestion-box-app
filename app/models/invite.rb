@@ -9,7 +9,7 @@
 #
 
 class Invite < ActiveRecord::Base
-  attr_accessible :email
+  attr_accessible :email, :id
 
   validates :email, :presence => {:message => "Please enter an email address."}
 

@@ -1,8 +1,15 @@
 SuggestionBoxApp::Application.routes.draw do
   root :to => 'invites#new'
   get '/thanks', to: "invites#thanks"
-  resources :invites
-  #get "/:thanks" => "invites#show", :as => :thanks
+
+ #rewrite '/organization/name' to /short_name
+ # or just link_to short_name_path
+ get "/:short_name" => "organizations#show"
+
+
+  resources :invites, :suggestions, :organizations
+ 
+
   #resources :invites
   #get "/thanks" => "invites#thanks"
 

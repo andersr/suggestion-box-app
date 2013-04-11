@@ -12,6 +12,7 @@ gem 'jquery-rails'
 
 group :development, :test do
   gem 'sqlite3'
+  gem 'pry-rails'
 end
 
 # Gems used only for assets and not required

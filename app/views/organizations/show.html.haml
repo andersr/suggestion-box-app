@@ -1,0 +1,25 @@
+%p#notice= notice
+%p
+  %b Name:
+  = @organization.name
+  (
+  = @organization.short_name
+  )
+= form_for(@suggestion) do |f|
+  = f.fields_for :suggestions do |s|
+    = s.label :suggestion_message
+    %br/
+    = s.text_area :suggestion_message
+    / .field
+    /   = f.label :name
+    /   %br/
+    /   = f.text_field :name
+    / .field
+    /   = f.label :short_name
+    /   %br/
+    /   = f.text_field :short_name
+    .actions
+      = f.submit
+= link_to 'Edit', edit_organization_path(@organization)
+|
+\#{link_to 'Back', organizations_path}

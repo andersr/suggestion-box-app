@@ -13,7 +13,9 @@ class OrganizationsController < ApplicationController
   # GET /organizations/1
   # GET /organizations/1.json
   def show
-    @organization = Organization.find(params[:id])
+   @organization = Organization.find_by_short_name(params[:short_name])
+   #binding.pry
+   @suggestion = @organization.suggestions.build
 
     respond_to do |format|
       format.html # show.html.erb
