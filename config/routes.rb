@@ -6,8 +6,7 @@ SuggestionBoxApp::Application.routes.draw do
  # or just link_to short_name_path
  get "/:short_name" => "organizations#show"
 
-
-  resources :invites, :suggestions, :organizations
+resources :invites, :suggestions, :organizations
  
 
   #resources :invites

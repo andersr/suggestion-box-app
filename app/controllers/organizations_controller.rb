@@ -13,9 +13,19 @@ class OrganizationsController < ApplicationController
   # GET /organizations/1
   # GET /organizations/1.json
   def show
-   @organization = Organization.find_by_short_name(params[:short_name])
-   #binding.pry
-   @suggestion = @organization.suggestions.build
+    @organization = Organization.find_by_short_name(params[:short_name])
+    @suggestion = @organization.suggestions.build
+    #@suggestion_box = @organization.suggestion_boxes.build
+
+   #@organization = Organization.find_by_short_name(params[:short_name])
+   #goal: display the information for the organization based on the short_name passed in the url
+      #binding.pry
+   #query Organization.suggestion_boxes.passcode
+
+  # if :passcode.nil
+  #   redirect_to :passcode
+  # end
+ #  @suggestion = @organization.suggestions.build
 
     respond_to do |format|
       format.html # show.html.erb

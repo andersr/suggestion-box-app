@@ -1,0 +1,9 @@
+= render 'header'
+%p#notice= notice
+%p
+  %b "Please enter the passcode for this suggestion box passcode (you'll find it on the suggestion box signs posted around your workspace.):"
+= form_for(@organization) do |f|
+  = f.fields_for :suggestion_boxes do |s|
+    = s.text_field :passcode, type:"password", placeholder:"Passcode"
+    .actions
+      = f.submit

@@ -1,15 +1,19 @@
+/ display a suggestion input field with an anonymous icon
+/ on focus, display additional fields for this form
+/ below the suggestion form, display a list of current/approved suggestions
+= render 'header'
 %p#notice= notice
 %p
-  %b Name:
-  = @organization.name
-  (
-  = @organization.short_name
-  )
+  /%b Name:
+  /= @organization.name
+  /(
+  /= @organization.short_name
+  /)
 = form_for(@suggestion) do |f|
   = f.fields_for :suggestions do |s|
-    = s.label :suggestion_message
+    /= s.label :suggestion_message
     %br/
-    = s.text_area :suggestion_message
+    = s.text_area :suggestion_message, placeholder:"Drop a note in our suggestion box...", :rows => 6, :cols => 30
     / .field
     /   = f.label :name
     /   %br/
@@ -19,7 +23,7 @@
     /   %br/
     /   = f.text_field :short_name
     .actions
-      = f.submit
-= link_to 'Edit', edit_organization_path(@organization)
-|
-\#{link_to 'Back', organizations_path}
+      = f.submit "Post Suggestion"
+/= link_to 'Edit', edit_organization_path(@organization)
+/|
+/\#{link_to 'Back', organizations_path}
