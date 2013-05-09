@@ -348,23 +348,22 @@ textarea, input {
 }
 
 /* line 95, ../../../sass/screen.scss */
-.inline {
+ul.inline, ol.inline {
   margin-top: 15px;
 }
 /* line 98, ../../../sass/screen.scss */
-.inline li {
+ul.inline li, ol.inline li {
   display: inline-block;
-  margin-left: 4px;
-  font-size: smaller;
-  padding-right: 10px;
+  margin-left: .2em;
+  padding-right: .4em;
   border-right: 1px solid #999999;
 }
 /* line 105, ../../../sass/screen.scss */
-.inline li:first-child {
+ul.inline li:first-child, ol.inline li:first-child {
   margin-left: 0;
 }
 /* line 108, ../../../sass/screen.scss */
-.inline li:last-child {
+ul.inline li:last-child, ol.inline li:last-child {
   border-right: none;
 }
 

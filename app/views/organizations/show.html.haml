@@ -14,6 +14,9 @@
     /= s.label :suggestion_message
     %br/
     = s.text_area :suggestion_message, placeholder:"Drop a note in our suggestion box...", :rows => 6, :cols => 30
+    %br/
+    = check_box_tag "anonymous-suggestion", 1, false
+    Post this suggestion anonymously
     / .field
     /   = f.label :name
     /   %br/
@@ -27,3 +30,15 @@
 /= link_to 'Edit', edit_organization_path(@organization)
 /|
 /\#{link_to 'Back', organizations_path}
+.suggestions-list
+  %hr
+  %p.suggestion-list-header Vote and comment on other suggestions
+  .suggestion
+    %p.suggestion-snippet "Could we get a bigger whiteboard in the 3rd floor conference room?"
+    .suggestion-vote
+      = link_to '[Vote up icon]', '#' 
+      = link_to '[Vote down icon]', '#' 
+    .suggestion-reply
+      = link_to '[Qty-replies icon]', '#'  
+      = link_to '[Add-reply icon]', '#' 
+= render 'footer'

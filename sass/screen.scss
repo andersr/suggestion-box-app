@@ -92,14 +92,14 @@ textarea, input {
 // LISTS
 // ------------------------------
 
-.inline {
+ul.inline, ol.inline {
 	margin-top: 15px;
 
 	li {
 		display: inline-block;
-		margin-left: 4px;
-		font-size: smaller;
-		padding-right: 10px;
+		margin-left: .2em;
+		//font-size: smaller;
+		padding-right: .4em;
 		border-right: 1px solid #999999;
 		
 		&:first-child{
