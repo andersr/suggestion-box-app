@@ -9,6 +9,7 @@
 #  passcode        :string(255)
 #  suggestion_id   :integer
 #  organization_id :integer
+#  short_name      :string(255)
 #
 
 require 'test_helper'

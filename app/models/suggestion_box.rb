@@ -9,10 +9,11 @@
 #  passcode        :string(255)
 #  suggestion_id   :integer
 #  organization_id :integer
+#  short_name      :string(255)
 #
 
 class SuggestionBox < ActiveRecord::Base
-  attr_accessible :name , :passcode
+  attr_accessible :name , :passcode, :short_name
   belongs_to :organization
   has_many :suggestions, :dependent => :destroy 
 
