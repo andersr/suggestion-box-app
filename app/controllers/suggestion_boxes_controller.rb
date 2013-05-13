@@ -14,6 +14,7 @@ class SuggestionBoxesController < ApplicationController
   # GET /suggestion_boxes/1.json
   def show
     @suggestion_box = SuggestionBox.find(params[:id])
+    @organization = @suggestion_box.organization
 
     respond_to do |format|
       format.html # show.html.erb

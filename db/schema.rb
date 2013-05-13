@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130409152218) do
+ActiveRecord::Schema.define(:version => 20130509231554) do
 
   create_table "invites", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -28,8 +28,9 @@ ActiveRecord::Schema.define(:version => 20130409152218) do
   create_table "members", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "organization_id"
   end
 
   create_table "organizations", :force => true do |t|
@@ -47,19 +48,19 @@ ActiveRecord::Schema.define(:version => 20130409152218) do
 
   create_table "suggestion_boxes", :force => true do |t|
     t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
     t.string   "passcode"
+    t.integer  "suggestion_id"
+    t.integer  "organization_id"
   end
 
   create_table "suggestions", :force => true do |t|
     t.text     "suggestion_message"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
-    t.string   "member_name"
-    t.string   "member_email"
     t.boolean  "anonymous_suggestion"
-    t.integer  "organization_id"
+    t.integer  "member_id"
   end
 
   create_table "users", :force => true do |t|

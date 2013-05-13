@@ -6,10 +6,8 @@
 #  suggestion_message   :text
 #  created_at           :datetime         not null
 #  updated_at           :datetime         not null
-#  member_name          :string(255)
-#  member_email         :string(255)
 #  anonymous_suggestion :boolean
-#  organization_id      :integer
+#  member_id            :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html

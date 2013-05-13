@@ -2,11 +2,13 @@
 #
 # Table name: suggestion_boxes
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
-#  passcode   :string(255)
+#  id              :integer          not null, primary key
+#  name            :string(255)
+#  created_at      :datetime         not null
+#  updated_at      :datetime         not null
+#  passcode        :string(255)
+#  suggestion_id   :integer
+#  organization_id :integer
 #
 
 require 'test_helper'
