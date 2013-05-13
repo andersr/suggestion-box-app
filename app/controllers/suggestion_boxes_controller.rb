@@ -13,6 +13,8 @@ class SuggestionBoxesController < ApplicationController
   # GET /suggestion_boxes/1
   # GET /suggestion_boxes/1.json
   def show
+#try matching by short name, but if no matching short name is found, try matching by id
+#    @organization = Organization.find_by_short_name(params[:short_name])
     @suggestion_box = SuggestionBox.find(params[:id])
     @organization = @suggestion_box.organization
 
