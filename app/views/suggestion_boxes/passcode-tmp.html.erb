@@ -1,0 +1,22 @@
+Sorry that passcode didn't match the passcode for this suggestion box.  Please try again.
+<%= form_for(@suggestion_box) do |f| %>
+  <% if @suggestion_box.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@suggestion_box.errors.count, "error") %> prohibited this suggestion_box from being saved:</h2>
+
+      <ul>
+      <% @suggestion_box.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :passcode %><br />
+    <%= f.text_field :entered_passcode %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

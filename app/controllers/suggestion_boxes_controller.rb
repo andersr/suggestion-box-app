@@ -1,6 +1,7 @@
 class SuggestionBoxesController < ApplicationController
   # GET /suggestion_boxes
   # GET /suggestion_boxes.json
+
   def index
     @suggestion_boxes = SuggestionBox.all
 
@@ -12,11 +13,10 @@ class SuggestionBoxesController < ApplicationController
 
   # GET /suggestion_boxes/1
   # GET /suggestion_boxes/1.json
+
   def show
-#try matching by short name, but if no matching short name is found, try matching by id
-#    @organization = Organization.find_by_short_name(params[:short_name])
     @suggestion_box = SuggestionBox.find(params[:id])
-    @organization = @suggestion_box.organization
+    @suggestion = @suggestion_box.suggestions.build
 
     respond_to do |format|
       format.html # show.html.erb
@@ -47,7 +47,7 @@ class SuggestionBoxesController < ApplicationController
 
     respond_to do |format|
       if @suggestion_box.save
-        format.html { redirect_to @suggestion_box, notice: 'Suggestion box was successfully created.' }
+        format.html { redirect_to @suggestion_box, notice: "Thanks for your suggestion!" }
         format.json { render json: @suggestion_box, status: :created, location: @suggestion_box }
       else
         format.html { render action: "new" }
@@ -84,6 +84,7 @@ class SuggestionBoxesController < ApplicationController
     end
   end
 
-  def passcode
-  end
+  # def passcode
+  #   @suggestion_box = SuggestionBox.find(params[:id])
+  # end
 end

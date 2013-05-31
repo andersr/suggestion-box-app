@@ -1,0 +1,11 @@
+<h1>Please enter the <%= @suggestion_box.short_name %> suggestion box passcode</h1>
+<%= form_for(@suggestion_box) do |f| %>
+  <div class="field">
+    <%= f.label "Please enter a passcode" %><br />
+    <%= f.text_field :entered_passcode %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+

@@ -11,9 +11,10 @@
 #
 
 class Suggestion < ActiveRecord::Base
-  attr_accessible :suggestion_message, :anonymous_suggestion
+  attr_accessible :suggestion_message, :anonymous_suggestion, :member_attributes
   belongs_to :suggestion_box
   belongs_to :member
+  accepts_nested_attributes_for :member
 
-  validates :suggestion_message, :presence => {:message => "Please enter a suggestion."}
+  #validates :suggestion_message, :presence => {:message => "Please enter a suggestion."}
 end

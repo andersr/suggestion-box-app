@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130513143408) do
+ActiveRecord::Schema.define(:version => 20130523224058) do
 
   create_table "invites", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -61,7 +61,10 @@ ActiveRecord::Schema.define(:version => 20130513143408) do
     t.datetime "updated_at",           :null => false
     t.boolean  "anonymous_suggestion"
     t.integer  "member_id"
+    t.integer  "suggestion_box_id"
   end
+
+  add_index "suggestions", ["suggestion_box_id"], :name => "index_suggestions_on_suggestion_box_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"

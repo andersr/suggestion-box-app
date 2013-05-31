@@ -1,11 +1,20 @@
 SuggestionBoxApp::Application.routes.draw do
 
-  resources :suggestion_boxes
-  get "/:short_name" => "suggestion_boxes#show"
+#landing page default and confirmation
+root :to => 'invites#new'
+get '/thanks', to: "invites#thanks"
 
-  #root :to => 'invites#new'
-  #get '/thanks', to: "invites#thanks"
+resources :invites, :organizations, :members
+#get "suggestion_boxes/:id/suggestions/new" => "suggestions#new"
   
+resources :suggestion_boxes do
+  resources :suggestions
+end
+
+  
+  #redirect org short name to corresponding suggestion box (ugly hack)
+  #get "/:short_name" => "suggestion_boxes#show"
+
   #get "suggestion-boxes" => "suggestion_boxes#index"
   #get "suggestion-boxes/new" => "suggestion_boxes#new"
   

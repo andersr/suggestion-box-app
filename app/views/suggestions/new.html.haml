@@ -1,8 +1,6 @@
-%header
-  = image_tag("/assets/bcl/bcl-logo.png", :size => "50x50", :alt => "Brooklyn Creative League", class:"logo")
-  %h1.title BCL Suggestion Box
+= render 'layouts/header'
 .main
-  = form_for(@suggestion) do |f|
+  = form_for([suggestion_box, @suggestion]) do |f|
     - if @suggestion.errors.any?
       #error_explanation
         %ul
@@ -11,15 +9,18 @@
     .field
       %br/
       = f.text_area :suggestion_message, type:"text", placeholder:"Drop a note in our suggestion box...", :rows => 6, :cols => 30
-    .field
       %br/
-      = f.text_field :member_name, placeholder:"Your Name"
-    .field
+      = fields_for @suggestion.member do |member_suggestion|
+        .field
+        = member_suggestion.text_field :name, placeholder:"Name (optional)"
+        %br/
+        .field
+        = member_suggestion.text_field :email, placeholder:"Email (optional)"
+        %br/
+      -#= f.check_box :anonymous_suggestion
+      -#= f.label :anonymous_suggestion,"I'd like to make this suggestion anonymously"
       %br/
-      = f.text_field :member_email, placeholder:"Your Email"
-    .field
-      = f.check_box :anonymous_suggestion
-      = f.label :anonymous_suggestion,"I'd like to make this suggestion anonymously"
-      %br/
+      -#= link_to "Sign In/Register to track your suggestion and vote on other suggestions", "#"
+      -#%br/
     .actions
-      = f.submit "Post Suggestion"
+      = f.submit "Continue"

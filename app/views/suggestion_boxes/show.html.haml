@@ -1,13 +1,6 @@
+= render 'layouts/header'
 %p#notice= notice
 %p
-  %b Name:
-  = @suggestion_box.name
+  = link_to "Post a new suggestion", new_suggestion_box_suggestion_path(@suggestion_box)
 %p
-  %b Short Name:
-  = @suggestion_box.short_name
-%p
-  %b Passcode:
-  = @suggestion_box.passcode
-= link_to 'Edit', edit_suggestion_box_path(@suggestion_box)
-|
-\#{link_to 'Back', suggestion_boxes_path}
+  Show a list of what's currently in the suggestion box, possibly with options to +1 and add a comment

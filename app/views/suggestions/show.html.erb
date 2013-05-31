@@ -2,15 +2,15 @@
 
 <p>
   <b>Message:</b>
-  <%= @suggestion.message %>
+  <%= @suggestion.suggestion_message %>
 </p>
 <p>
-  <b>Name:</b>
-  <%= @suggestion.member_name %>
+  <!-- Will want to add this in the input form first <b>Name:</b> -->
+  <%# @suggestion.member_name %>
 </p>
 <p>
-  <b>Email:</b>
-  <%= @suggestion.member_email %>
+  <!-- <b>Email:</b>
+ -->  <%# @suggestion.member_email %>
 </p>
 <p>
   <b>Anonymous?</b>
@@ -18,5 +18,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_suggestion_path(@suggestion) %> |
-<%= link_to 'Back', suggestions_path %>
+<%= link_to 'Edit', edit_suggestion_box_suggestion_path(@suggestion) %> |
+<%= link_to 'Back', suggestion_box_suggestions_path %>
