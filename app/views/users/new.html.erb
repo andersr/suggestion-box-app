@@ -12,19 +12,23 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <p class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </p>
+  <p class="field">
     <%= f.label :email %>
     <%= f.text_field :email, placeholder:"your@email.com" %>
-  </div>
-   <div class="field">
+  </p>
+   <p class="field">
     <%= f.label :password %>
     <%= f.password_field :password, placeholder:"Password" %>
-  </div>
-     <div class="field">
+  </p>
+     <p class="field">
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation, placeholder:"Password again" %>
-  </div>
-  <div class="actions">
+  </p>
+  <p class="actions">
     <%= f.submit "Sign me up!" %>
-  </div>
+  </p>
 <% end %>

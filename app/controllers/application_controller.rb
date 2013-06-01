@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 private
   def current_user
     #cache in an instance variable, so only fetched one time per session
-    @current_user ||= User.find(session[:user_id]) if session[:user_id]
+    @current_user ||= User.find_by_auth_token!(cookies[:auth_token]) if cookies[:auth_token]
   end
 
   #above method is only available to the controller

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130601174551) do
+ActiveRecord::Schema.define(:version => 20130601183039) do
 
   create_table "invites", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -74,6 +74,7 @@ ActiveRecord::Schema.define(:version => 20130601174551) do
     t.string   "name"
     t.string   "password_digest"
     t.string   "password"
+    t.string   "auth_token"
   end
 
 end

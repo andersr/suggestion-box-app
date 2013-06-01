@@ -25,6 +25,7 @@ class SessionsController < ApplicationController
   # GET /sessions/new.json
   def new
     @session = Session.new
+    params[:remember_me] = true
 
     respond_to do |format|
       format.html # new.html.erb
@@ -43,7 +44,12 @@ class SessionsController < ApplicationController
     user = User.find_by_email(params[:email])
 
     if user && user.authenticate(params[:password])
-      session[:user_id] = user.id 
+      if params[:remember_me]
+        cookies.permanent[:auth_token] = user.auth_token
+      else
+        cookies[:auth_token] = user.auth_token
+      end
+      #session[:user_id] = user.id 
       redirect_to suggestion_boxes_url, notice:"Logged In!"
     else
       flash.now.alert = "Email or password is invalid :("
@@ -80,6 +86,7 @@ class SessionsController < ApplicationController
   # DELETE /sessions/1
   # DELETE /sessions/1.json
   def destroy
+    cookies.delete(:auth_token)
     session[:user_id] = nil
     redirect_to suggestion_boxes_url, notice: "You've been signed out"
   #   @session = Session.find(params[:id])
