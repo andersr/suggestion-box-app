@@ -2,9 +2,15 @@ SuggestionBoxApp::Application.routes.draw do
 
 #landing page default and confirmation
 root :to => 'invites#new'
-get '/thanks', to: "invites#thanks"
+get 'thanks', to: "invites#thanks"
 
-resources :invites, :organizations, :members
+#signup, login, logout
+get 'signup', to: "members#new", as: "signup"
+get 'login', to: "sessions#new", as: "login"
+get 'logout', to: "sessions#destroy", as: "logout"
+# reset password...
+
+resources :invites, :organizations, :members, :sessions
 #get "suggestion_boxes/:id/suggestions/new" => "suggestions#new"
   
 resources :suggestion_boxes do

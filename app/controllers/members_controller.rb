@@ -1,4 +1,16 @@
 class MembersController < ApplicationController
+
+    # GET /members/new
+    # GET /members/new.json
+  def new
+    @member = Member.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @member }
+    end
+  end
+  
   # GET /members
   # GET /members.json
   def index
@@ -21,17 +33,6 @@ class MembersController < ApplicationController
     end
   end
 
-  # GET /members/new
-  # GET /members/new.json
-  def new
-    @member = Member.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @member }
-    end
-  end
-
   # GET /members/1/edit
   def edit
     @member = Member.find(params[:id])
@@ -44,6 +45,7 @@ class MembersController < ApplicationController
 
     respond_to do |format|
       if @member.save
+        session[:member_id] = @member.id
         format.html { redirect_to @member, notice: 'Member was successfully created.' }
         format.json { render json: @member, status: :created, location: @member }
       else

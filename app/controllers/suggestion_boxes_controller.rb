@@ -2,6 +2,8 @@ class SuggestionBoxesController < ApplicationController
   # GET /suggestion_boxes
   # GET /suggestion_boxes.json
 
+  before_filter :authorize, only: [:new, :edit, :update, :destroy]
+
   def index
     @suggestion_boxes = SuggestionBox.all
 
@@ -16,7 +18,7 @@ class SuggestionBoxesController < ApplicationController
 
   def show
     @suggestion_box = SuggestionBox.find(params[:id])
-    @suggestion = @suggestion_box.suggestions.build
+   # @suggestion = @suggestion_box.suggestions.build
 
     respond_to do |format|
       format.html # show.html.erb

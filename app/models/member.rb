@@ -11,8 +11,16 @@
 #
 
 class Member < ActiveRecord::Base
-  attr_accessible :email, :name
-  belongs_to :organization
-  has_many :suggestions
-  # has_many :suggestions, :as => :suggestable
+
+	has_secure_password
+	# will validate for presence of password and match with password_confirmation
+
+	attr_accessible :name, :email, :password, :password_confirmation
+
+
+	#validates_uniqueness_of :email
+
+	belongs_to :organization
+	has_many :suggestions
+
 end
