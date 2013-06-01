@@ -40,10 +40,10 @@ class SessionsController < ApplicationController
   # POST /sessions
   # POST /sessions.json
   def create
-    member = Member.find_by_email(params[:email])
+    user = User.find_by_email(params[:email])
 
-    if member && member.authenticate(params[:password])
-      session[:member_id] = member.id 
+    if user && user.authenticate(params[:password])
+      session[:user_id] = user.id 
       redirect_to suggestion_boxes_url, notice:"Logged In!"
     else
       flash.now.alert = "Email or password is invalid :("
@@ -80,8 +80,8 @@ class SessionsController < ApplicationController
   # DELETE /sessions/1
   # DELETE /sessions/1.json
   def destroy
-    session[:member_id] = nil
-    redirect_to suggestion_boxes_url, notice: "Logged out"
+    session[:user_id] = nil
+    redirect_to suggestion_boxes_url, notice: "You've been signed out"
   #   @session = Session.find(params[:id])
   #   @session.destroy
 

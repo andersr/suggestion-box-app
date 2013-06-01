@@ -5,12 +5,12 @@ root :to => 'invites#new'
 get 'thanks', to: "invites#thanks"
 
 #signup, login, logout
-get 'signup', to: "members#new", as: "signup"
+get 'signup', to: "users#new", as: "signup"
 get 'login', to: "sessions#new", as: "login"
 get 'logout', to: "sessions#destroy", as: "logout"
 # reset password...
 
-resources :invites, :organizations, :members, :sessions
+resources :invites, :organizations, :users, :sessions
 #get "suggestion_boxes/:id/suggestions/new" => "suggestions#new"
   
 resources :suggestion_boxes do

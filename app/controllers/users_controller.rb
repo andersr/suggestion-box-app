@@ -3,21 +3,19 @@ class UsersController < ApplicationController
 		@user = User.new
 	end
 
-	# def welcome
-	# 	@user = User.new
-	# end
-
-
 	def create
 		@user = User.new(params[:user])
 
 		respond_to do |format|
 			if @user.save
-				flash[:notice] = "we just created something"
+				 session[:user_id] = @user.id
+				# redirect_to user_path(@user.id), notice: "Thank you for signing up!"
+				# flash[:notice] = "we just created something"
 				format.html { redirect_to @user, notice: 'User was successfully registered.' }
 				format.json { render json: @user, status: :created, location: @user.new }
 			else
 				flash[:notice] = "something went wrong"
+				render "new"
 			end
 		end
 

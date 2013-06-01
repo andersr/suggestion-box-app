@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
 private
   def current_user
     #cache in an instance variable, so only fetched one time per session
-    @current_user ||= Member.find(session[:member_id]) if session[:member_id]
+    @current_user ||= User.find(session[:user_id]) if session[:user_id]
   end
 
   #above method is only available to the controller
