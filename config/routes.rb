@@ -1,5 +1,7 @@
 SuggestionBoxApp::Application.routes.draw do
 
+  get "password_resets/new"
+
 #landing page default and confirmation
 root :to => 'invites#new'
 get 'thanks', to: "invites#thanks"
@@ -10,12 +12,14 @@ get 'login', to: "sessions#new", as: "login"
 get 'logout', to: "sessions#destroy", as: "logout"
 # reset password...
 
-resources :invites, :organizations, :users, :sessions
+resources :invites, :organizations, :users, :sessions, :password_resets
 #get "suggestion_boxes/:id/suggestions/new" => "suggestions#new"
   
 resources :suggestion_boxes do
   resources :suggestions
 end
+
+default_url_options :host => "localhost:3000"
 
   
   #redirect org short name to corresponding suggestion box (ugly hack)
