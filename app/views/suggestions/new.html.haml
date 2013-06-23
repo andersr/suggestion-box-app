@@ -1,6 +1,9 @@
-= render 'layouts/header'
+%header
+  = image_tag("http://placehold.it/50x50", :size => "50x50", :alt => "Org logo", class:"logo")
+  %h1.title
+    = @suggestion_box.name + " Suggestion Box"
 .main
-  = form_for([suggestion_box, @suggestion]) do |f|
+  = form_for [@suggestion_box, @suggestion] do |f|
     - if @suggestion.errors.any?
       #error_explanation
         %ul
@@ -10,12 +13,12 @@
       %br/
       = f.text_area :suggestion_message, type:"text", placeholder:"Drop a note in our suggestion box...", :rows => 6, :cols => 30
       %br/
-      = fields_for @suggestion.member do |member_suggestion|
+      -# = f.fields_for @suggestion.member do |member_suggestion|
         .field
-        = member_suggestion.text_field :name, placeholder:"Name (optional)"
+        -# = member_suggestion.text_field :name, placeholder:"Name (optional)"
         %br/
         .field
-        = member_suggestion.text_field :email, placeholder:"Email (optional)"
+        -# = member_suggestion.text_field :email, placeholder:"Email (optional)"
         %br/
       -#= f.check_box :anonymous_suggestion
       -#= f.label :anonymous_suggestion,"I'd like to make this suggestion anonymously"

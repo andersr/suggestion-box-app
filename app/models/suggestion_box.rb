@@ -13,8 +13,8 @@
 #
 
 class SuggestionBox < ActiveRecord::Base
-  attr_accessible :name , :passcode, :short_name, :suggestions_attributes
+  attr_accessible :name , :passcode, :short_name #, :suggestions_attributes
   belongs_to :organization
   has_many :suggestions, :dependent => :destroy 
-  accepts_nested_attributes_for :suggestions #, allow_destroy: true
+  #accepts_nested_attributes_for :suggestions #, allow_destroy: true
 end

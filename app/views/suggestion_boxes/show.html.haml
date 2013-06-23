@@ -1,6 +1,14 @@
-= render 'layouts/header'
-%p#notice= notice
-%p
-  = link_to "Post a new suggestion", new_suggestion_box_suggestion_path(@suggestion_box)
-%p
-  Show a list of what's currently in the suggestion box, possibly with options to +1 and add a comment
+    %header
+      = image_tag("http://placehold.it/50x50", :size => "50x50", :alt => "Org logo", class:"logo")
+      %h1.title
+        = @suggestion_box.name + " Suggestion Box"
+    %p#notice= notice
+    %p
+      = link_to "Post a new suggestion", new_suggestion_box_suggestion_path(@suggestion_box)
+    %table
+      %tr
+        %th Message
+        - @suggestions.each do |suggestion|
+          %tr
+            %td
+              = suggestion.suggestion_message

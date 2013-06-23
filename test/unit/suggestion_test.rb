@@ -8,6 +8,7 @@
 #  updated_at           :datetime         not null
 #  anonymous_suggestion :boolean
 #  member_id            :integer
+#  suggestion_box_id    :integer
 #
 
 require 'test_helper'

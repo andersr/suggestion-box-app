@@ -2,9 +2,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   helper_method :suggestion_box
 
-  def suggestion_box
-      SuggestionBox.find(params[:suggestion_box_id])
-  end
+  # def suggestion_box
+  #     SuggestionBox.find(params[:suggestion_box_id])
+  # end
 
 private
   def current_user

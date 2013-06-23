@@ -8,6 +8,7 @@
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
 #  organization_id :integer
+#  password_digest :string(255)
 #
 
 class Member < ActiveRecord::Base
