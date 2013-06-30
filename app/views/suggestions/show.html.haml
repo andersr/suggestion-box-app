@@ -1,13 +1,17 @@
+Here's the suggestion you posted:
+%p<
+  "
+  = @suggestion.message
+  %span>"
 %p
-  - if @suggestion.anonymous_suggestion?
-  Suggestion from an anonymous visitor:
-  "
-  = @suggestion.suggestion_message
-  "
+  - if @suggestion.anonymous?
+    This suggestion is currently anonymous.  Want to add your name/email, and be able to edit and track this suggestion?
+    = link_to "Register", "#"
+    or
+    = link_to "Sign in", "#"
+    now. It only takes a minute!
+  - else
+    = link_to "Edit", "#"
+    this suggestion.
 %hr
-%p
-  %b Anonymous?
-  = @suggestion.anonymous_suggestion
-= link_to 'Edit', edit_suggestion_box_suggestion_path(@suggestion)
-|
-\#{link_to 'Back', suggestion_box_suggestions_path}
+= link_to "Post another suggestion", new_suggestion_box_suggestion_path(@suggestion_box)
