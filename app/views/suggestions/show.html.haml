@@ -1,11 +1,10 @@
 %p
-  %b Message:
+  - if @suggestion.anonymous_suggestion?
+  Suggestion from an anonymous visitor:
+  "
   = @suggestion.suggestion_message
-%p
-  / Will want to add this in the input form first <b>Name:</b>
-%p
-  /
-    <b>Email:</b>
+  "
+%hr
 %p
   %b Anonymous?
   = @suggestion.anonymous_suggestion

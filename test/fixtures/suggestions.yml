@@ -2,13 +2,13 @@
 #
 # Table name: suggestions
 #
-#  id                   :integer          not null, primary key
-#  suggestion_message   :text
-#  created_at           :datetime         not null
-#  updated_at           :datetime         not null
-#  anonymous_suggestion :boolean
-#  member_id            :integer
-#  suggestion_box_id    :integer
+#  id                :integer          not null, primary key
+#  message           :text
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#  anonymous         :boolean
+#  member_id         :integer
+#  suggestion_box_id :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html

@@ -12,15 +12,19 @@
     .field
       %br/
       = f.text_area :suggestion_message, type:"text", placeholder:"How can we make BCL better?", :rows => 6, :cols => 30
-    %p.anonymous
-      This is currently an anonymous suggestion.
+    %p.anonymous>
+      = f.label :anonymous_suggestion do
+        = f.check_box :anonymous_suggestion
+        Anonymous suggestion.
+    %p  
       = link_to "Register", "#"
       or
       = link_to "Sign in", "#"
       to add your name/email and track suggestion progress.
-    %p.ru-human
+
+    %p.math-quiz
       %hr
       Just to make sure you're human, what's 3+6? 
-      = text_field_tag 'ru-human'
+      = text_field_tag 'math-quiz'
     %p.actions
       = f.submit "Drop your note in the suggestion box"
