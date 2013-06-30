@@ -1,0 +1,14 @@
+%p
+  %b Message:
+  = @suggestion.suggestion_message
+%p
+  / Will want to add this in the input form first <b>Name:</b>
+%p
+  /
+    <b>Email:</b>
+%p
+  %b Anonymous?
+  = @suggestion.anonymous_suggestion
+= link_to 'Edit', edit_suggestion_box_suggestion_path(@suggestion)
+|
+\#{link_to 'Back', suggestion_box_suggestions_path}

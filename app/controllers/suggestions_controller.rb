@@ -49,10 +49,12 @@
       end
 
       def create
+        # the form fields were not saving to the db because I was not reading in the hash
+        # with params from the form via params[:suggestion]
         @suggestion = @suggestion_box.suggestions.build(params[:suggestion])
 
           if @suggestion.save
-            redirect_to [@suggestion_box, @suggestion]
+            redirect_to [@suggestion_box, @suggestion], notice: "Thanks!  We appreciate your input!"
           else
            render action: "new"
           end

@@ -11,19 +11,16 @@
             = msg.to_sentence
     .field
       %br/
-      = f.text_area :suggestion_message, type:"text", placeholder:"Drop a note in our suggestion box...", :rows => 6, :cols => 30
-      %br/
-      -# = f.fields_for @suggestion.member do |member_suggestion|
-        .field
-        -# = member_suggestion.text_field :name, placeholder:"Name (optional)"
-        %br/
-        .field
-        -# = member_suggestion.text_field :email, placeholder:"Email (optional)"
-        %br/
-      -#= f.check_box :anonymous_suggestion
-      -#= f.label :anonymous_suggestion,"I'd like to make this suggestion anonymously"
-      %br/
-      -#= link_to "Sign In/Register to track your suggestion and vote on other suggestions", "#"
-      -#%br/
-    .actions
-      = f.submit "Continue"
+      = f.text_area :suggestion_message, type:"text", placeholder:"How can we make BCL better?", :rows => 6, :cols => 30
+    %p.anonymous
+      This is currently an anonymous suggestion.
+      = link_to "Register", "#"
+      or
+      = link_to "Sign in", "#"
+      to add your name/email and track suggestion progress.
+    %p.ru-human
+      %hr
+      Just to make sure you're human, what's 3+6? 
+      = text_field_tag 'ru-human'
+    %p.actions
+      = f.submit "Drop your note in the suggestion box"
