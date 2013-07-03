@@ -1,14 +1,19 @@
-    %header
-      = image_tag("http://placehold.it/50x50", :size => "50x50", :alt => "Org logo", class:"logo")
-      %h1.title
-        = @suggestion_box.name + " Suggestion Box"
-    %p#notice= notice
-    %p
-      = link_to "Post a new suggestion", new_suggestion_box_suggestion_path(@suggestion_box)
-    %table
-      %tr
-        %th Message
-        - @suggestions.each do |suggestion|
-          %tr
-            %td
-              = suggestion.suggestion_message
+%header
+  = image_tag("http://placehold.it/50x50", :size => "50x50", :alt => "Org logo", class:"logo")
+  %h1.title
+    = @suggestion_box.name + " Suggestion Box"
+%p#notice= notice
+%p
+  = link_to "Post a new suggestion", new_suggestion_box_suggestion_path(@suggestion_box)
+%table{:border => "1"}
+  %tr
+    %th
+      Suggestion
+    %th
+      By
+  - @suggestions.each do |suggestion|
+    %tr
+      %td
+        = suggestion.message
+      %td
+        Posted by (Name+Email or "Anonymous")

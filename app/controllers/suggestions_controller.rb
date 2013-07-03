@@ -35,6 +35,12 @@
         end
       end
 
+    #SuggestionBox.find(params[:suggestion_box_id])
+      # def new_short_name
+      #   @suggestion_box = SuggestionBox.find_by_short_name(params[:short_name])
+      #   @suggestion = @suggestion_box.suggestions.build
+
+      # end
 
     #SuggestionBox.find(params[:suggestion_box_id])
       def new
@@ -92,7 +98,14 @@
       private
 
       def set_suggestion_box
-        @suggestion_box = SuggestionBox.find(params[:suggestion_box_id])
+
+        if params[:short_name]
+          Rails.logger.info "short name or not"
+            @suggestion_box = SuggestionBox.where("lower(short_name) =?", params[:short_name].downcase).first
+          else
+            Rails.logger.info "else"
+            @suggestion_box = SuggestionBox.find(params[:suggestion_box_id])
+        end
       end
 
       def suggestion_params
