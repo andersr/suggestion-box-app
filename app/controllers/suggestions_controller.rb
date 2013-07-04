@@ -45,6 +45,7 @@
     #SuggestionBox.find(params[:suggestion_box_id])
       def new
         @suggestion = @suggestion_box.suggestions.build
+        @suggestion.textcaptcha
        
         #flash[:error] = "Sorry, no suggestion box found with the id #{:id}." and return unless @suggestion_box
         

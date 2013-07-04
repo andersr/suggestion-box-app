@@ -16,10 +16,9 @@
     class Suggestion < ActiveRecord::Base
       attr_accessible :message, :anonymous, :name, :email
       belongs_to :suggestion_box
-      #belongs_to :member
-      #accepts_nested_attributes_for :user
-
       validates :message, presence: true
+      acts_as_textcaptcha :api_key     => 'dpeeqh5p81s0084ww0c004800ea9r39s',
+                      :bcrypt_salt => '$2a$10$7QKuzTiPaFIRMQD37Y5Y4.'
 
       #validates :suggestion_message, :presence => {:message => "Please enter a suggestion."}
     end

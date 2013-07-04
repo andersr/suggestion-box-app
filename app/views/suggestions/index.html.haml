@@ -1,15 +1,10 @@
-      %h1
-        Suggestions for Suggestion Box "#{@suggestion_box.name}"
-      %table
-        %tr
-          %th Message
-          %th
-          %th
-          %th
-        - @suggestions.each do |suggestion|
-          %tr
-            %td= suggestion.suggestion_message
-            %td/
-          %td/
-          %td/
-      %br/
+%h1
+  Suggestions for Suggestion Box "#{@suggestion_box.name}"
+%table
+  %tr
+    %th Message
+    %th From
+  - @suggestions.each do |suggestion|
+    %tr
+      %td= suggestion.message
+      %td sender

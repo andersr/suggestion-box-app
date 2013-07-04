@@ -11,6 +11,7 @@ gem 'bcrypt-ruby'
 
 # gem 'sqlite3'
 gem 'jquery-rails'
+gem 'acts_as_textcaptcha'
 
 group :development, :test do
   gem 'sqlite3'
