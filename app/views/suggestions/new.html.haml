@@ -18,10 +18,10 @@
     /     %span>Anonymous suggestion.
 
     %p
-      = text_field_tag 'suggestion-name', nil, placeholder:'Name (optional)'
+      = f.text_field :name, placeholder:'Name (optional)'
 
     %p
-      = text_field_tag 'suggestion-email', nil, placeholder:"Email (optional)"
+      = f.text_field :email, placeholder:"Email (optional)"
 
     %p.math-quiz
       / %hr

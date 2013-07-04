@@ -9,6 +9,8 @@
 #  anonymous         :boolean
 #  member_id         :integer
 #  suggestion_box_id :integer
+#  name              :string(255)
+#  email             :string(255)
 #
 
 require 'test_helper'

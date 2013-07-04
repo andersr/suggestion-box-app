@@ -9,10 +9,12 @@
 #  anonymous         :boolean
 #  member_id         :integer
 #  suggestion_box_id :integer
+#  name              :string(255)
+#  email             :string(255)
 #
 
     class Suggestion < ActiveRecord::Base
-      attr_accessible :message, :anonymous
+      attr_accessible :message, :anonymous, :name, :email
       belongs_to :suggestion_box
       #belongs_to :member
       #accepts_nested_attributes_for :user

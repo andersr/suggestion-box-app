@@ -4,6 +4,11 @@ New suggestion from an anonymous visitor:
   = @suggestion.message
   %span>"
 %p
+  Name:
+  = @suggestion.name
+  Email:
+  = @suggestion.email
+%p
   - if @suggestion.anonymous?
     This suggestion is currently anonymous.  Want to add your name/email, and be able to edit and track this suggestion?
     = link_to "Register", "#"
@@ -11,6 +16,10 @@ New suggestion from an anonymous visitor:
     = link_to "Sign in", "#"
     now. It only takes a minute!
   - else
+    Name:
+    = @suggestion.name
+    Email:
+    = @suggestion.email
     = link_to "Edit", "#"
     this suggestion.
 %hr

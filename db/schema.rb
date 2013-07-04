@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130630085727) do
+ActiveRecord::Schema.define(:version => 20130704180022) do
 
   create_table "invites", :force => true do |t|
     t.datetime "created_at", :null => false
@@ -63,6 +63,8 @@ ActiveRecord::Schema.define(:version => 20130630085727) do
     t.boolean  "anonymous"
     t.integer  "member_id"
     t.integer  "suggestion_box_id"
+    t.string   "name"
+    t.string   "email"
   end
 
   add_index "suggestions", ["suggestion_box_id"], :name => "index_suggestions_on_suggestion_box_id"
