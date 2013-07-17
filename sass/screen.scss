@@ -52,18 +52,19 @@ header {
 
 
 body {
-	  font-family: 'Crimson Text', Georgia, Times, serif;
+	  //font-family: 'Crimson Text', Georgia, Times, serif;
     font-size:100%;
+    background-color: $light;
     //line-height:1.125em;
 }
 
 h1 {
-    font-family: 'Allerta', Helvetica, Arial, sans-serif;
+	font-family: 'Pathway Gothic One', sans-serif;
     font-size: 1.4em;
 }
 
 h2 {
-    font-family: 'Crimson Text', Georgia, Times, serif;
+    //font-family: 'Crimson Text', Georgia, Times, serif;
     font-size: 1.2em;
 }
  
@@ -167,7 +168,7 @@ max-width: 100%;
 
 	h1 {
 		font: 4.5em 'Dancing Script', Georgia, Times, serif;
-		color:$ml-orange;
+		//color:$ml-orange;
 		margin-bottom:.15em;
 	}
 
@@ -227,7 +228,7 @@ max-width: 100%;
 		background-image: linear-gradient(top, #FFDA24, #D40015);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFDA24, endColorstr=#D40015);
 	}
 
-	.error { color:$ml-orange;
+	.error { color:$warm-red;
 		padding-top: 10px;
 		font-size: 1.2em;
 

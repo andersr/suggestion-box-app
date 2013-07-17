@@ -1,31 +1,47 @@
 /*********************
 COLORS
 
-Theme: Moon Landing
-https://kuler.adobe.com/#myKuler/themes
+
+
+Theme: Old Wood Suggestion Box
+Based on http://www.colourlovers.com/web/trends/websites/7844/Banner_Illustration
 *********************/
-$ml-beige: 			#FAFAC6;
-$ml-gray:			#BAC0AC;
-$ml-grayblue:		#98A89E;
-$ml-orange:			#FF4411;
-$ml-red:			#D40015;
+$light: 			#FDFFE3; //light-yellow beige
+$medium-light:		#E6E3BB; //gray-brown
+$warm-red: 			#C6491A; //warm red
+$brown: 			#8E4423;  //brown
+$dark:				#242729; //off-black
+
+
+// /* generic */
+// $light-gray:		#E6E6E6;
+
+
+//Theme: Moon Landing
+//https://kuler.adobe.com/#myKuler/themes
+//*********************/
+// $ml-beige: 			#FAFAC6;
+// $ml-gray:			#BAC0AC;
+// $ml-grayblue:		#98A89E;
+// $ml-orange:			#FF4411;
+// $ml-red:			#D40015;
 
 /* generic */
-$light-gray:		#E6E6E6;
+// $light-gray:		#E6E6E6;
 
 
 
 /* Legacy colors */
-$alert-yellow:      #ebe16f;
-$alert-red:         #fbe3e4;
-$alert-green:       #e6efc2;
-$alert-blue:        #d5edf8;
-$black:             #000;
-$white:             #fff;
-$bones-pink:        #f01d4f;
-$bones-blue:        #1990db;
-$link-color:		#4C87DF;
-$off-white:		#FCFEEF;
+// $alert-yellow:      #ebe16f;
+// $alert-red:         #fbe3e4;
+// $alert-green:       #e6efc2;
+// $alert-blue:        #d5edf8;
+// $black:             #000;
+// $white:             #fff;
+// $bones-pink:        #f01d4f;
+// $bones-blue:        #1990db;
+// $link-color:		#4C87DF;
+// $off-white:		#FCFEEF;
 
 .tmp {
 	color:			#E6E6E6;

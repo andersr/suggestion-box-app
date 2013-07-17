@@ -60,6 +60,8 @@
         # with params from the form via params[:suggestion]
         @suggestion = @suggestion_box.suggestions.build(params[:suggestion])
 
+        #send mail notification to suggestion box owner with the new suggestion
+
           if @suggestion.save
             redirect_to [@suggestion_box, @suggestion], notice: "Thanks!  We appreciate your input!"
           else
