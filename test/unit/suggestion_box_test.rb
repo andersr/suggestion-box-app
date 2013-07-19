@@ -10,6 +10,8 @@
 #  suggestion_id   :integer
 #  organization_id :integer
 #  short_name      :string(255)
+#  owner_email     :string(255)
+#  owner_name      :string(255)
 #
 
 require 'test_helper'
