@@ -6,19 +6,18 @@ class SuggestionBoxMailer < ActionMailer::Base
   #
   #   en.suggestion_box_mailer.new_suggestion_notification.subject
   #
- def welcome_email(user)
-    @user = user
-    @url  = 'http://example.com/login'
-    mail(to: @user.email, subject: 'Welcome to My Awesome Site')
-  end
+ # def welcome_email(user)
+ #    @user = user
+ #    @url  = 'http://example.com/login'
+ #    mail(to: @user.email, subject: 'Welcome to My Awesome Site')
+ #  end
 
 
-  def new_suggestion_notification(suggestion_box)
-
-    # this instance variable can be shared in the email view
-   # @greeting = "Hi"
+  def new_suggestion_notification(suggestion_box, suggestion)
     @suggestion_box = suggestion_box
+    @suggestion = suggestion
+    #@message_snippet = @suggestion.message.truncate(:length => 10)
 
-    mail(to: @suggestion_box.owner_email, subject: 'New posting in the BCL suggestion box!')
+    mail(to: @suggestion_box.owner_email, subject: "[BCL Suggestion Box] #{@suggestion.message}")
   end
 end

@@ -65,7 +65,7 @@
           if @suggestion.save
 
             #send notification email to the owner_email
-           SuggestionBoxMailer.new_suggestion_notification(@suggestion_box).deliver
+           SuggestionBoxMailer.new_suggestion_notification(@suggestion_box, @suggestion).deliver
 
             redirect_to [@suggestion_box, @suggestion], notice: "Thanks!  We appreciate your input!"
           else
