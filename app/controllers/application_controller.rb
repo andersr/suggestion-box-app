@@ -20,11 +20,11 @@ def authorize
   redirect_to login_url, alert: "Please sign in to access that." if current_user.nil? 
 end
 
-  # protected
-  # def authenticate
-  #   authenticate_or_request_with_http_basic do |username, password|
-  #     username == "bcl" && password == "bcl718"
-  #   end
-  # end
+protected
+def authenticate
+  authenticate_or_request_with_http_basic do |username, password|
+    username == "bcl" && password == "bcl718"
+  end
+end
 
 end

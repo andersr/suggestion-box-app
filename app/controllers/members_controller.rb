@@ -2,6 +2,9 @@ class MembersController < ApplicationController
 
     # GET /members/new
     # GET /members/new.json
+
+   before_filter :authenticate
+    
   def new
     @member = Member.new
 

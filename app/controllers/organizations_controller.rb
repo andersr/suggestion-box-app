@@ -1,6 +1,9 @@
 class OrganizationsController < ApplicationController
   # GET /organizations
   # GET /organizations.json
+
+  before_filter :authenticate
+  
   def index
     @organizations = Organization.all
 
