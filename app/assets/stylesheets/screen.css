@@ -311,6 +311,7 @@ header .notice {
 
 /* line 54, ../../../sass/screen.scss */
 body {
+  font-family: 'Crimson Text', Georgia, Times, serif;
   font-size: 100%;
   background-color: #fdffe3;
 }
@@ -426,6 +427,7 @@ ul.inline li:last-child, ol.inline li:last-child {
 /* line 169, ../../../sass/screen.scss */
 .landing-page h1 {
   font: 4.5em 'Dancing Script', Georgia, Times, serif;
+  color: #d40015;
   margin-bottom: .15em;
 }
 /* line 175, ../../../sass/screen.scss */
