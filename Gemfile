@@ -8,7 +8,7 @@ gem 'rails', '3.2.8'
 gem 'rack', '1.4.1'
 gem 'haml'
 gem 'haml-rails'
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # gem 'sqlite3'
 gem 'jquery-rails'
