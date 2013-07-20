@@ -14,11 +14,10 @@
 #
 
     class Suggestion < ActiveRecord::Base
-      attr_accessible :message, :anonymous, :name, :email
+      attr_accessible :message, :anonymous, :name, :email, :spam_answer
       belongs_to :suggestion_box
       validates :message, presence: true
-      acts_as_textcaptcha :api_key     => 'dpeeqh5p81s0084ww0c004800ea9r39s',
-                      :bcrypt_salt => '$2a$10$7QKuzTiPaFIRMQD37Y5Y4.'
+      acts_as_textcaptcha :api_key => 'azbjl8lm6u0cg4kos80o44cssdem847a', :bcrypt_salt => '$2a$10$UGMpZISBfrKcnRgatlu5P.'
 
       #validates :suggestion_message, :presence => {:message => "Please enter a suggestion."}
     end

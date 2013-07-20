@@ -7,11 +7,13 @@ gem 'rails', '3.2.8'
 gem 'rack', '1.4.1'
 gem 'haml'
 gem 'haml-rails'
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', :require => 'bcrypt'
 
 # gem 'sqlite3'
 gem 'jquery-rails'
 gem 'acts_as_textcaptcha'
+
+gem "letter_opener", :group => :development
 
 group :development, :test do
   gem 'sqlite3'

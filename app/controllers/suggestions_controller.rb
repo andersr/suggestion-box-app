@@ -64,10 +64,8 @@
 
           if @suggestion.save
 
-            #send notification email to the suggestion_box owner, which is the organization
-            # currently, organizations have members, but want to change this to users
-            # who should the email be sent to?
-            # easiest might be to just associate an owner with 
+            #send notification email to the owner_email
+           SuggestionBoxMailer.new_suggestion_notification(@suggestion_box).deliver
 
             redirect_to [@suggestion_box, @suggestion], notice: "Thanks!  We appreciate your input!"
           else
