@@ -1,98 +1,74 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-
- // set font to 100% in body
- // set block width with percentages, font sizes with ems
-
-
 @import "normalize/normalize";
 @import "compass";
 @import "colors";
 @import "clouds";
-@import "dev";
+//@import "dev";
 
+
+// BASE
+// ------------------------------
 body {
-	 font-family:"museo-sans",sans-serif;
-	 font-weight: 300;
-    font-size:100%;
-    background-color: $light;
-    //line-height:1.125em;
+	font-family:"museo-sans", sans-serif;
+	font-weight: 300;
+	background-color:#eeeeee;
+}
+#container {
+	width: 25em;
+	margin-left: auto;
+	margin-right: auto;
+	border-left: 1px solid #ccc;
+	border-right: 1px solid #ccc;
 }
 
+// HEADER
+// ------------------------------
 header {
-	padding:.5em;
-	background-color: #eee;
+	background-color: #ccc;
 	position: relative;
-	height: 65px;
+	height: 2.2em;
 
 	img.logo {
 		position: absolute;
-		left:10px;
-		top:15px;
-		float: left;
-		width: 60px;
+		left:.25em;
+		top:.25em;
 	}
 	h1.title {
-		float: left;
-		clear: right;
-		margin-left: 76px;
-		padding-top: 20px;
-		//position: absolute;
-		//top:25px;
-		//left: 20px;
+		position: absolute;
+		margin-top:0;
+		top:.25em;
+		left: 2.2em;
 	}
 
-	.notice {
+	.notices {
 		display: block;
-		height: 50px;
+		height: 2em;
 		background-color:#ffff99;
 		color: #000;
 	}
-}
+} //header
 
-.main {
+
+// CONTENT
+// ------------------------------
+.content {
 	padding:.5em;
-}
-
-h1 {
-    font-size: 1.4em;
-    font-weight: 700;
-}
-
-h2 {
-    //font-family: 'Crimson Text', Georgia, Times, serif;
-    font-size: 1.2em;
-}
- 
-p {
-    font-size: 1.3em;
 }
 
 
 // FORMS
 // ------------------------------
-
-textarea, input {
-	font-size: 16px; 
-}
 .help-text {
-	margin-top: 5px;
+	margin-top: .5em;
 	font-size: smaller;
 	font-style: italic;
 }
-.error {
-	textarea {
-		border: 2px solid red;
-	}
-}
+
 
 // LISTS
 // ------------------------------
 
 ul.inline, ol.inline {
-	margin-top: 15px;
+	margin-top: 1em;
 
 	li {
 		display: inline-block;
@@ -131,7 +107,7 @@ ul.inline, ol.inline {
 
 .table-cell-field {
 	min-width: 7.5em;
-max-width: 100%;
+	max-width: 100%;
 }
 
 
@@ -190,7 +166,6 @@ max-width: 100%;
 		border:2px solid #98A89E;
 		padding:10px;
 		@include border-radius(5px);
-		//width:80%;
 		width: 7.5em;
 	}
 	.submit-button {

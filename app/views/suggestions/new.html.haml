@@ -1,29 +1,30 @@
-%header
-  = image_tag("http://placehold.it/50x50", :size => "50x50", :alt => "Org logo", class:"logo")
-  %h1.title
-    = @suggestion_box.name + " Suggestion Box"
-.main
-  = form_for [@suggestion_box, @suggestion] do |f|
-    - if @suggestion.errors.any?
-      #error_explanation
-        %ul
-          - @suggestion.errors.messages.values.each do |msg|
-            = msg.to_sentence
-    .field
-      %br/
-      = f.text_area :message, type:"text", placeholder:"How can we make BCL better?", :rows => 6, :cols => 30, autocapitalize:"sentences"
+#container
+  %header
+    = image_tag("http://placehold.it/50x50", :size => "50x50", :alt => "Org logo", class:"logo")
+    %h1.title
+      = @suggestion_box.short_name + " Suggestion Box"
+  .content
+    = form_for [@suggestion_box, @suggestion] do |f|
+      - if @suggestion.errors.any?
+        #error_explanation
+          %ul
+            - @suggestion.errors.messages.values.each do |msg|
+              = msg.to_sentence
+      .field
+        %br/
+        = f.text_area :message, type:"text", placeholder:"How can we make BCL better?", :rows => 6, :cols => 30, autocapitalize:"sentences"
 
-    %p
-      = f.text_field :name, placeholder:'Name (optional)', autocapitalize:"words"
+      %p
+        = f.text_field :name, placeholder:'Name (optional)', autocapitalize:"words"
 
-    %p
-      = f.email_field :email, placeholder:"Email (optional)", autocorrect:"off", autocapitalize:"off"
+      %p
+        = f.email_field :email, placeholder:"Email (optional)", autocorrect:"off", autocapitalize:"off"
 
-    %p
-      = textcaptcha_fields(f) do
-        .field
-          = f.label :spam_answer, @suggestion.spam_question
-          %br
-          = f.text_field :spam_answer, :value => ''
-    %p.actions
-      = f.submit "Post it!"
+      %p
+        = textcaptcha_fields(f) do
+          .field
+            = f.label :spam_answer, @suggestion.spam_question
+            %br
+            = f.text_field :spam_answer, :value => ''
+      %p.actions
+        = f.submit "Post it!"
