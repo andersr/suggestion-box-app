@@ -8,8 +8,11 @@
     %link{:href => "http://fonts.googleapis.com/css?family=Dancing+Script", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic", :rel => "stylesheet", :type => "text/css"}/
     %link{:href => "http://fonts.googleapis.com/css?family=Crimson+Text", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "http://fonts.googleapis.com/css?family=Allerta", :rel => "stylesheet", :type => "text/css"}/
-    %link{href:'http://fonts.googleapis.com/css?family=Pathway+Gothic+One', rel:'stylesheet', type:'text/css'}
+    -#%link{:href => "http://fonts.googleapis.com/css?family=Allerta", :rel => "stylesheet", :type => "text/css"}/
+    -#%link{href:'http://fonts.googleapis.com/css?family=Pathway+Gothic+One', rel:'stylesheet', type:'text/css'}
+    %script{:type=>"text/javascript", :src=>"//use.typekit.net/wjb6ybj.js"}
+    :javascript
+      try{Typekit.load();}catch(e){}
     = stylesheet_link_tag "screen", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
