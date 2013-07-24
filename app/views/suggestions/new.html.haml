@@ -11,13 +11,13 @@
             = msg.to_sentence
     .field
       %br/
-      = f.text_area :message, type:"text", placeholder:"How can we make BCL better?", :rows => 6, :cols => 30
+      = f.text_area :message, type:"text", placeholder:"How can we make BCL better?", :rows => 6, :cols => 30, autocapitalize:"sentences"
 
     %p
-      = f.text_field :name, placeholder:'Name (optional)'
+      = f.text_field :name, placeholder:'Name (optional)', autocapitalize:"words"
 
     %p
-      = f.email_field :email, placeholder:"Email (optional)"
+      = f.email_field :email, placeholder:"Email (optional)", autocorrect:"off", autocapitalize:"off"
 
     %p
       = textcaptcha_fields(f) do

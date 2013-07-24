@@ -5,15 +5,13 @@
 
  // set font to 100% in body
  // set block width with percentages, font sizes with ems
- // try building a table-based layout for a landing page - single vertical horizontally centered container
 
-@import "compass/reset";
-@import "compass/css3";
-@import "compass/css3/box-sizing";
+
+@import "normalize/normalize";
+@import "compass";
 @import "colors";
 @import "clouds";
 @import "dev";
-@import "compass/typography/text/replacement";
 
 header {
 	padding:.5em;
