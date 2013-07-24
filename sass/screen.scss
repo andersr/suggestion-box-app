@@ -13,30 +13,39 @@ body {
 	background-color:#eeeeee;
 }
 #container {
-	width: 25em;
-	margin-left: auto;
-	margin-right: auto;
-	border-left: 1px solid #ccc;
-	border-right: 1px solid #ccc;
+	width: 100%;
 }
+
+
+// for larger viewports:
+	// // margin-left: auto;
+	// // margin-right: auto;
+	// border: 1px solid #ccc;
 
 // HEADER
 // ------------------------------
 header {
 	background-color: #ccc;
-	position: relative;
-	height: 2.2em;
+	padding:1em .5em 1.3em 1em; //shorthand: top/bottom, left/right
+	
+// when adding a graphic:
+	//position: relative;
+	//height: 2em;
 
-	img.logo {
-		position: absolute;
-		left:.25em;
-		top:.25em;
-	}
+	// img.logo {
+	// 	position: absolute;
+	// 	left:.25em;
+	// 	top:.25em;
+	// }
+
 	h1.title {
-		position: absolute;
+		// position: absolute;
 		margin-top:0;
-		top:.25em;
-		left: 2.2em;
+		margin-bottom: 0;
+		// top:.25em;
+		// left: .25em;
+		//padding-left:.25em;
+		font-size: 1.8em;
 	}
 
 	.notices {
@@ -51,16 +60,45 @@ header {
 // CONTENT
 // ------------------------------
 .content {
-	padding:.5em;
+	padding:1em 2em 1em 1em;
+	overflow:hidden; // prevent horizontal scrolling in mobile safari
 }
 
 
 // FORMS
 // ------------------------------
+
+input, textarea {
+	width:100%;
+	padding:.3em;
+	font-size: 1.7em;
+}
 .help-text {
 	margin-top: .5em;
-	font-size: smaller;
+	//font-size: smaller;
 	font-style: italic;
+}
+
+input[type="submit"] {
+	width:100% !important;
+}
+.spam_question {
+	//font-size: smaller;
+	font-style: italic;
+	color:#666666;
+
+	label {
+		font-size: .95em;
+		margin-left:.3em;
+		//margin-bottom: .3em;
+		//padding-bottom: .5em;
+		display:inline;
+	}
+
+	input {
+		margin-top: .3em;
+		display:inline;
+	}
 }
 
 
