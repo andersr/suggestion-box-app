@@ -10,23 +10,13 @@
           %ul
             - @suggestion.errors.messages.values.each do |msg|
               = msg.to_sentence
-      .field
-        -#= f.label :message, "How can we make BCL Better?"
-        -#%br/
-        = f.text_area :message, type:"text", placeholder:"How can we make BCL better?", :rows => 2, autocapitalize:"sentences", autofocus:true
-
-      %p
-        = f.text_field :name, placeholder:'Name (optional)', autocapitalize:"words"
-
-      %p
-        = f.email_field :email, placeholder:"Email (optional)", autocorrect:"off", autocapitalize:"off"
-
-      %p.spam_question
-        %label
-          Just to make sure you're a real person:
-        =text_field_tag "dummy", nil, placeholder:"What is 5 + 2?"
-        / = textcaptcha_fields(f) do
-        /   = f.label :spam_answer, @suggestion.spam_question
-        /   = f.text_field :spam_answer, :value => ''
-      %p.actions
-        = f.submit "Post it!"
+      = f.text_area :message, type:"text", placeholder:"How can we make BCL better?", :rows => 3, autocapitalize:"sentences", autofocus:true, id:"suggestion-message"
+      = f.text_field :name, placeholder:'Name (optional)', autocapitalize:"words"
+      = f.email_field :email, placeholder:"Email (optional)", autocorrect:"off", autocapitalize:"off"
+      %label.help
+        Just to make sure you're a real person:
+      -#=text_field_tag "dummy", nil, placeholder:"What is 5 + 2?"
+      = textcaptcha_fields(f) do
+        = f.label :spam_answer, @suggestion.spam_question
+        = f.text_field :spam_answer, :value => ''
+      = f.submit "Post it!"
