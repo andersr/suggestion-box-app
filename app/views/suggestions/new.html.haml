@@ -15,6 +15,7 @@
       = f.email_field :email, placeholder:"Email (optional)", autocorrect:"off", autocapitalize:"off"
       %label.help
         Just to make sure you're a real person:
+        %br
       -#=text_field_tag "dummy", nil, placeholder:"What is 5 + 2?"
       = textcaptcha_fields(f) do
         = f.label :spam_answer, @suggestion.spam_question

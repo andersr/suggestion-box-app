@@ -16,3 +16,5 @@
 
 # Ignore all files relating to research, mockups, prototypes, etc.
 /design/
+
+/public/tests/
