@@ -1,7 +1,8 @@
 %header
   = image_tag("http://placehold.it/50x50", :size => "50x50", :alt => "Org logo", class:"logo")
   %h1.title
-    = @suggestion_box.short_name << " Suggestion Box"
+    = @suggestion_box.short_name
+    &nbsp;Suggestion Box
 %p#notice= notice
 %p
   = link_to "Post a new suggestion", new_suggestion_box_suggestion_path(@suggestion_box)

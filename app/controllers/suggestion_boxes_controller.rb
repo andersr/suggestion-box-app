@@ -25,7 +25,7 @@
 
           respond_to do |format|
             format.html # show.html.erb
-            format.json { render json: @suggestions }
+            format.json { render json: @suggestion_box }
           end
         end
 

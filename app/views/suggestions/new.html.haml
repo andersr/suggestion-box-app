@@ -2,7 +2,8 @@
   %header
     -#= image_tag("http://placehold.it/50x50", :size => "50x50", :alt => "Org logo", class:"logo")
     %h1.title
-      = @suggestion_box.short_name << " Suggestion Box"
+      = @suggestion_box.short_name
+      &nbsp;Suggestion Box
   .content
     = form_for [@suggestion_box, @suggestion] do |f|
       - if @suggestion.errors.any?
