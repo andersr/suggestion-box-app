@@ -48,7 +48,7 @@
         # POST /suggestion_boxes
         # POST /suggestion_boxes.json
         def create
-          @suggestion_box = SuggestionBox.new(params[:id])
+          @suggestion_box = SuggestionBox.new(params[:suggestion_box])
 
           respond_to do |format|
             if @suggestion_box.save

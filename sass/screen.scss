@@ -38,7 +38,7 @@ header {
 	// 	top:.25em;
 	// }
 
-	h1.title {
+	h1 {
 		// position: absolute;
 		margin-top:0;
 		margin-bottom: 0;
@@ -59,7 +59,7 @@ header {
 
 // CONTENT
 // ------------------------------
-.content {
+#content {
 	padding:1.5em 2em 1.2em 1em;
 	overflow:hidden; // prevent horizontal scrolling in mobile safari
 }

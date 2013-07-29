@@ -1,24 +1,22 @@
-#container
-  %header
-    -#= image_tag("http://placehold.it/50x50", :size => "50x50", :alt => "Org logo", class:"logo")
-    %h1.title
-      = @suggestion_box.short_name
-      &nbsp;Suggestion Box
-  .content
-    = form_for [@suggestion_box, @suggestion] do |f|
-      - if @suggestion.errors.any?
-        #error_explanation
-          %ul
-            - @suggestion.errors.messages.values.each do |msg|
-              = msg.to_sentence
-      = f.text_area :message, type:"text", placeholder:"How can we make BCL better?", :rows => 3, autocapitalize:"sentences", autofocus:true, id:"suggestion-message"
-      = f.text_field :name, placeholder:'Name (optional)', autocapitalize:"words"
-      = f.email_field :email, placeholder:"Email (optional)", autocorrect:"off", autocapitalize:"off"
-      %label.help
-        Just to make sure you're a real person:
-        %br
-      -#=text_field_tag "dummy", nil, placeholder:"What is 5 + 2?"
-      = textcaptcha_fields(f) do
-        = f.label :spam_answer, @suggestion.spam_question
-        = f.text_field :spam_answer, :value => ''
-      = f.submit "Post it!"
+%header
+  -#= image_tag("http://placehold.it/50x50", :size => "50x50", :alt => "Org logo", class:"logo")
+  %h1
+    #{@suggestion_box.short_name} Suggestion Box
+#content
+  = form_for [@suggestion_box, @suggestion] do |f|
+    - if @suggestion.errors.any?
+      #error_explanation
+        %ul
+          - @suggestion.errors.messages.values.each do |msg|
+            = msg.to_sentence
+    = f.text_area :message, type:"text", placeholder:"How can we make #{@suggestion_box.short_name} better?", :rows => 3, autocapitalize:"sentences", autofocus:true, id:"suggestion-message"
+    = f.text_field :name, placeholder:'Name (optional)', autocapitalize:"words"
+    = f.email_field :email, placeholder:"Email (optional)", autocorrect:"off", autocapitalize:"off"
+    %label.help
+      Just to make sure you're a real person:
+      %br
+    -#=text_field_tag "dummy", nil, placeholder:"What is 5 + 2?"
+    = textcaptcha_fields(f) do
+      = f.label :spam_answer, @suggestion.spam_question
+      = f.text_field :spam_answer, :value => ''
+    = f.submit "Post it!"
