@@ -1,4 +1,6 @@
 class InvitesController < ApplicationController
+
+  #layout "product"
   # GET /invites
   # GET /invites.json
   def index

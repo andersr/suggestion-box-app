@@ -1,8 +1,7 @@
-@import "normalize/normalize";
+//@import "normalize/normalize";
 @import "compass";
 @import "colors";
-@import "clouds";
-@import "invites";
+//@import "clouds";
 //@import "dev";
 
 
@@ -14,7 +13,6 @@
 // BASE
 // ------------------------------
 body {
-	//font-family:"museo-sans", sans-serif;
 	background-color:#eeeeee;
 }
 #container {
@@ -137,10 +135,12 @@ ul.inline, ol.inline {
 
 .table-cell-field {
 	min-width: 7.5em;
-	max-width: 100%;
+max-width: 100%;
 }
 
-//tablet
+@import "invites";
+
+//tablet and larger
 @media all and (min-width: 30em) {
 
 	body {
@@ -155,4 +155,6 @@ ul.inline, ol.inline {
 		margin-right: auto;
 		overflow:hidden;
 	}
+
+
 } // @media all and (min-width: 30em)

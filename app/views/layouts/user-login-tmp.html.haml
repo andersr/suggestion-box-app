@@ -1,0 +1,12 @@
+user-login-tmp
+
+/ .user-account
+  /     - if current_user
+  /         = "Logged in as #{current_user.email}"
+  /         | 
+  /         = link_to "Sign Out", logout_path  #("current"), method: "delete"
+  /     - else
+  /         = link_to "Sign Up", signup_path
+  /         | 
+  /         = link_to "Login", login_path
+  

@@ -1,0 +1,219 @@
+@import "normalize/normalize";
+@import "compass";
+@import "colors";
+@import "clouds";
+
+
+// BASE
+// ------------------------------
+body {
+	font-family:'Josefin Sans', Helvetica, Arial, sans-serif;
+}
+#container {
+	position: absolute;
+	top:1em;
+	left:1.5em;
+	right:1.5em;
+	bottom:1.5em;
+	overflow:none;
+}
+
+#content {
+	//padding:1.5em 2em 1.2em 1em;
+	overflow:hidden; // prevent horizontal scrolling in mobile safari
+	width:100%;
+
+		footer {
+			margin-top:0;
+			font-size:1em;
+			color:#666666;
+			text-align: center;
+			//width:100%;
+
+			ul {
+				margin-top: .5em;
+				padding-left: 0;
+				// margin-left: auto;
+				// margin-right: auto;
+			}
+		}
+}
+
+// FORMS
+// ------------------------------
+
+input, textarea, .editable-div {
+	width:100%;
+	padding:.3em;
+	font-size: 1.2em;
+	margin-bottom: 1em;
+}
+
+.help {
+	margin-left:.3em;
+	font-size: .95em;
+	font-style: italic;
+	color:#666666;
+}
+
+h1 {
+	font: 4.5em 'Dancing Script', Georgia, Times, serif;
+	color:$ml-red;
+	margin-bottom:.15em;
+	margin-top: 0;
+}
+
+h2 {
+	font-family: 'Josefin Sans', Georgia, Times, serif;
+	font-weight:bold;
+	color: #666;
+	font-size:1.6em;
+	margin-bottom:.25em;
+	margin-top: 0;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.3em;
+    margin-bottom: .5em;
+    	margin-top: 0;
+}
+
+.signup-text-field {
+	//width: 100%;
+	font-size:1em;
+	border:2px solid #98A89E;
+	padding:10px;
+	@include border-radius(5px);
+	//width:80%;
+	width: 7.5em;
+}
+.submit-button {
+	width: 100%;
+	margin-left: 5px;
+	border:1px solid #d82e00;
+	@include border-radius(5px);
+
+	font:1em bold arial, helvetica, sans-serif;
+	text-align: center;
+
+	padding: 11px 10px;
+	text-shadow: -1px -1px 0 rgba(0,0,0,0.3);
+
+	color: #FFFFFF;
+	background-color: #FF4411;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FF4411), color-stop(100%, #D40015));
+	background-image: -webkit-linear-gradient(top, #FF4411, #D40015);
+	background-image: -moz-linear-gradient(top, #FF4411, #D40015);
+	background-image: -ms-linear-gradient(top, #FF4411, #D40015);
+	background-image: -o-linear-gradient(top, #FF4411, #D40015);
+	background-image: linear-gradient(top, #FF4411, #D40015);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FF4411, endColorstr=#D40015);
+}
+
+.submit-button:hover{
+	cursor: pointer;
+	border:1px solid #aa2400; background-color: #FFDA24;
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFDA24), color-stop(100%, #D40015));
+	background-image: -webkit-linear-gradient(top, #FFDA24, #D40015);
+	background-image: -moz-linear-gradient(top, #FFDA24, #D40015);
+	background-image: -ms-linear-gradient(top, #FFDA24, #D40015);
+	background-image: -o-linear-gradient(top, #FFDA24, #D40015);
+	background-image: linear-gradient(top, #FFDA24, #D40015);filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFDA24, endColorstr=#D40015);
+}
+
+.error { color:$warm-red;
+	padding-top: 10px;
+	font-size: 1.2em;
+
+}
+
+.error-messages {
+	margin-top: .5em;
+	clear: both;
+	font-size:1em;
+	font-weight: bold;
+	color:#cc0000;
+
+}
+.field_with_errors {
+	display: inline;
+
+	input {
+		border: 2px solid #cc0000;
+	}
+}
+
+a, a:visited {
+	color:#666666;
+	text-decoration:none;
+	
+	&:hover {
+		color:black;
+		background-color: transparent;
+	}
+}
+
+
+// LISTS
+// ------------------------------
+
+ul.inline, ol.inline {
+	//margin-top: 1em;
+
+	li {
+		display: inline-block;
+		margin-left: .2em;
+		padding-right: .4em;
+		border-right: 1px solid #999999;
+		
+		&:first-child{
+			margin-left:0;
+		}
+		&:last-child{
+			border-right:none;
+		}
+	}
+}
+
+// CSS TABLE
+// Set using a css table display
+// ---------
+.display-table {
+	display:table;
+    border-collapse:collapse;
+    width: 100%;
+}
+.table-row {
+	 display:table-row;
+}
+.table-cell {
+	 display:table-cell;
+	 vertical-align: middle;
+}
+.table-cell-submit {
+	width: 7.5em;
+}
+
+.table-cell-field {
+	min-width: 7.5em;
+max-width: 100%;
+}
+
+//tablet and larger
+@media all and (min-width: 30em) {
+
+	body {
+		overflow:none;
+	}
+
+	#container {
+		width: 20em;
+		// border: 1px solid #ccc;
+		margin-top: 1em;
+		margin-left: auto;
+		margin-right: auto;
+		overflow:hidden;
+	}
+
+
+} // @media all and (min-width: 30em)
