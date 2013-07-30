@@ -1,15 +1,2 @@
-= render 'landing_page/clouds'
-.landing-page
-	.container
-		.centered-box
-			%h1 Thanks!
-			%p.margin-bottom
-				We've added you to the ChirpyBox mailing list. We'll be in touch!
-				-# would like to include "#{@invite.email}" 
-			%footer
-				%nav
-					%ul.inline
-						%li
-							= mail_to "hello@chirpybox.com", "Contact", :encode => "hex"
-						%li #{link_to "Twitter", "https://twitter.com/chirpybox"}
-						%li #{link_to "Take Our Survey", "#"}
+%h1 Thanks!
+%p We've added you to the ChirpyBox mailing list. We'll be in touch!
