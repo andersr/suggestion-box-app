@@ -6,6 +6,12 @@
 
 // BASE
 // ------------------------------
+
+html
+{
+	// prevent horizontal scrolling in mobile safari
+    overflow-x:hidden;
+}
 body {
 	font-family:'Josefin Sans', Helvetica, Arial, sans-serif;
 }
@@ -15,12 +21,13 @@ body {
 	left:1.5em;
 	right:1.5em;
 	bottom:1.5em;
-	overflow:none;
+	//overflow-x: hidden; // prevent horizontal scrolling in mobile safari
+	
 }
 
 #content {
 	//padding:1.5em 2em 1.2em 1em;
-	overflow:hidden; // prevent horizontal scrolling in mobile safari
+	
 	width:100%;
 
 		footer {
@@ -64,10 +71,11 @@ h1 {
 }
 
 h2 {
-	font-family: 'Josefin Sans', Georgia, Times, serif;
-	font-weight:bold;
+	font-family:'Pathway Gothic One', sans-serif;
+	//font-weight:bold;
 	color: #666;
-	font-size:1.6em;
+	font-size:1.52em;
+	//letter-spacing: .01em;
 	margin-bottom:.25em;
 	margin-top: 0;
 }
@@ -201,18 +209,20 @@ max-width: 100%;
 
 //tablet and larger
 @media all and (min-width: 30em) {
+	// body {
+	// 	overflow:none;
+	// }
 
-	body {
-		overflow:none;
-	}
 
 	#container {
 		width: 20em;
-		// border: 1px solid #ccc;
 		margin-top: 1em;
 		margin-left: auto;
 		margin-right: auto;
-		overflow:hidden;
+	}
+
+	#content {
+		overflow:visible;
 	}
 
 
