@@ -1,135 +1,3 @@
-/*********************
-COLORS
-
-
-
-Theme: Old Wood Suggestion Box
-Based on http://www.colourlovers.com/web/trends/websites/7844/Banner_Illustration
-*********************/
-/* generic */
-/* Legacy colors */
-/* line 46, ../../../sass/_colors.scss */
-.tmp {
-  color: #E6E6E6;
-}
-
-/* line 8, ../../../sass/screen.scss */
-.label-test {
-  display: none;
-}
-
-/* line 15, ../../../sass/screen.scss */
-body {
-  background-color: #eeeeee;
-}
-
-/* line 18, ../../../sass/screen.scss */
-#container {
-  width: 100%;
-}
-
-/* line 25, ../../../sass/screen.scss */
-header {
-  background-color: #ccc;
-  padding: 1em .5em 1.3em 1em;
-}
-/* line 39, ../../../sass/screen.scss */
-header h1 {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 1.8em;
-}
-/* line 49, ../../../sass/screen.scss */
-header .notices {
-  display: block;
-  height: 2em;
-  background-color: #ffff99;
-  color: #000;
-}
-
-/* line 60, ../../../sass/screen.scss */
-#content {
-  padding: 1.5em 2em 1.2em 1em;
-  overflow: hidden;
-}
-
-/* line 69, ../../../sass/screen.scss */
-input, textarea, .editable-div {
-  width: 100%;
-  padding: .3em;
-  font-size: 1.2em;
-  margin-bottom: 1em;
-}
-
-/* line 76, ../../../sass/screen.scss */
-.editable-div {
-  -moz-appearance: textfield;
-  -webkit-appearance: textfield;
-  background-color: white;
-  background-color: -moz-field;
-  border: 1px solid darkgray;
-  box-shadow: 1px 1px 1px 0 lightgray inset;
-  font: -moz-field;
-  font: -webkit-small-control;
-}
-
-/* line 87, ../../../sass/screen.scss */
-.help {
-  margin-left: .3em;
-  font-size: .95em;
-  font-style: italic;
-  color: #666666;
-}
-
-/* line 98, ../../../sass/screen.scss */
-ul.inline, ol.inline {
-  margin-top: 1em;
-}
-/* line 101, ../../../sass/screen.scss */
-ul.inline li, ol.inline li {
-  display: inline-block;
-  margin-left: .2em;
-  padding-right: .4em;
-  border-right: 1px solid #999999;
-}
-/* line 108, ../../../sass/screen.scss */
-ul.inline li:first-child, ol.inline li:first-child {
-  margin-left: 0;
-}
-/* line 111, ../../../sass/screen.scss */
-ul.inline li:last-child, ol.inline li:last-child {
-  border-right: none;
-}
-
-/* line 120, ../../../sass/screen.scss */
-.display-table {
-  display: table;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-/* line 125, ../../../sass/screen.scss */
-.table-row {
-  display: table-row;
-}
-
-/* line 128, ../../../sass/screen.scss */
-.table-cell {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-/* line 132, ../../../sass/screen.scss */
-.table-cell-submit {
-  width: 7.5em;
-}
-
-/* line 136, ../../../sass/screen.scss */
-.table-cell-field {
-  min-width: 7.5em;
-  max-width: 100%;
-}
-
 /* normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* normalize.scss v2.1.2 | MIT/GPLv2 License | bit.ly/normalize-with-compass */
 /* ==========================================================================
@@ -162,8 +30,6 @@ audio,
 canvas,
 video {
   display: inline-block;
-  *display: inline;
-  *zoom: 1;
 }
 
 /**
@@ -207,18 +73,6 @@ html {
   /* 2 */
   /* Establish a vertical rhythm unit using $base-line-height. */
   line-height: 1.5em;
-}
-
-/**
- * Address `font-family` inconsistency between `textarea` and other form
- * elements.
- */
-/* line 138, ../../../sass/normalize/_normalize.scss */
-button,
-input,
-select,
-textarea {
-  font-family: "museo-sans", sans-serif;
 }
 
 /**
@@ -375,7 +229,6 @@ kbd,
 pre,
 samp {
   font-family: monospace, serif;
-  _font-family: 'courier new', monospace;
   font-size: 1em;
   line-height: 1.5em;
 }
@@ -385,9 +238,7 @@ samp {
  */
 /* line 310, ../../../sass/normalize/_normalize.scss */
 pre {
-  white-space: pre;
   white-space: pre-wrap;
-  word-wrap: break-word;
 }
 
 /**
@@ -465,16 +316,6 @@ ul {
   padding: 0 0 0 40px;
 }
 
-/**
- * Correct list images handled incorrectly in IE 7.
- */
-/* line 404, ../../../sass/normalize/_normalize.scss */
-nav ul,
-nav ol {
-  list-style: none;
-  list-style-image: none;
-}
-
 /* ==========================================================================
    Embedded content
    ========================================================================== */
@@ -484,8 +325,6 @@ nav ol {
 /* line 418, ../../../sass/normalize/_normalize.scss */
 img {
   border: 0;
-  /* Improve image quality when scaled in IE 7. */
-  -ms-interpolation-mode: bicubic;
 }
 
 /**
@@ -510,14 +349,6 @@ figure {
 /* ==========================================================================
    Forms
    ========================================================================== */
-/**
- * Correct margin displayed oddly in IE 6/7.
- */
-/* line 455, ../../../sass/normalize/_normalize.scss */
-form {
-  margin: 0;
-}
-
 /**
  * Define consistent border, margin, and padding.
  */
@@ -551,8 +382,6 @@ legend {
   /* 1 */
   padding: 0;
   /* 2 */
-  *margin-left: -7px;
-  /* 3 */
 }
 
 /**
@@ -572,10 +401,6 @@ textarea {
   /* 2 */
   margin: 0;
   /* 3 */
-  vertical-align: baseline;
-  /* 4 */
-  *vertical-align: middle;
-  /* 4 */
 }
 
 /**
@@ -618,8 +443,6 @@ input[type="submit"] {
   /* 2 */
   cursor: pointer;
   /* 3 */
-  *overflow: visible;
-  /* 4 */
 }
 
 /**
@@ -646,10 +469,6 @@ input[type="radio"] {
   /* 1 */
   padding: 0;
   /* 2 */
-  *height: 13px;
-  /* 3 */
-  *width: 13px;
-  /* 3 */
 }
 
 /**
@@ -726,217 +545,42 @@ Based on http://www.colourlovers.com/web/trends/websites/7844/Banner_Illustratio
   color: #E6E6E6;
 }
 
-/*Lets start with the cloud formation rather*/
-/*The container will also serve as the SKY*/
-/* line 5, ../../../sass/_clouds.scss */
+/* line 9, ../../../sass/screen.scss */
 body {
-  /*To hide the horizontal scroller appearing during the animation*/
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
+  background-color: #eeeeee;
 }
 
-/* line 12, ../../../sass/_clouds.scss */
-#clouds {
-  margin-top: -20px;
-  background: #c9dbe9;
-  background: -webkit-linear-gradient(top, #c9dbe9 0%, white 100%);
-  background: -linear-gradient(top, #c9dbe9 0%, white 100%);
-  background: -moz-linear-gradient(top, #c9dbe9 0%, white 100%);
-}
-
-/*Time to finalise the cloud shape*/
-/* line 22, ../../../sass/_clouds.scss */
-.cloud {
-  width: 200px;
-  height: 60px;
-  background: #fff;
-  border-radius: 200px;
-  -moz-border-radius: 200px;
-  -webkit-border-radius: 200px;
-  position: relative;
-}
-
-/* line 33, ../../../sass/_clouds.scss */
-.cloud:before, .cloud:after {
-  content: '';
-  position: absolute;
-  background: #fff;
-  width: 100px;
-  height: 80px;
-  position: absolute;
-  top: -15px;
-  left: 10px;
-  border-radius: 100px;
-  -moz-border-radius: 100px;
-  -webkit-border-radius: 100px;
-  -webkit-transform: rotate(30deg);
-  transform: rotate(30deg);
-  -moz-transform: rotate(30deg);
-}
-
-/* line 49, ../../../sass/_clouds.scss */
-.cloud:after {
-  width: 120px;
-  height: 120px;
-  top: -55px;
-  left: auto;
-  right: 15px;
-}
-
-/*Time to animate*/
-/* line 55, ../../../sass/_clouds.scss */
-.x1 {
-  -webkit-animation: moveclouds 15s linear infinite;
-  -moz-animation: moveclouds 15s linear infinite;
-  -o-animation: moveclouds 15s linear infinite;
-}
-
-/*variable speed, opacity, and position of clouds for realistic effect*/
-/* line 62, ../../../sass/_clouds.scss */
-.x2 {
-  left: 200px;
-  -webkit-transform: scale(0.6);
-  -moz-transform: scale(0.6);
-  transform: scale(0.6);
-  opacity: 0.6;
-  /*opacity proportional to the size*/
-  /*Speed will also be proportional to the size and opacity*/
-  /*More the speed. Less the time in 's' = seconds*/
-  -webkit-animation: moveclouds 25s linear infinite;
-  -moz-animation: moveclouds 25s linear infinite;
-  -o-animation: moveclouds 25s linear infinite;
-}
-
-/* line 77, ../../../sass/_clouds.scss */
-.x3 {
-  left: -250px;
-  top: -200px;
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  transform: scale(0.8);
-  opacity: 0.8;
-  /*opacity proportional to the size*/
-  -webkit-animation: moveclouds 20s linear infinite;
-  -moz-animation: moveclouds 20s linear infinite;
-  -o-animation: moveclouds 20s linear infinite;
-}
-
-/* line 90, ../../../sass/_clouds.scss */
-.x4 {
-  left: 470px;
-  top: -250px;
-  -webkit-transform: scale(0.75);
-  -moz-transform: scale(0.75);
-  transform: scale(0.75);
-  opacity: 0.75;
-  /*opacity proportional to the size*/
-  -webkit-animation: moveclouds 18s linear infinite;
-  -moz-animation: moveclouds 18s linear infinite;
-  -o-animation: moveclouds 18s linear infinite;
-}
-
-/* line 103, ../../../sass/_clouds.scss */
-.x5 {
-  left: -150px;
-  top: -150px;
-  -webkit-transform: scale(0.8);
-  -moz-transform: scale(0.8);
-  transform: scale(0.8);
-  opacity: 0.8;
-  /*opacity proportional to the size*/
-  -webkit-animation: moveclouds 20s linear infinite;
-  -moz-animation: moveclouds 20s linear infinite;
-  -o-animation: moveclouds 20s linear infinite;
-}
-
-/* line 116, ../../../sass/_clouds.scss */
-.x6 {
-  left: 150px;
-  top: 500px;
-  -webkit-transform: scale(0.9);
-  -moz-transform: scale(0.9);
-  transform: scale(0.9);
-  opacity: 0.9;
-  /*opacity proportional to the size*/
-  -webkit-animation: moveclouds 19s linear infinite;
-  -moz-animation: moveclouds 19s linear infinite;
-  -o-animation: moveclouds 19s linear infinite;
-}
-
-@-webkit-keyframes moveclouds {
-  /* line 130, ../../../sass/_clouds.scss */
-  0% {
-    margin-left: 1000px;
-  }
-
-  /* line 131, ../../../sass/_clouds.scss */
-  100% {
-    margin-left: -1000px;
-  }
-}
-
-@-moz-keyframes moveclouds {
-  /* line 134, ../../../sass/_clouds.scss */
-  0% {
-    margin-left: 1000px;
-  }
-
-  /* line 135, ../../../sass/_clouds.scss */
-  100% {
-    margin-left: -1000px;
-  }
-}
-
-@-o-keyframes moveclouds {
-  /* line 138, ../../../sass/_clouds.scss */
-  0% {
-    margin-left: 1000px;
-  }
-
-  /* line 139, ../../../sass/_clouds.scss */
-  100% {
-    margin-left: -1000px;
-  }
-}
-
-/* line 11, ../../../sass/invites.scss */
-html {
-  overflow-x: hidden;
-}
-
-/* line 15, ../../../sass/invites.scss */
-body {
-  font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
-}
-
-/* line 18, ../../../sass/invites.scss */
+/* line 12, ../../../sass/screen.scss */
 #container {
-  position: absolute;
-  top: 1em;
-  left: 1.5em;
-  right: 1.5em;
-  bottom: 1.5em;
-}
-
-/* line 28, ../../../sass/invites.scss */
-#content {
   width: 100%;
 }
-/* line 33, ../../../sass/invites.scss */
-#content footer {
-  margin-top: 0;
-  font-size: 1em;
-  color: #666666;
-  text-align: center;
+
+/* line 19, ../../../sass/screen.scss */
+header {
+  background-color: #ccc;
+  padding: 1em .5em 1.3em 1em;
 }
-/* line 40, ../../../sass/invites.scss */
-#content footer ul {
-  margin-top: .5em;
-  padding-left: 0;
+/* line 33, ../../../sass/screen.scss */
+header h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.8em;
+}
+/* line 43, ../../../sass/screen.scss */
+header .notices {
+  display: block;
+  height: 2em;
+  background-color: #ffff99;
+  color: #000;
 }
 
-/* line 52, ../../../sass/invites.scss */
+/* line 54, ../../../sass/screen.scss */
+#content {
+  padding: 1.5em 2em 1.2em 1em;
+  overflow: hidden;
+}
+
+/* line 64, ../../../sass/screen.scss */
 input, textarea, .editable-div {
   width: 100%;
   padding: .3em;
@@ -944,7 +588,7 @@ input, textarea, .editable-div {
   margin-bottom: 1em;
 }
 
-/* line 59, ../../../sass/invites.scss */
+/* line 82, ../../../sass/screen.scss */
 .help {
   margin-left: .3em;
   font-size: .95em;
@@ -952,185 +596,67 @@ input, textarea, .editable-div {
   color: #666666;
 }
 
-/* line 66, ../../../sass/invites.scss */
-h1 {
-  font: 4.5em 'Dancing Script', Georgia, Times, serif;
-  color: #d40015;
-  margin-bottom: .15em;
-  margin-top: 0;
+/* line 93, ../../../sass/screen.scss */
+ul.inline, ol.inline {
+  margin-top: 1em;
 }
-
-/* line 73, ../../../sass/invites.scss */
-h2 {
-  font-family: 'Pathway Gothic One', sans-serif;
-  color: #666;
-  font-size: 1.52em;
-  margin-bottom: .25em;
-  margin-top: 0;
-}
-
-/* line 83, ../../../sass/invites.scss */
-p {
-  font-size: 1.5em;
-  line-height: 1.3em;
-  margin-bottom: .5em;
-  margin-top: 0;
-}
-
-/* line 90, ../../../sass/invites.scss */
-.signup-text-field {
-  font-size: 1em;
-  border: 2px solid #98A89E;
-  padding: 10px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  width: 7.5em;
-}
-
-/* line 99, ../../../sass/invites.scss */
-.submit-button {
-  width: 100%;
-  margin-left: 5px;
-  border: 1px solid #d82e00;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  font: 1em bold arial, helvetica, sans-serif;
-  text-align: center;
-  padding: 11px 10px;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
-  color: #FFFFFF;
-  background-color: #FF4411;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ff4411), color-stop(100%, #d40015));
-  background-image: -webkit-linear-gradient(top, #ff4411, #d40015);
-  background-image: -moz-linear-gradient(top, #ff4411, #d40015);
-  background-image: -ms-linear-gradient(top, #ff4411, #d40015);
-  background-image: -o-linear-gradient(top, #ff4411, #d40015);
-  background-image: linear-gradient(top, #ff4411, #d40015);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FF4411, endColorstr=#D40015);
-}
-
-/* line 121, ../../../sass/invites.scss */
-.submit-button:hover {
-  cursor: pointer;
-  border: 1px solid #aa2400;
-  background-color: #FFDA24;
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffda24), color-stop(100%, #d40015));
-  background-image: -webkit-linear-gradient(top, #ffda24, #d40015);
-  background-image: -moz-linear-gradient(top, #ffda24, #d40015);
-  background-image: -ms-linear-gradient(top, #ffda24, #d40015);
-  background-image: -o-linear-gradient(top, #ffda24, #d40015);
-  background-image: linear-gradient(top, #ffda24, #d40015);
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFDA24, endColorstr=#D40015);
-}
-
-/* line 132, ../../../sass/invites.scss */
-.error {
-  color: #c6491a;
-  padding-top: 10px;
-  font-size: 1.2em;
-}
-
-/* line 138, ../../../sass/invites.scss */
-.error-messages {
-  margin-top: .5em;
-  clear: both;
-  font-size: 1em;
-  font-weight: bold;
-  color: #cc0000;
-}
-
-/* line 146, ../../../sass/invites.scss */
-.field_with_errors {
-  display: inline;
-}
-/* line 149, ../../../sass/invites.scss */
-.field_with_errors input {
-  border: 2px solid #cc0000;
-}
-
-/* line 154, ../../../sass/invites.scss */
-a, a:visited {
-  color: #666666;
-  text-decoration: none;
-}
-/* line 158, ../../../sass/invites.scss */
-a:hover, a:visited:hover {
-  color: black;
-  background-color: transparent;
-}
-
-/* line 171, ../../../sass/invites.scss */
+/* line 96, ../../../sass/screen.scss */
 ul.inline li, ol.inline li {
   display: inline-block;
   margin-left: .2em;
   padding-right: .4em;
   border-right: 1px solid #999999;
 }
-/* line 177, ../../../sass/invites.scss */
+/* line 103, ../../../sass/screen.scss */
 ul.inline li:first-child, ol.inline li:first-child {
   margin-left: 0;
 }
-/* line 180, ../../../sass/invites.scss */
+/* line 106, ../../../sass/screen.scss */
 ul.inline li:last-child, ol.inline li:last-child {
   border-right: none;
 }
 
-/* line 189, ../../../sass/invites.scss */
+/* line 115, ../../../sass/screen.scss */
 .display-table {
   display: table;
   border-collapse: collapse;
   width: 100%;
 }
 
-/* line 194, ../../../sass/invites.scss */
+/* line 120, ../../../sass/screen.scss */
 .table-row {
   display: table-row;
 }
 
-/* line 197, ../../../sass/invites.scss */
+/* line 123, ../../../sass/screen.scss */
 .table-cell {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 201, ../../../sass/invites.scss */
+/* line 127, ../../../sass/screen.scss */
 .table-cell-submit {
   width: 7.5em;
 }
 
-/* line 205, ../../../sass/invites.scss */
+/* line 131, ../../../sass/screen.scss */
 .table-cell-field {
   min-width: 7.5em;
   max-width: 100%;
 }
 
-@media all and (min-width: 30em) {
-  /* line 217, ../../../sass/invites.scss */
-  #container {
-    width: 20em;
-    margin-top: 1em;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* line 224, ../../../sass/invites.scss */
-  #content {
-    overflow: visible;
-  }
+/* line 138, ../../../sass/screen.scss */
+#new_suggestion {
+  width: 100%;
 }
+
 @media all and (min-width: 30em) {
-  /* line 146, ../../../sass/screen.scss */
+  /* line 148, ../../../sass/screen.scss */
   body {
     overflow: none;
   }
 
-  /* line 150, ../../../sass/screen.scss */
+  /* line 152, ../../../sass/screen.scss */
   #container {
     width: 30em;
     border: 1px solid #ccc;

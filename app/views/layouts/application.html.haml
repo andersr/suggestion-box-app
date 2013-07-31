@@ -11,9 +11,7 @@
     = stylesheet_link_tag "screen", :media => "all"
     = csrf_meta_tags
   %body
-  = render 'layouts/clouds'
-  #container.landing-page
-    = render "layouts/flashes"
-    = yield
-    = javascript_include_tag(:application)
-    -#= render "layouts/footer"
+    #container
+      = render "layouts/flashes"
+      = yield
+      = javascript_include_tag(:application)

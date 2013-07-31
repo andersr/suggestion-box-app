@@ -1,13 +1,7 @@
-//@import "normalize/normalize";
+@import "normalize/normalize";
 @import "compass";
 @import "colors";
-//@import "clouds";
 //@import "dev";
-
-
-.label-test {
-	display:none;
-}
 
 
 // BASE
@@ -59,6 +53,7 @@ header {
 // ------------------------------
 #content {
 	padding:1.5em 2em 1.2em 1em;
+	//padding:0;
 	overflow:hidden; // prevent horizontal scrolling in mobile safari
 }
 
@@ -73,16 +68,16 @@ input, textarea, .editable-div {
 	margin-bottom: 1em;
 }
 
-.editable-div {
-    -moz-appearance: textfield;
-    -webkit-appearance: textfield;
-    background-color: white;
-    background-color: -moz-field;
-    border: 1px solid darkgray;
-    box-shadow: 1px 1px 1px 0 lightgray inset;  
-    font: -moz-field;
-    font: -webkit-small-control;  
-}
+// .editable-div {
+//     -moz-appearance: textfield;
+//     -webkit-appearance: textfield;
+//     background-color: white;
+//     background-color: -moz-field;
+//     border: 1px solid darkgray;
+//     box-shadow: 1px 1px 1px 0 lightgray inset;  
+//     font: -moz-field;
+//     font: -webkit-small-control;  
+// }
 
 .help {
 	//margin-top: .5em;
@@ -138,7 +133,14 @@ ul.inline, ol.inline {
 max-width: 100%;
 }
 
-@import "invites";
+// NEW SUGGESTION FORM
+// ------------------------------
+#new_suggestion {
+	width: 100%;
+
+
+}
+
 
 //tablet and larger
 @media all and (min-width: 30em) {

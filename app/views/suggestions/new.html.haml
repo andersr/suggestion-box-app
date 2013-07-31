@@ -11,7 +11,7 @@
             = msg.to_sentence
     = f.text_area :message, type:"text", placeholder:"How can we make #{@suggestion_box.short_name} better?", :rows => 3, autocapitalize:"sentences", autofocus:true, id:"suggestion-message"
     = f.text_field :name, placeholder:'Name (optional)', autocapitalize:"words"
-    = f.email_field :email, placeholder:"Email (optional)", autocorrect:"off", autocapitalize:"off"
+    = f.email_field :email, placeholder:'Email (optional)', autocorrect:"off", autocapitalize:"off"
     %label.help
       Just to make sure you're a real person:
       %br
@@ -19,4 +19,4 @@
     = textcaptcha_fields(f) do
       = f.label :spam_answer, @suggestion.spam_question
       = f.text_field :spam_answer, :value => ''
-    = f.submit "Post it!"
+    = f.submit "Post your suggestion"
