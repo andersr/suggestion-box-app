@@ -5,10 +5,13 @@
 #content
   = form_for [@suggestion_box, @suggestion] do |f|
     - if @suggestion.errors.any?
-      #error_explanation
-        %ul
-          - @suggestion.errors.messages.values.each do |msg|
-            = msg.to_sentence
+      .errors_header
+        Oops, looks like there was a problem...
+        / %ul
+        /   - @suggestion.errors.messages.values.each do |msg|
+        /     %li
+        /       %span
+        /         = msg.to_sentence
     = f.text_area :message, type:"text", placeholder:"How can we make #{@suggestion_box.short_name} better?", :rows => 3, autocapitalize:"sentences", autofocus:true, id:"suggestion-message"
     = f.text_field :name, placeholder:'Name (optional)', autocapitalize:"words"
     = f.email_field :email, placeholder:'Email (optional)', autocorrect:"off", autocapitalize:"off"
