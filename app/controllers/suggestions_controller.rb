@@ -12,8 +12,8 @@
       #   @suggestion = suggestion_box.suggestions.build
       # end
 
-      before_filter :set_suggestion_box, :authenticate
-
+      before_filter :set_suggestion_box
+      
       def index
         #@suggestion_box = SuggestionBox.find(params[:suggestion_box_id])
         #@suggestion = @suggestion_box.suggestions.find(params[:id])

@@ -4,8 +4,6 @@
 
         #before_filter :authorize, only: [:new, :edit, :update, :destroy]
 
-        before_filter :authenticate
-
         def index
           @suggestion_boxes = SuggestionBox.all
 

@@ -3,26 +3,26 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 
-$('input, textarea').each(function() {
+// $('input, textarea').each(function() {
  
-    var self = $(this),
-        label = $("label[for='" + self.attr("id") + "']").text();
+//     var self = $(this),
+//         label = $("label[for='" + self.attr("id") + "']").text();
         
-    // Replace initial values
-    if (!self.val().replace(/^\s+/g, "").length) {
-        self.val(label).addClass("placeholder"); 
-    }
+//     // Replace initial values
+//     if (!self.val().replace(/^\s+/g, "").length) {
+//         self.val(label).addClass("placeholder"); 
+//     }
         
-    self.on("focus", function() {
-        if (self.val() === label) {
-            self.val('').removeClass("placeholder");
-        }
-    });
+//     self.on("focus", function() {
+//         if (self.val() === label) {
+//             self.val('').removeClass("placeholder");
+//         }
+//     });
         
-    self.on("blur", function() {
-        if (!self.val().replace(/^\s+/g, "")) {
-            self.val(label).addClass("placeholder");
-        }
-    });
+//     self.on("blur", function() {
+//         if (!self.val().replace(/^\s+/g, "")) {
+//             self.val(label).addClass("placeholder");
+//         }
+//     });
  
-});
+// });

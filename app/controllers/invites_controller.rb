@@ -1,5 +1,7 @@
 class InvitesController < ApplicationController
 
+  skip_before_filter :authenticate
+
   #layout "product"
   # GET /invites
   # GET /invites.json
