@@ -1,4 +1,4 @@
-!!!
+!!! 5
 %html
   %head
     %meta{:charset => "utf-8"}/
@@ -10,7 +10,8 @@
       try{Typekit.load();}catch(e){}
     = stylesheet_link_tag "screen", :media => "all"
     = csrf_meta_tags
-    = javascript_include_tag(:application)
+    = javascript_include_tag "application", debug: true
+    -#= javascript_include_tag "test"
   %body
     #container
       = render "layouts/flashes"

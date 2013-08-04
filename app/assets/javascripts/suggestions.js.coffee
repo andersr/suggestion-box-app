@@ -3,8 +3,12 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 
-$(document).ready ->
-  $("#new_suggestion").on("ajax:success", (e, data, status, xhr) ->
-    $("#new_suggestion").append xhr.responseText
-  ).bind "ajax:error", (e, xhr, status, error) ->
-    $("#new_suggestion").append "<p>ERROR</p>"
+# $(document).ready ->
+#   $("#new_suggestion").on("ajax:success", (e, data, status, xhr) ->
+#     $("#new_suggestion").append xhr.responseText
+#   ).bind "ajax:error", (e, xhr, status, error) ->
+#     $("#new_suggestion").append "<p>ERROR</p>"
+
+#$(document).ready ->
+ # alert "page has loaded!"
+ alert 'hello!'
