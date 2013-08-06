@@ -1,6 +1,10 @@
-//= require_self
-//= require_jquery
-//= require_jquery_ujs
+//= require jquery
+//= require jquery_ujs
 //= require_tree .
 
-var foo = true;
+
+//$("#new-suggestion-submit").prop("disabled", true);
+
+// $(document).ready(function(){
+//     $("#content").css("background-color","red);
+// });
