@@ -11,16 +11,19 @@ body {
 }
 #container {
 	width: 100%;
+	background-color: #ffffff;
 }
 
 // HEADER
 // ------------------------------
 header {
 	display:table;
-	background-color: #ffffff;
 	border-collapse: separate;
 	border-spacing: 1em 0.5em;
+	background-color:#eeeeee;
 	width:100%;
+	//border-bottom: 1px solid $block-divider;
+	//margin: 0 1em;
 
 	.table-row {
 		display:table-row;
@@ -40,7 +43,6 @@ header {
 		h1 {
 			display:table-cell;
 			vertical-align: middle;
-			padding-left:.25em;
 			font-size: 1.3em;
 		}
 	}
@@ -52,8 +54,8 @@ header {
 // CONTENT
 // ------------------------------
 #content {
-	padding:1.5em 2em 0 1em;
-	margin-bottom: 1em;
+	padding:1em 2em 0 1em;
+	margin-bottom: 2em;
 	//padding:0;
 	overflow:hidden; // prevent horizontal scrolling in mobile safari
 }
@@ -78,13 +80,17 @@ footer {
 // FORMS
 // ------------------------------
 
-input, textarea, .editable-div {
+input, textarea {
 	width:100%;
 	padding:.3em;
 	font-size: 1.2em;
-	margin-bottom: 1em;
+	margin-bottom: .75em;
 }
 
+label.spam_answer {
+	margin-bottom: .3em;
+	display: block;
+}
 
 
 .help {

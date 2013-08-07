@@ -21,6 +21,6 @@
       Just to make sure you're a real person:
       %br
     = textcaptcha_fields(f) do
-      = f.label :spam_answer, @suggestion.spam_question
+      = f.label :spam_answer, @suggestion.spam_question, class:"spam_answer"
       = f.text_field :spam_answer, :value => ''
     = f.submit "Continue", id:"new-suggestion-submit"
