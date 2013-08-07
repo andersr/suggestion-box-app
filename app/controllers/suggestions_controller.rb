@@ -1,22 +1,8 @@
     class SuggestionsController < ApplicationController
-      #before_filter :authenticate, only: :edit
-          #@short_name = @suggestion_box.short_name
-        # @suggestion = @suggestion_box.Suggestion.new
-        # # fail
-        # ?\binding.pry
-
-        #respond_to :html, :xml, :json
-
-
-      # def build_suggestion
-      #   @suggestion = suggestion_box.suggestions.build
-      # end
 
       before_filter :set_suggestion_box
       
       def index
-        #@suggestion_box = SuggestionBox.find(params[:suggestion_box_id])
-        #@suggestion = @suggestion_box.suggestions.find(params[:id])
         @suggestions = @suggestion_box.suggestions.all
 
         respond_to do |format|
@@ -26,7 +12,6 @@
       end 
 
       def show
-        #@suggestion_box = SuggestionBox.find(params[:suggestion_box_id])
         @suggestion = @suggestion_box.suggestions.find(params[:id])
 
         respond_to do |format|
@@ -35,14 +20,6 @@
         end
       end
 
-    #SuggestionBox.find(params[:suggestion_box_id])
-      # def new_short_name
-      #   @suggestion_box = SuggestionBox.find_by_short_name(params[:short_name])
-      #   @suggestion = @suggestion_box.suggestions.build
-
-      # end
-
-    #SuggestionBox.find(params[:suggestion_box_id])
       def new
         @suggestion = @suggestion_box.suggestions.build
         @suggestion.textcaptcha
@@ -65,7 +42,7 @@
           if @suggestion.save
 
             #send notification email to the owner_email
-           SuggestionBoxMailer.new_suggestion_notification(@suggestion_box, @suggestion).deliver
+            SuggestionBoxMailer.new_suggestion_notification(@suggestion_box, @suggestion).deliver
 
             redirect_to [@suggestion_box, @suggestion], notice: "Thanks!  We appreciate your input!"
           else
@@ -74,13 +51,10 @@
       end
 
       def edit
-        #@suggestion_box = SuggestionBox.find(params[:suggestion_box_id])
         @suggestion = @suggestion_box.suggestions.find(params[:id])
       end
 
       def update
-        #@suggestion = Suggestion.find(params[:id])
-
         respond_to do |format|
           if @suggestion.update_attributes(params[:suggestion])
             format.html { redirect_to @suggestion, notice: 'Suggestion was successfully updated.' }
@@ -93,7 +67,6 @@
       end
 
       def destroy
-        #@suggestion = Suggestion.find(params[:id])
         @suggestion.destroy
 
         respond_to do |format|

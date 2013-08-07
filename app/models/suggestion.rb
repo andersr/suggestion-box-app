@@ -14,7 +14,7 @@
 #
 
 class Suggestion < ActiveRecord::Base
-  attr_accessible :message, :anonymous, :name, :email, :spam_answer
+  attr_accessible :message, :name, :email, :spam_answer # :anonymous, 
   belongs_to :suggestion_box
   validates :message, presence: true
 
@@ -24,5 +24,4 @@ class Suggestion < ActiveRecord::Base
   						:questions   => [{ 'question' => '1+1 equals?', 'answers' => '2,two' },
                                        { 'question' => 'The green hat is what color?', 'answers' => 'green' }]
  
-  #validates :suggestion_message, :presence => {:message => "Please enter a suggestion."}
 end

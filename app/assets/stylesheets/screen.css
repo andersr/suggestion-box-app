@@ -555,23 +555,36 @@ body {
   width: 100%;
 }
 
-/* line 19, ../../../sass/screen.scss */
+/* line 18, ../../../sass/screen.scss */
 header {
-  background-color: #ccc;
-  padding: 1em .5em 1.3em 1em;
+  display: table;
+  background-color: #ffffff;
+  border-collapse: separate;
+  border-spacing: 1em 0.5em;
+  width: 100%;
 }
-/* line 33, ../../../sass/screen.scss */
-header h1 {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 1.8em;
+/* line 25, ../../../sass/screen.scss */
+header .table-row {
+  display: table-row;
 }
-/* line 43, ../../../sass/screen.scss */
-header .notices {
-  display: block;
-  height: 2em;
-  background-color: #ffff99;
-  color: #000;
+/* line 28, ../../../sass/screen.scss */
+header .table-row .logo {
+  display: table-cell;
+  vertical-align: middle;
+  padding-top: .25em;
+  width: 3.5em;
+}
+/* line 34, ../../../sass/screen.scss */
+header .table-row .logo img {
+  width: 100%;
+  height: auto;
+}
+/* line 40, ../../../sass/screen.scss */
+header .table-row h1 {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: .25em;
+  font-size: 1.3em;
 }
 
 /* line 54, ../../../sass/screen.scss */
@@ -595,7 +608,7 @@ footer p {
   font-size: .7em;
 }
 
-/* line 83, ../../../sass/screen.scss */
+/* line 81, ../../../sass/screen.scss */
 input, textarea, .editable-div {
   width: 100%;
   padding: .3em;
@@ -603,7 +616,7 @@ input, textarea, .editable-div {
   margin-bottom: 1em;
 }
 
-/* line 101, ../../../sass/screen.scss */
+/* line 90, ../../../sass/screen.scss */
 .help {
   margin-left: .3em;
   font-size: .95em;
@@ -611,61 +624,27 @@ input, textarea, .editable-div {
   color: #666666;
 }
 
-/* line 112, ../../../sass/screen.scss */
+/* line 101, ../../../sass/screen.scss */
 ul.inline, ol.inline {
   margin-top: 1em;
 }
-/* line 115, ../../../sass/screen.scss */
+/* line 104, ../../../sass/screen.scss */
 ul.inline li, ol.inline li {
   display: inline-block;
   margin-left: .2em;
   padding-right: .4em;
   border-right: 1px solid #999999;
 }
-/* line 122, ../../../sass/screen.scss */
+/* line 111, ../../../sass/screen.scss */
 ul.inline li:first-child, ol.inline li:first-child {
   margin-left: 0;
 }
-/* line 125, ../../../sass/screen.scss */
+/* line 114, ../../../sass/screen.scss */
 ul.inline li:last-child, ol.inline li:last-child {
   border-right: none;
 }
 
-/* line 134, ../../../sass/screen.scss */
-.display-table {
-  display: table;
-  border-collapse: collapse;
-  width: 100%;
-}
-
-/* line 139, ../../../sass/screen.scss */
-.table-row {
-  display: table-row;
-}
-
-/* line 142, ../../../sass/screen.scss */
-.table-cell {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-/* line 146, ../../../sass/screen.scss */
-.table-cell-submit {
-  width: 7.5em;
-}
-
-/* line 150, ../../../sass/screen.scss */
-.table-cell-field {
-  min-width: 7.5em;
-  max-width: 100%;
-}
-
-/* line 157, ../../../sass/screen.scss */
-#new_suggestion {
-  width: 100%;
-}
-
-/* line 166, ../../../sass/screen.scss */
+/* line 122, ../../../sass/screen.scss */
 .errors_header {
   margin-bottom: 1em;
   font-style: italic;
@@ -673,12 +652,12 @@ ul.inline li:last-child, ol.inline li:last-child {
 }
 
 @media all and (min-width: 30em) {
-  /* line 182, ../../../sass/screen.scss */
+  /* line 138, ../../../sass/screen.scss */
   body {
     overflow: none;
   }
 
-  /* line 186, ../../../sass/screen.scss */
+  /* line 142, ../../../sass/screen.scss */
   #container {
     width: 30em;
     border: 1px solid #ccc;
