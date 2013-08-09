@@ -25,11 +25,10 @@
         @suggestion.textcaptcha
        
         #flash[:error] = "Sorry, no suggestion box found with the id #{:id}." and return unless @suggestion_box
-        
-      #   respond_to do |format|
-      #     format.html # new.html.erb
-      #     format.json { render json: @suggestion_box }
-      #   end
+        respond_to do |format|
+          format.html # new.html.erb
+          format.json { render json: @suggestion_box }
+        end
       end
 
       def create
@@ -46,7 +45,8 @@
 
             redirect_to [@suggestion_box, @suggestion], notice: "Thanks!  We appreciate your input!"
           else
-           render action: "new"
+           # render action: "new"
+            render json: @suggestion.errors
           end
       end
 

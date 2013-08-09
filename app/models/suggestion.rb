@@ -18,6 +18,9 @@ class Suggestion < ActiveRecord::Base
   belongs_to :suggestion_box
   validates :message, presence: true
 
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+  validates :email, format: { with: VALID_EMAIL_REGEX }
+
   acts_as_textcaptcha 	:api_key => 'azbjl8lm6u0cg4kos80o44cssdem847a',
   						:bcrypt_salt => '$2a$10$UGMpZISBfrKcnRgatlu5P.',
   						:bcrypt_cost => '3',

@@ -8,19 +8,21 @@
   = form_for [@suggestion_box, @suggestion], remote:true do |f|
     - if @suggestion.errors.any?
       .errors_header
-        /Oops, looks like there was a problem...
-        / %ul
-        /   - @suggestion.errors.messages.values.each do |msg|
-        /     %li
-        /       %span
-        /         = msg.to_sentence
+        Oops, looks like there was a problem...
+      %ul
+        - @suggestion.errors.full_messages.each do |msg|
+          %li
+            %span
+              = msg
     = f.text_area :message, type:"text", placeholder:"How can we make #{@suggestion_box.short_name} better?", :rows => 3, autocapitalize:"sentences", autofocus:true, id:"suggestion-message"
-    = f.text_field :name, placeholder:'Name (optional)', autocapitalize:"words", id:"test"
-    = f.email_field :email, placeholder:'Email (optional)', autocorrect:"off", autocapitalize:"off"
-    %label.help
-      Just to make sure you're a real person:
-      %br
+    = f.text_field :name, placeholder:'Name (optional)', autocapitalize:"words"
+    = f.email_field :email, placeholder:'Email (optional)', autocorrect:"off", autocapitalize:"off", id:"email"
+    .email-error-message{:style => 'display: none;'}
     = textcaptcha_fields(f) do
+      %label.help
+        Just to make sure you're a real person:
+      %br
       = f.label :spam_answer, @suggestion.spam_question, class:"spam_answer"
       = f.text_field :spam_answer, :value => ''
+      .spam-error-message{:style => 'display: none;'}
     = f.submit "Continue", id:"new-suggestion-submit"
