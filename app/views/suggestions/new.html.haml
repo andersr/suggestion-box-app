@@ -14,15 +14,16 @@
           %li
             %span
               = msg
-    = f.text_area :message, type:"text", placeholder:"How can we make #{@suggestion_box.short_name} better?", :rows => 3, autocapitalize:"sentences", autofocus:true, id:"suggestion-message"
-    = f.text_field :name, placeholder:'Name (optional)', autocapitalize:"words"
-    = f.email_field :email, placeholder:'Email (optional)', autocorrect:"off", autocapitalize:"off", id:"email"
-    .email-error-message{:style => 'display: none;'}
-    = textcaptcha_fields(f) do
-      %label.help
-        Just to make sure you're a real person:
-      %br
-      = f.label :spam_answer, @suggestion.spam_question, class:"spam_answer"
-      = f.text_field :spam_answer, :value => ''
-      .spam-error-message{:style => 'display: none;'}
+    .field-group
+      = f.text_area :message, type:"text", placeholder:"How can we make #{@suggestion_box.short_name} better?", :rows => 3, autocapitalize:"sentences", autofocus:true, id:"suggestion-message"
+    .field-group
+      = f.text_field :name, placeholder:'Name (optional)', autocapitalize:"words"
+    .field-group
+      = f.email_field :email, placeholder:'Email (optional)', autocorrect:"off", autocapitalize:"off", id:"email"
+      .email-error-message.error-message
+    .field-group
+      = textcaptcha_fields(f) do
+        = f.label :spam_answer, @suggestion.spam_question, class:"spam_question"
+        = f.text_field :spam_answer, :value => '', class:"spam_answer", placeholder:"Just to make sure you're a real person"
+        .spam-error-message.error-message
     = f.submit "Continue", id:"new-suggestion-submit"

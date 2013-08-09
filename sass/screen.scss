@@ -80,26 +80,48 @@ footer {
 // FORMS
 // ------------------------------
 
-input, textarea {
-	width:100%;
-	padding:.3em;
-	font-size: 1.2em;
-	margin-bottom: .75em;
-}
+form {
 
-label.spam_answer {
-	margin-bottom: .3em;
-	display: block;
-}
+	.email-error-message, .spam-error-message {
+		display:none;
+	}
+	.field-group {
+		margin-bottom: .75em;
+	}
+		input, textarea {
+		width:100%;
+		padding:.3em;
+		font-size: 1.2em;
+		display: block;
+	}
+
+	label.spam_question {
+		margin-bottom: .3em;
+	}
+
+	// 	#suggestion_spam_answer {
+	// 	display: inline;
+	// 	width:3em;
+	// }
 
 
-.help {
-	//margin-top: .5em;
-	margin-left:.3em;
-	font-size: .95em;
-	font-style: italic;
-	color:#666666;
-}
+	.help {
+		margin-left:.3em;
+		font-size: .95em;
+		font-style: italic;
+		color:#666666;
+	}
+
+	.error-message {
+		margin-top: 0;
+		//padding-left:.4em;
+		//margin-left:.3em;
+		font-size: .95em;
+		font-style: italic;
+		color:$form-error;
+	}
+} //form
+
 
 // LISTS
 // ------------------------------

@@ -19,12 +19,13 @@ class Suggestion < ActiveRecord::Base
   validates :message, presence: true
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
-  validates :email, format: { with: VALID_EMAIL_REGEX }
+  validates :email, format: { with: VALID_EMAIL_REGEX, message:"Please enter a valid email address." } 
 
   acts_as_textcaptcha 	:api_key => 'azbjl8lm6u0cg4kos80o44cssdem847a',
   						:bcrypt_salt => '$2a$10$UGMpZISBfrKcnRgatlu5P.',
   						:bcrypt_cost => '3',
   						:questions   => [{ 'question' => '1+1 equals?', 'answers' => '2,two' },
-                                       { 'question' => 'The green hat is what color?', 'answers' => 'green' }]
+                                       { 'question' => 'The green hat is what color?', 'answers' => 'green' }],
+              :message => "Sorry, incorrect answer. Please try again."
  
 end
