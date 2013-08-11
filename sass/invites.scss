@@ -11,9 +11,15 @@ html
 {
 	// prevent horizontal scrolling in mobile safari
     overflow-x:hidden;
+
 }
 body {
-	font-family:'Josefin Sans', Helvetica, Arial, sans-serif;
+	font-family:"museo-sans", Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-weight: 100;
+		font-size: 90%;
+
+
 }
 #container {
 	position: absolute;
@@ -64,27 +70,34 @@ input, textarea, .editable-div {
 }
 
 h1 {
-	font: 4.5em 'Dancing Script', Georgia, Times, serif;
+  font-family: "coquette",fantasy,helvetica;
+	font-size: 4.5em;
+	letter-spacing:-0.05em;
+font-weight: 400;
 	color:$ml-red;
-	margin-bottom:.15em;
+	margin-bottom:0;
+	padding-bottom: 0;
 	margin-top: 0;
 }
 
 h2 {
-	font-family:'Pathway Gothic One', sans-serif;
+	//font-family:'Pathway Gothic One', sans-serif;
 	//font-weight:bold;
-	color: #666;
-	font-size:1.52em;
-	//letter-spacing: .01em;
+	//color: #666;
+	font-size:1.15em;
+	 line-height: 1.2em;
+	font-weight: 700;
+	//letter-spacing: .005em;
 	margin-bottom:.25em;
-	margin-top: 0;
+	margin-top: -0.25em;
 }
 
 p {
-    font-size: 1.5em;
-    line-height: 1.3em;
+    font-size: 1.3em;
+    line-height: 1.25em;
     margin-bottom: .5em;
     	margin-top: 0;
+    	color:#383838;
 }
 
 .signup-text-field {
@@ -202,8 +215,8 @@ ul.inline, ol.inline {
 	width: 7.5em;
 }
 
-.table-cell-field {
-	min-width: 7.5em;
+.signup-text-field {
+	min-width: 8em;
 max-width: 100%;
 }
 

@@ -724,12 +724,15 @@ html {
   overflow-x: hidden;
 }
 
-/* line 15, ../../../sass/invites.scss */
+/* line 16, ../../../sass/invites.scss */
 body {
-  font-family: 'Josefin Sans', Helvetica, Arial, sans-serif;
+  font-family: "museo-sans", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 90%;
 }
 
-/* line 18, ../../../sass/invites.scss */
+/* line 24, ../../../sass/invites.scss */
 #container {
   position: absolute;
   top: 1em;
@@ -738,24 +741,24 @@ body {
   bottom: 1.5em;
 }
 
-/* line 28, ../../../sass/invites.scss */
+/* line 34, ../../../sass/invites.scss */
 #content {
   width: 100%;
 }
-/* line 33, ../../../sass/invites.scss */
+/* line 39, ../../../sass/invites.scss */
 #content footer {
   margin-top: 0;
   font-size: 1em;
   color: #666666;
   text-align: center;
 }
-/* line 40, ../../../sass/invites.scss */
+/* line 46, ../../../sass/invites.scss */
 #content footer ul {
   margin-top: .5em;
   padding-left: 0;
 }
 
-/* line 52, ../../../sass/invites.scss */
+/* line 58, ../../../sass/invites.scss */
 input, textarea, .editable-div {
   width: 100%;
   padding: .3em;
@@ -763,7 +766,7 @@ input, textarea, .editable-div {
   margin-bottom: 1em;
 }
 
-/* line 59, ../../../sass/invites.scss */
+/* line 65, ../../../sass/invites.scss */
 .help {
   margin-left: .3em;
   font-size: .95em;
@@ -771,32 +774,37 @@ input, textarea, .editable-div {
   color: #666666;
 }
 
-/* line 66, ../../../sass/invites.scss */
+/* line 72, ../../../sass/invites.scss */
 h1 {
-  font: 4.5em 'Dancing Script', Georgia, Times, serif;
+  font-family: "coquette",fantasy,helvetica;
+  font-size: 4.5em;
+  letter-spacing: -0.05em;
+  font-weight: 400;
   color: #d40015;
-  margin-bottom: .15em;
-  margin-top: 0;
-}
-
-/* line 73, ../../../sass/invites.scss */
-h2 {
-  font-family: 'Pathway Gothic One', sans-serif;
-  color: #666;
-  font-size: 1.52em;
-  margin-bottom: .25em;
+  margin-bottom: 0;
+  padding-bottom: 0;
   margin-top: 0;
 }
 
 /* line 83, ../../../sass/invites.scss */
-p {
-  font-size: 1.5em;
-  line-height: 1.3em;
-  margin-bottom: .5em;
-  margin-top: 0;
+h2 {
+  font-size: 1.15em;
+  line-height: 1.2em;
+  font-weight: 700;
+  margin-bottom: .25em;
+  margin-top: -0.25em;
 }
 
-/* line 90, ../../../sass/invites.scss */
+/* line 95, ../../../sass/invites.scss */
+p {
+  font-size: 1.3em;
+  line-height: 1.25em;
+  margin-bottom: .5em;
+  margin-top: 0;
+  color: #383838;
+}
+
+/* line 103, ../../../sass/invites.scss */
 .signup-text-field {
   font-size: 1em;
   border: 2px solid #98A89E;
@@ -809,7 +817,7 @@ p {
   width: 7.5em;
 }
 
-/* line 99, ../../../sass/invites.scss */
+/* line 112, ../../../sass/invites.scss */
 .submit-button {
   width: 100%;
   margin-left: 5px;
@@ -834,7 +842,7 @@ p {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FF4411, endColorstr=#D40015);
 }
 
-/* line 121, ../../../sass/invites.scss */
+/* line 134, ../../../sass/invites.scss */
 .submit-button:hover {
   cursor: pointer;
   border: 1px solid #aa2400;
@@ -848,14 +856,14 @@ p {
   filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#FFDA24, endColorstr=#D40015);
 }
 
-/* line 132, ../../../sass/invites.scss */
+/* line 145, ../../../sass/invites.scss */
 .error {
   color: #c6491a;
   padding-top: 10px;
   font-size: 1.2em;
 }
 
-/* line 138, ../../../sass/invites.scss */
+/* line 151, ../../../sass/invites.scss */
 .error-messages {
   margin-top: .5em;
   clear: both;
@@ -864,73 +872,73 @@ p {
   color: #cc0000;
 }
 
-/* line 146, ../../../sass/invites.scss */
+/* line 159, ../../../sass/invites.scss */
 .field_with_errors {
   display: inline;
 }
-/* line 149, ../../../sass/invites.scss */
+/* line 162, ../../../sass/invites.scss */
 .field_with_errors input {
   border: 2px solid #cc0000;
 }
 
-/* line 154, ../../../sass/invites.scss */
+/* line 167, ../../../sass/invites.scss */
 a, a:visited {
   color: #666666;
   text-decoration: none;
 }
-/* line 158, ../../../sass/invites.scss */
+/* line 171, ../../../sass/invites.scss */
 a:hover, a:visited:hover {
   color: black;
   background-color: transparent;
 }
 
-/* line 171, ../../../sass/invites.scss */
+/* line 184, ../../../sass/invites.scss */
 ul.inline li, ol.inline li {
   display: inline-block;
   margin-left: .2em;
   padding-right: .4em;
   border-right: 1px solid #999999;
 }
-/* line 177, ../../../sass/invites.scss */
+/* line 190, ../../../sass/invites.scss */
 ul.inline li:first-child, ol.inline li:first-child {
   margin-left: 0;
 }
-/* line 180, ../../../sass/invites.scss */
+/* line 193, ../../../sass/invites.scss */
 ul.inline li:last-child, ol.inline li:last-child {
   border-right: none;
 }
 
-/* line 189, ../../../sass/invites.scss */
+/* line 202, ../../../sass/invites.scss */
 .display-table {
   display: table;
   border-collapse: collapse;
   width: 100%;
 }
 
-/* line 194, ../../../sass/invites.scss */
+/* line 207, ../../../sass/invites.scss */
 .table-row {
   display: table-row;
 }
 
-/* line 197, ../../../sass/invites.scss */
+/* line 210, ../../../sass/invites.scss */
 .table-cell {
   display: table-cell;
   vertical-align: middle;
 }
 
-/* line 201, ../../../sass/invites.scss */
+/* line 214, ../../../sass/invites.scss */
 .table-cell-submit {
   width: 7.5em;
 }
 
-/* line 205, ../../../sass/invites.scss */
-.table-cell-field {
-  min-width: 7.5em;
+/* line 218, ../../../sass/invites.scss */
+.signup-text-field {
+  min-width: 8em;
   max-width: 100%;
 }
 
 @media all and (min-width: 30em) {
-  /* line 217, ../../../sass/invites.scss */
+  /* line 230, ../../../sass/invites.scss */
   #container {
     width: 20em;
     margin-top: 1em;
@@ -938,7 +946,7 @@ ul.inline li:last-child, ol.inline li:last-child {
     margin-right: auto;
   }
 
-  /* line 224, ../../../sass/invites.scss */
+  /* line 237, ../../../sass/invites.scss */
   #content {
     overflow: visible;
   }

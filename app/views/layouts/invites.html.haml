@@ -1,20 +1,16 @@
-!!!
+!!! 5
 %html
   %head
     %meta{:charset => "utf-8"}/
-    %meta{:content => "width=device-width, initial-scale=1.0, user-scalable=no", :name => "viewport"}/
-    -#%meta{:content => "yes", :name => "apple-mobile-web-app-capable"}/
-    %title ChirpyBox - A Suggestion Box in the Cloud
-    %link{:href => "http://fonts.googleapis.com/css?family=Dancing+Script", :rel => "stylesheet", :type => "text/css"}/
-    %link{:href => "http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic", :rel => "stylesheet", :type => "text/css"}/
-    -#%link{:href => "http://fonts.googleapis.com/css?family=Crimson+Text", :rel => "stylesheet", :type => "text/css"}/
-    -#%link{:href => "http://fonts.googleapis.com/css?family=Allerta", :rel => "stylesheet", :type => "text/css"}/
-    %link{href:'http://fonts.googleapis.com/css?family=Pathway+Gothic+One', rel:'stylesheet', type:'text/css'}
-    -#%link{href:'http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700', rel:'stylesheet', type:'text/css'}/
+    %meta{:content => "width=device-width", :name => "viewport"}/
+    %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}/
+    %title ChirpyBox - A Social Suggestion Box
+    %script(src="//use.typekit.net/wjb6ybj.js")
+    :javascript
+      try{Typekit.load();}catch(e){}
     = stylesheet_link_tag "invites", :media => "all"
-    = javascript_include_tag "application"
     = csrf_meta_tags
-    %body
+  %body
     = render 'layouts/clouds'
     #container
       #content
@@ -26,3 +22,4 @@
                 = mail_to "hello@chirpybox.com", "Contact", :encode => "hex"
               %li #{link_to "Twitter", "https://twitter.com/chirpybox"}
               %li #{link_to "Take Our Survey", "#"}
+    = javascript_include_tag :application   

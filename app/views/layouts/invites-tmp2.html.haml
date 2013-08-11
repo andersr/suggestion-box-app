@@ -1,0 +1,25 @@
+!!! 5
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width", :name => "viewport"}/
+    %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}/
+    %title ChirpyBox - A Suggestion Box in the Cloud
+    %script{:type=>"text/javascript", :src=>"//use.typekit.net/wjb6ybj.js"}
+    :javascript
+      try{Typekit.load();}catch(e){}
+    = stylesheet_link_tag "invites", :media => "all"
+    = csrf_meta_tags
+    %body
+      = render 'layouts/clouds'
+      #container
+        #content
+          = yield
+          %footer
+            %nav
+              %ul.inline
+                %li
+                  = mail_to "hello@chirpybox.com", "Contact", :encode => "hex"
+                %li #{link_to "Twitter", "https://twitter.com/chirpybox"}
+                %li #{link_to "Take Our Survey", "#"}
+      = javascript_include_tag "application"
