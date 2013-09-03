@@ -1,26 +1,24 @@
-New suggestion from an anonymous visitor:
-%p<
-  "
-  = @suggestion.message
-  %span>"
-%p
-  Name:
-  = @suggestion.name
-  Email:
-  = @suggestion.email
-%p
-  - if @suggestion.anonymous?
-    This suggestion is currently anonymous.  Want to add your name/email, and be able to edit and track this suggestion?
-    = link_to "Register", "#"
-    or
-    = link_to "Sign in", "#"
-    now. It only takes a minute!
-  - else
-    Name:
-    = @suggestion.name
-    Email:
-    = @suggestion.email
-    = link_to "Edit", "#"
-    this suggestion.
-%hr
-= link_to "Post another suggestion", new_suggestion_box_suggestion_path(@suggestion_box)
+%header
+  .table-row
+    .logo
+      = image_tag("bcl/bcl-logo.png", :alt => "Org logo")
+    %h1
+      #{@suggestion_box.short_name} Suggestion Box
+#content
+  %p.flash.notice Thanks!  We appreciate your input!
+  -#= render "layouts/flashes"
+  %h2 Here's your suggestion:
+  %p<
+    "
+    = @suggestion.message
+    %span>"
+  - if @suggestion.name?
+    %p
+      Name:
+      = @suggestion.name
+  - if @suggestion.email?
+    %p
+      Email:
+      = @suggestion.email
+  %hr
+  = link_to "Post another suggestion", new_suggestion_box_suggestion_path(@suggestion_box)

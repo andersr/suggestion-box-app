@@ -2,35 +2,35 @@
 
 
 //disable new suggestion submit unless suggestion message has values
-// $( "#new-suggestion-submit" ).prop( "disabled", true );
+$( "#new-suggestion-submit" ).prop( "disabled", true );
 
-// $("#suggestion-message").keyup(function () {
+$("#suggestion-message").keyup(function () {
 
-// 	if ($("#suggestion-message").val() == '' || $("#suggestion-message").val() == ' '){
+	if ($("#suggestion-message").val() == '' || $("#suggestion-message").val() == ' '){
 
-// 		$( "#new-suggestion-submit" ).prop( "disabled", true );
-// 	}
-// 	else {
-// 		//alert("submit is now enabled");
+		$( "#new-suggestion-submit" ).prop( "disabled", true );
+	}
+	else {
+		//alert("submit is now enabled");
 
-// 		$( "#new-suggestion-submit" ).prop( "disabled", false );
+		$( "#new-suggestion-submit" ).prop( "disabled", false );
 
-// 	}
-// });
+	}
+});
 
 
 
-// var $newSuggestionForm = $('form#new_suggestion');
-// $newSuggestionForm.bind( 'ajax:success', function(event, data) {
-// 	// console.log(data);
-// 	if (data.email) {
-// 		$('.email-error-message').css('display','block').text(data.email);
-// 	}
+var $newSuggestionForm = $('form#new_suggestion');
+$newSuggestionForm.bind( 'ajax:success', function(event, data) {
+	// console.log(data);
+	if (data.email) {
+		$('.email-error-message').css('display','block').text(data.email);
+	}
 
-// 	if (data.spam_answer) {
-// 		$('.spam-error-message').css('display','block').text(data.spam_answer);
-// 	}
-// });
+	if (data.spam_answer) {
+		$('.spam-error-message').css('display','block').text(data.spam_answer);
+	}
+});
 
 
 

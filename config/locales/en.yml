@@ -12,8 +12,8 @@ en:
         suggestion:
           attributes:
             spam_answer:
-              incorrect_answer: "Sorry, incorrect answer. Please try again."
+              incorrect_answer: "is incorrect. Please try again."
   activemodel:
     attributes:
-      comment:
+      suggestion:
         spam_answer: "Spam answer"

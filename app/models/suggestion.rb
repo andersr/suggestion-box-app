@@ -24,15 +24,22 @@ class Suggestion < ActiveRecord::Base
                               :if => :should_validate_email? } 
 
   acts_as_textcaptcha 	:api_key => 'azbjl8lm6u0cg4kos80o44cssdem847a',
-  						:bcrypt_salt => '$2a$10$UGMpZISBfrKcnRgatlu5P.',
-  						:bcrypt_cost => '3',
-  						:questions   => [{ 'question' => '1+1 equals?', 'answers' => '2,two' },
-                                       { 'question' => 'The green hat is what color?', 'answers' => 'green' }],
-              :message => "Sorry, incorrect answer. Please try again."
+  						:bcrypt_salt => '$2a$10$UGMpZISBfrKcnRgatlu5P.'
+  						# :bcrypt_cost => '3',
+  						# :questions   => [{ 'question' => '1+1 equals?', 'answers' => '2,two' },
+        #                                { 'question' => 'The green hat is what color?', 'answers' => 'green,Green' }]
 
+  # def perform_textcaptcha?
+  #   false
+  # end
+  
   def should_validate_email?
     true unless self.email.empty?
   end
+
+  # def perform_textcaptcha?
+  #   false
+  # end
 
  
 end

@@ -7,11 +7,29 @@
 // BASE
 // ------------------------------
 body {
-	background-color:#eeeeee;
+	//background-color:#eeeeee;
+	//background-color: #dfcda9;
+	background-color: #f7f6f4;
+	color: #71604e;
 }
 #container {
 	width: 100%;
 	background-color: #ffffff;
+	padding-bottom: 3em;
+}
+
+p {
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+// HEADINGS
+// ------------------------------
+
+h2 {
+	font-size:1em;
+	margin-bottom:0;
+	margin-top: .5em;
 }
 
 // HEADER
@@ -21,6 +39,7 @@ header {
 	border-collapse: separate;
 	border-spacing: 1em 0.5em;
 	background-color:#eeeeee;
+	//background-color: #dfcda9;
 	width:100%;
 	//border-bottom: 1px solid $block-divider;
 	//margin: 0 1em;
@@ -43,7 +62,8 @@ header {
 		h1 {
 			display:table-cell;
 			vertical-align: middle;
-			font-size: 1.3em;
+			font-size: 1.35em;
+			//letter-spacing: .01em;
 		}
 	}
 } //header
@@ -58,6 +78,14 @@ header {
 	margin-bottom: 2em;
 	//padding:0;
 	overflow:hidden; // prevent horizontal scrolling in mobile safari
+}
+
+.flash {
+	display:block;
+	width:100%;
+	margin:0;
+	font-style:italic;
+	//background-color: #e5e76f;
 }
 
 // FOOTER
@@ -122,6 +150,20 @@ form {
 	}
 } //form
 
+// FORM ERRORS
+// ------------------------------
+// .errors_header {
+// 	//margin-top:0;
+// 	margin-bottom: 1em;
+// 	font-style: italic;
+// 	color:$form-error;
+	
+// 	ul li span {
+
+// 	}
+
+// }
+
 
 // LISTS
 // ------------------------------
@@ -145,23 +187,8 @@ ul.inline, ol.inline {
 	}
 }
 
-// FORM ERRORS
-// ------------------------------
-.errors_header {
-	//margin-top:0;
-	margin-bottom: 1em;
-	font-style: italic;
-	color:$form-error;
-	
-	ul li span {
-
-	}
-
-}
-
-
 //tablet and larger
-@media all and (min-width: 30em) {
+@media all and (min-width: 25em) {
 
 	body {
 		overflow:none;
@@ -174,7 +201,15 @@ ul.inline, ol.inline {
 		margin-left: auto;
 		margin-right: auto;
 		overflow:hidden;
-	}
+		@include border-radius(15px);
+		padding-bottom: .5em;
 
+		header {
 
-} // @media all and (min-width: 30em)
+			h1 {
+				font-size: 1.5em;
+			}
+		}
+	}	
+} // tablet and larger
+

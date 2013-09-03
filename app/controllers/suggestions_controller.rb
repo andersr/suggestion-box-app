@@ -24,7 +24,6 @@
         @suggestion = @suggestion_box.suggestions.build
         @suggestion.textcaptcha
        
-        #flash[:error] = "Sorry, no suggestion box found with the id #{:id}." and return unless @suggestion_box
         respond_to do |format|
           format.html # new.html.erb
           format.json { render json: @suggestion_box }
@@ -41,7 +40,7 @@
           if @suggestion.save
             #pry.bind
             #send notification email to the owner_email
-            #SuggestionBoxMailer.new_suggestion_notification(@suggestion_box, @suggestion).deliver
+            SuggestionBoxMailer.new_suggestion_notification(@suggestion_box, @suggestion).deliver
 
           #redirect_to suggestion_box_suggestion_path(@suggestion_box, @suggestion), notice: "Thanks!  We appreciate your input!"
           redirect_to [@suggestion_box, @suggestion], notice: "Thanks!  We appreciate your input!"

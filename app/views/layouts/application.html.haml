@@ -4,7 +4,8 @@
     %meta{:charset => "utf-8"}/
     %meta{:content => "width=device-width", :name => "viewport"}/
     %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}/
-    %title ChirpyBox - A Social Suggestion Box
+    %title #{@suggestion_box.short_name} Suggestion Box - Powered by ChirpyBox, a Suggestion Box in the Cloud
+    = favicon_link_tag 'favicon.ico'
     %script{:type=>"text/javascript", :src=>"//use.typekit.net/wjb6ybj.js"}
     :javascript
       try{Typekit.load();}catch(e){}
@@ -12,7 +13,6 @@
     = csrf_meta_tags
   %body
     #container
-      = render "layouts/flashes"
       = yield
       = render "layouts/footer"
     = javascript_include_tag :application   

@@ -13,6 +13,9 @@ class SuggestionBoxMailer < ActionMailer::Base
  #  end
 
 
+# passing this:
+# SuggestionBoxMailer.new_suggestion_notification(@suggestion_box, @suggestion).deliver
+
   def new_suggestion_notification(suggestion_box, suggestion)
     @suggestion_box = suggestion_box
     @suggestion = suggestion
