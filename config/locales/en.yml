@@ -12,7 +12,7 @@ en:
         suggestion:
           attributes:
             spam_answer:
-              incorrect_answer: "is incorrect. Please try again."
+              incorrect_answer: "Sorry, that's incorrect. Please try again."
   activemodel:
     attributes:
       suggestion:

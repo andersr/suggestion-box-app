@@ -5,15 +5,15 @@
     %h1
       #{@suggestion_box.short_name} Suggestion Box
 #content
-  = form_for [@suggestion_box, @suggestion] do |f|
-    - if @suggestion.errors.any?
-      .errors_header
-        Oops, looks like there was a problem...
-      %ul
-        - @suggestion.errors.full_messages.each do |msg|
-          %li
-            %span
-              = msg
+  = form_for [@suggestion_box, @suggestion], remote:true do |f|
+    /   - if @suggestion.errors.any?
+    /     .errors_header
+    /       Oops, looks like there was a problem...
+    /     %ul
+    /       - @suggestion.errors.full_messages.each do |msg|
+    /         %li
+    /           %span
+    /             = msg
     .field-group
       = f.text_area :message, type:"text", placeholder:"How can we make #{@suggestion_box.short_name} better?", :rows => 3, autocapitalize:"sentences", autofocus:true, id:"suggestion-message"
     .field-group

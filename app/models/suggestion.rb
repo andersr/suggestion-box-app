@@ -29,9 +29,9 @@ class Suggestion < ActiveRecord::Base
   						# :questions   => [{ 'question' => '1+1 equals?', 'answers' => '2,two' },
         #                                { 'question' => 'The green hat is what color?', 'answers' => 'green,Green' }]
 
-  def perform_textcaptcha?
-    false
-  end
+  # def perform_textcaptcha?
+  #   false
+  # end
   
   def should_validate_email?
     true unless self.email.empty?
