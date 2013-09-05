@@ -24,7 +24,8 @@
     .field-group
       = textcaptcha_fields(f) do 
         = f.label :spam_question, @suggestion.spam_question, class:"spam_question"
-        -#(What's this?)
+        .help
+          = link_to "(What's this?)", "#"
         = f.text_field :spam_answer, :value => '', class:"spam_answer"
         .spam-error-message.error-message
     = f.submit "Continue", id:"new-suggestion-submit"

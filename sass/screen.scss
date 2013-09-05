@@ -133,11 +133,13 @@ form {
 	// }
 
 
-	.help {
-		margin-left:.3em;
-		font-size: .95em;
+	.help, .help a {
+		display: inline;
+		margin-left:.2em;
+		font-size: .85em;
 		font-style: italic;
 		color:#666666;
+		//text-decoration: none;
 	}
 
 	.error-message {
