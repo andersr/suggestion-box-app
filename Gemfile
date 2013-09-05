@@ -9,6 +9,7 @@ gem 'rack', '~> 1.4.5'
 gem 'haml'
 gem 'haml-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'figaro'
 
 # gem 'sqlite3'
 gem 'jquery-rails'

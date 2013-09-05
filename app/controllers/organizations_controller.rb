@@ -40,7 +40,7 @@ class OrganizationsController < ApplicationController
   # GET /organizations/new.json
   def new
     @organization = Organization.new
-    @suggestions = @organization.suggestions.build
+    #@suggestions = @organization.suggestions.build
 
     respond_to do |format|
       format.html # new.html.erb

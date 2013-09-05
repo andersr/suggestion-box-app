@@ -5,7 +5,7 @@
     %h1
       #{@suggestion_box.short_name} Suggestion Box
 #content
-  = form_for [@suggestion_box, @suggestion], :remote => true do |f|
+  = form_for [@suggestion_box, @suggestion] do |f|
     - if @suggestion.errors.any?
       .errors_header
         Oops, looks like there was a problem...

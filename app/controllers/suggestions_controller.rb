@@ -40,7 +40,10 @@
           if @suggestion.save
             #pry.bind
             #send notification email to the owner_email
-            SuggestionBoxMailer.new_suggestion_notification(@suggestion_box, @suggestion).deliver
+            #UserMailer.welcome_email(@user).deliver
+
+            SuggestionBoxMailer.new_suggestion_notification(@suggestion_box,@suggestion).deliver
+          
 
           #redirect_to suggestion_box_suggestion_path(@suggestion_box, @suggestion), notice: "Thanks!  We appreciate your input!"
           redirect_to [@suggestion_box, @suggestion], notice: "Thanks!  We appreciate your input!"

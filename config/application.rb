@@ -9,6 +9,11 @@ if defined?(Bundler)
   # Bundler.require(:default, :assets, Rails.env)
 end
 
+# Load login info for mail, databases, etc from a fil that is not posted to the public repo
+# See http://railscasts.com/episodes/85-yaml-configuration-revised
+#ENV.update YAML.load(File.read(File.expand_path('secure_info.yml', __FILE__)))
+
+
 module SuggestionBoxApp
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.

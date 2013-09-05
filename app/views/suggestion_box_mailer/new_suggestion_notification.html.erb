@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p><strong>Hi <%= @suggestion_box.owner_name %>,<br>
+    <p>The following suggestion was just dropped in your suggestion box:</p><strong></p>
+    <p><%= @suggestion.message %></p>
+
+    <% if @suggestion.name.blank? && @suggestion.email.blank? %>
+    	<p>No name or email address was included with this suggestion :-/</p>
+    <% elsif @suggestion.email.blank? %>
+    	<p>Suggested by: <%= @suggestion.name %>. No email address was included :-(</p>
+    <% elsif @suggestion.email.blank? %>
+    	<p>Email: <%= @suggestion.email %>. No name was included :-(</p>
+    <% else %>
+    	<p>Suggested by: <%= @suggestion.name %><br>
+    	Email address: <%= mail_to @suggestion.email, "#{@suggestion.email}", :encode => "hex" %>
+    </p>
+    <% end %>
+ </body>
+</html>

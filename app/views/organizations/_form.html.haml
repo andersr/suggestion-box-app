@@ -7,17 +7,17 @@
       %ul
         - @organization.errors.full_messages.each do |msg|
           %li= msg
-  = f.fields_for :suggestions do |s|
-    = s.label :suggestion_message
-    %br/
-    = s.text_area :suggestion_message
+  / = f.fields_for :suggestions do |s|
+  /   = s.label :suggestion_message
+  /   %br/
+  /   = s.text_area :suggestion_message
   .field
     = f.label :name
     %br/
     = f.text_field :name
   .field
-    = f.label :short_name
+    -#= f.label :short_name
     %br/
-    = f.text_field :short_name
+    -#= f.text_field :short_name
   .actions
     = f.submit
