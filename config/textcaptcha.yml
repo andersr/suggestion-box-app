@@ -1,6 +1,6 @@
 development: &common_settings
   # api_key: azbjl8lm6u0cg4kos80o44cssdem847a  # grab one from http://textcaptcha.com/api
-  bcrypt_salt: $2a$10$S5ifkHypwDIhUc9MWdi8x.   # must be a valid bcrypt salt, we've generated this one for you randomly
+  bcrypt_salt: ENV["TEXTCAPTCHA_BCRYPT_SALT"]   # must be a valid bcrypt salt, we've generated this one for you randomly
                                                # generate another with; require 'bcrypt'; BCrypt::Engine.generate_salt
   bcrypt_cost: 4 # optional (default is 10) must be > 4 (a larger number means slower, but better encryption)
                   # see http://bcrypt-ruby.rubyforge.org for more information on bcrypt
@@ -28,7 +28,7 @@ development: &common_settings
 
 test:
   <<: *common_settings
-  api_key: azbjl8lm6u0cg4kos80o44cssdem847a
+  api_key: ENV["TEXTCAPTCHA_API_KEY"]
   bcrypt_salt: $2a$10$S5ifkHypwDIhUc9MWdi8x.
   bcrypt_cost: 1
 

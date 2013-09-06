@@ -23,10 +23,21 @@ class Suggestion < ActiveRecord::Base
                               message:"Please enter a valid email address.",
                               :if => :should_validate_email? } 
 
-  acts_as_textcaptcha :bcrypt_salt => '$2a$10$UGMpZISBfrKcnRgatlu5P.',
-                      :bcrypt_cost => '3',
-                      :questions   => [{ 'question' => '1+1 equals?', 'answers' => '2,two' },
-                      { 'question' => 'The green hat is what color?', 'answers' => 'green,Green' }]
+  acts_as_textcaptcha :bcrypt_salt => '$2a$10$UGMpZISBfrKcnRgatlu5P.', #ENV["TEXTCAPTCHA_BCRYPT_SALT"]
+                      :bcrypt_cost => '4',
+                      :questions => [{ 'question' => '1+1 equals?', 'answers' => '2,two' },
+                                    { 'question' => 'The green hat is what color?', 'answers' => 'green,Green' },
+                                    {'question' => 'Is ice hot or cold?', 'answers' => 'cold,Cold' },
+                                    {'question' => 'What color is an orange?', 'answers' => 'orange,Organge'},
+                                    {'question' => 'What is two plus 3?', 'answers' => '5,five' },
+                                    {'question' => 'What is 5 times two?', 'answers' => '10,ten' },
+                                    {'question' => 'How many colors in green, brown, foot, blue?', 'answers' => '3,three'},
+                                    {'question' => 'What\'s George\'s name?', 'answers' => 'george,George'},
+                                    {'question' => 'What\'s 11 minus 1?', 'answers' => '10,ten' },
+                                    {'question' => 'Is boiling water hot or cold?', 'answers' => 'hot,Hot' },
+                                    {'question' => 'What color is my blue shirt today?', 'answers' => 'blue,Blue' },
+                                    {'question' => 'What is 16 plus four?', 'answers' => '20,twenty' }
+                                    ]
 
   #:api_key => 'azbjl8lm6u0cg4kos80o44cssdem847a',
   
